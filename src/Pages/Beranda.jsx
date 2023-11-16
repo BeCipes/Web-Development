@@ -1,13 +1,12 @@
-import Navbar from "../Component/navbar"
+import Navbar from "../Component/navbar";
 
 const Beranda = () => {
-
   return (
     <div>
-    <Navbar/>
-    <h2>Ini Beranda</h2>
+      <Navbar />
+      <h2>Ini Beranda</h2>
     </div>
-  )
-}
+  );
+};
 
-export default Beranda
+export default Beranda;

@@ -1,5 +1,5 @@
 //link react-scroll untuk ke id
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
@@ -27,8 +27,6 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-
 
   const content = (
     <>
@@ -69,7 +67,13 @@ const Navbar = () => {
     </>
   );
   return (
-    <nav className={`${navbarFixed ? "fixed top-0 left-0 right-0 bg-lime-500 shadow-md" : "bg-lime-500"}`}>
+    <nav
+      className={`${
+        navbarFixed
+          ? "fixed top-0 left-0 right-0 bg-lime-500 shadow-md"
+          : "bg-lime-500"
+      }`}
+    >
       <div className="h-10vh flex justify-between z-50 text-black lg:py-5 px-10 py-4">
         <div className="flex items-center flex-1">
           <span className="text-2xl font-bold flex items-center ">
@@ -81,32 +85,32 @@ const Navbar = () => {
           <div className="flex-10">
             <ul className="flex gap-10 text-[18px] font-semibold">
               <Link spy={true} smooth={true} to="/beranda">
-                <li className="hover:text-blue-300 transition border-b-2 border-lime-500 hover:border-blue-300 cursor-pointer">
+                <li className="hover:text-blue-50 transition border-b-2 border-lime-500 hover:border-blue-50 cursor-pointer">
                   Beranda
                 </li>
               </Link>
-              <Link spy={true} smooth={true} to= "/panduan">
-                <li className="hover:text-blue-300 transition border-b-2 border-lime-500 hover:border-blue-300 cursor-pointer whitespace-nowrap">
+              <Link spy={true} smooth={true} to="/panduan">
+                <li className="hover:text-blue-50 transition border-b-2 border-lime-500 hover:border-blue-50 cursor-pointer whitespace-nowrap">
                   Panduan Pengguna
                 </li>
               </Link>
               <Link spy={true} smooth={true} to="/about">
-                <li className="hover:text-blue-300 transition border-b-2 border-lime-500 hover:border-blue-300 cursor-pointer whitespace-nowrap">
+                <li className="hover:text-blue-50 transition border-b-2 border-lime-500 hover:border-blue-50 cursor-pointer whitespace-nowrap">
                   Tentang Kami
                 </li>
               </Link>
               <Link spy={true} smooth={true} to="/contactus">
-                <li className="hover:text-blue-300 transition border-b-2 border-lime-500 hover:border-blue-300 cursor-pointer whitespace-nowrap">
+                <li className="hover:text-blue-50 transition border-b-2 border-lime-500 hover:border-blue-50 cursor-pointer whitespace-nowrap">
                   Kontak Dukungan
                 </li>
               </Link>
               <Link spy={true} smooth={true} to="/blog">
-                <li className="hover:text-blue-300 transition border-b-2 border-lime-500 hover:border-blue-300 cursor-pointer">
+                <li className="hover:text-blue-50 transition border-b-2 border-lime-500 hover:border-blue-50 cursor-pointer">
                   Blog
                 </li>
               </Link>
               <Link spy={true} smooth={true} to="/login">
-                <li className="hover:text-blue-300 transition border-b-2 border-lime-500 hover:border-blue-300 cursor-pointer">
+                <li className="hover:text-blue-50 transition border-b-2 border-lime-500 hover:border-blue-50 cursor-pointer">
                   Login
                 </li>
               </Link>
