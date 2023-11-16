@@ -3,9 +3,9 @@ import Navbar from "../Component/navbar"
 const Beranda = () => {
 
   return (
-    <div className='bg-lime-500'>
+    <div>
     <Navbar/>
-    <h2 className='bg-lime-400'>Ini Beranda</h2>
+    <h2>Ini Beranda</h2>
     </div>
   )
 }

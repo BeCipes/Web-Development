@@ -2,9 +2,9 @@ import Navbar from "../Component/navbar"
 
 const Panduan = () => {
     return (
-        <div className='bg-lime-500'>
+        <div>
         <Navbar/>
-        <h2 className='bg-lime-400'>INI Panduan</h2>
+        <h2>INI Panduan</h2>
         </div>
     )
 }

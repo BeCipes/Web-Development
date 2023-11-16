@@ -2,9 +2,9 @@ import Navbar from "../Component/navbar"
 
 const Login = () => {
     return (
-        <div className='bg-lime-500'>
+        <div>
         <Navbar/>
-        <h2 className='bg-lime-400'>INI Login</h2>
+        <h2>INI Login</h2>
         </div>
     )
 }

@@ -2,9 +2,9 @@ import Navbar from "../Component/navbar"
 function About() {
 
   return (
-    <div className='bg-lime-500'>
+    <div>
     <Navbar/>
-    <h2 className='bg-lime-400'>NI ABOUT</h2>
+    <h2>NI ABOUT</h2>
     </div>
 
   )

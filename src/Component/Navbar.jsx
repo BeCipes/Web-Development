@@ -1,18 +1,38 @@
 //link react-scroll untuk ke id
 import { Link } from "react-router-dom"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
 import { RiHealthBookLine } from "react-icons/ri";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
+  const [navbarFixed, setNavbarFixed] = useState(false);
+
   const handleClick = () => {
     setClick(!click);
   };
+
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setNavbarFixed(true);
+    } else {
+      setNavbarFixed(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
+
   const content = (
     <>
-      <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-lime-500 transition">
+      <div className="lg:hidden block fixed top-16 w-full left-0 right-0 bg-lime-500 transition">
         <ul className="text-center text-xl p-20">
           <Link spy={true} smooth={true} to="/beranda">
             <li className="my-4 py-4 border-b border-lime-500 hover:bg-lime-400 hover:rounded font-semibold">
@@ -29,7 +49,7 @@ const Navbar = () => {
               Tentang Kami
             </li>
           </Link>
-          <Link spy={true} smooth={true} to="/contact">
+          <Link spy={true} smooth={true} to="/contactus">
             <li className="my-4 py-4 border-b border-lime-500 hover:bg-lime-400 hover:rounded font-semibold">
               Kontak Dukungan
             </li>
@@ -49,7 +69,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <nav>
+    <nav className={`${navbarFixed ? "fixed top-0 left-0 right-0 bg-lime-500 shadow-md" : "bg-lime-500"}`}>
       <div className="h-10vh flex justify-between z-50 text-black lg:py-5 px-10 py-4">
         <div className="flex items-center flex-1">
           <span className="text-2xl font-bold flex items-center ">
