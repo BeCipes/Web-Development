@@ -5,6 +5,7 @@ import Panduan from "./Pages/Panduan";
 import Login from "./Pages/Login";
 import ContactUs from "./Pages/ContactUs";
 import Blog from "./Pages/Blog";
+import AdminPage from "./Pages/AdminPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/login" element={<Login/>} />
+        <Route path="/admin" element={<AdminPage/>} />
       </Routes>
     </Router>
   );

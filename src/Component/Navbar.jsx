@@ -1,5 +1,5 @@
 //link react-scroll untuk ke id
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
@@ -27,8 +27,6 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-
 
   const content = (
     <>
@@ -69,13 +67,21 @@ const Navbar = () => {
     </>
   );
   return (
-    <nav className={`${navbarFixed ? "fixed top-0 left-0 right-0 bg-lime-500 shadow-md" : "bg-lime-500"}`}>
+    <nav
+      className={`${
+        navbarFixed
+          ? "fixed top-0 left-0 right-0 bg-lime-500 shadow-md"
+          : "bg-lime-500"
+      }`}
+    >
       <div className="h-10vh flex justify-between z-50 text-black lg:py-5 px-10 py-4">
         <div className="flex items-center flex-1">
-          <span className="text-2xl font-bold flex items-center ">
-            <RiHealthBookLine />
-            <span className="ml-2">Healty Food</span>
-          </span>
+          <Link spy={true} smooth={true} to="/beranda">
+            <span className="text-2xl font-bold flex items-center ">
+              <RiHealthBookLine />
+              <span className="ml-2">Healty Food</span>
+            </span>
+          </Link>
         </div>
         <div className="lg:flex md:flex lg: flex-1 items-center justify-end font-normal hidden">
           <div className="flex-10">
@@ -85,7 +91,7 @@ const Navbar = () => {
                   Beranda
                 </li>
               </Link>
-              <Link spy={true} smooth={true} to= "/panduan">
+              <Link spy={true} smooth={true} to="/panduan">
                 <li className="hover:text-blue-300 transition border-b-2 border-lime-500 hover:border-blue-300 cursor-pointer whitespace-nowrap">
                   Panduan Pengguna
                 </li>
