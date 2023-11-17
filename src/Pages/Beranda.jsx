@@ -1,4 +1,4 @@
-import Navbar from "../Component/navbar";
+import Navbar from "../Component/Navbar";
 
 const Beranda = () => {
   return (
