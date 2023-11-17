@@ -4,7 +4,16 @@ const Default = () => {
   return (
     <div>
       <Navbar />
-      <h2>disinilah kita ngoding alfin</h2>
+      <div>
+        <h3 className="text-black text-3xl font-semibold ">
+          Selamat datang di Healthy food{" "}
+        </h3>
+
+        <p className="font-poppins bg-primary">
+          Sebuah platform yang dirancang untuk memantapkan individu dalam
+          perjalanan mereka menuju gaya hidup yang lebih sehat.
+        </p>
+      </div>
     </div>
   );
 };
