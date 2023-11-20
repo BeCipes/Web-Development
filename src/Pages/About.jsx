@@ -29,13 +29,13 @@ const About = () => {
               langkah, dan pengembangan keterampilan dasar memasak.
             </h3>
             <h2 className="font-poppins">Kapanpun. Dimanapun</h2>
-            <button className=" bg-slate-500 mt-10">Panduan Pengguna</button>
+            <button className=" bg-lime-500 mt-10 rounded-full px-8 h-8">Panduan Pengguna</button>
           </div>
           <div className="w-1/2 flex-1  pl-40">
             <img
               className="rounded-full w-80 h-80"
-              src="public/assets/Alpukat.jpg"
-              alt="Alpukat"
+              src="public/assets/Landingpage1.jpg"
+              alt="Landing Page"
             />
           </div>
         </div>
@@ -46,8 +46,8 @@ const About = () => {
         <div className="w-1/2 flex">
             <img
               
-              src="public/assets/Alpukat.jpg"
-              alt="Alpukat"
+              src="public/assets/community.jpg"
+              alt="community"
             />
           </div>
           <div className="text-center flex-1 text-white w-1/2 px-10">
