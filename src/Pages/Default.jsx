@@ -131,28 +131,24 @@ const Default = () => {
             </p>
           </div>
         </div>
+      </div>
 
-        {/* content5 */}
-        <div
-          className="hero h-96 "
-          style={{ backgroundImage: "url(public/assets/landingpage..jpg" }}
-        >
-          <div className="hero-overlay bg-opacity-60"></div>
-          <div className="hero-content text-center text-neutral-content">
-            <div className="max-w-md ">
-              <h1 className="mb-5 text-4xl font-bold text-white position-fixed">
-                Yuk andalkan daftar menu makanan sehat dan bergizi setiap hari.
-              </h1>
-              <button className="btn bg-grab border-none hover:bg-primary rounded-3xl px-5 mr-5">
-                Beranda
-              </button>{" "}
-              <span>
-                <button className="btn bg-grab border-none hover:bg-primary rounded-3xl px-5">
-                  App
-                </button>
-              </span>
-            </div>
-          </div>
+      {/* content5 */}
+      <div
+        className="columns-1 w-full relative bg-no-repeat bg-cover mt-16"
+        style={{ backgroundImage: "url(public/assets/landingpage..jpg" }}
+      >
+        <div className="bg-opacity-60 absolute w-full h-full z-10 bg-black"></div>
+        <div className="mx-auto text-center py-40 z-20 relative">
+          <h1 className="mb-5 text-4xl font-bold text-white w-1/2 mx-auto">
+            Yuk andalkan daftar menu makanan sehat dan bergizi setiap hari.
+          </h1>
+          <button className="btn bg-grab border-none hover:bg-primary rounded-3xl px-5 mr-5 font-semibold">
+            Beranda
+          </button>{" "}
+          <button className="btn bg-grab border-none hover:bg-primary rounded-3xl px-5 w-[94px] font-semibold">
+            App
+          </button>
         </div>
       </div>
 
