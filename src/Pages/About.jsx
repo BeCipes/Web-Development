@@ -1,15 +1,16 @@
-import React from 'react';
 import Navbar from "../Component/Navbar";
+import React from 'react';
+
 
 const About = () => {
   return (
     <>
       <Navbar />
-     
-      <div className="container-fluid sectionView pt-lg-5" style={{ backgroundColor: '#FFFAEE', fontFamily: 'Poppins' }}>
+
+      <div className="container-fluid sectionView pt-lg-5" style={{ backgroundColor: '#FFFFFF', fontFamily: 'Poppins',marginTop: '20px' }}>
   <div className="row pb-lg-5" style={{ display: 'flex' }}>
     <div className="col-md-6 col-12 text-center order-lg-1 order-2" style={{ flex: 1 }}>
-      <img src="src/assets/Tentangkami.png" alt="" style={{ maxWidth: '60%', height: 'auto', marginTop: '20px', borderRadius: '20px' }} />
+      <img src="src/assets/t.kami.png" alt="" style={{ maxWidth: '60%', height: 'auto', marginTop: '20px', borderRadius: '20px' }} />
     </div>
     <div className="me-5 col-xl-6 col-12 order-lg-2 order-1 pt-lg-5 pe-lg-5 p-md-5 text-lg-start text-center kolomview" style={{ flex: 2 }}>
       <span className="fw-bold text-display-4" style={{ fontWeight: 'bold', fontFamily: 'Poppins' }}>Visi Misi</span><br /><br />
