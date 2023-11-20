@@ -1,20 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
+import myimage from '../assets/foto kelompok/logo.jpg';
 
 const Sidebar = () => {
-    return (
-      <div className="bg-gray-800 text-white h-screen w-1/5 fixed">
-        <div className="p-4">
-          <h1 className="text-2xl font-bold">Your Website Name</h1>
-        </div>
-        <ul className="py-4">
-          <li className="py-2 px-4 hover:bg-gray-700 cursor-pointer">Home</li>
-          <li className="py-2 px-4 hover:bg-gray-700 cursor-pointer">About</li>
-          <li className="py-2 px-4 hover:bg-gray-700 cursor-pointer">Services</li>
-          <li className="py-2 px-4 hover:bg-gray-700 cursor-pointer">Contact</li>
-        </ul>
-      </div>
-    );
+  const [sidebarVisible, setSidebarVisible] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarVisible(!sidebarVisible);
   };
+
+  return (
+    <div className={`bg-gray-800 fixed text-white h-screen w-${sidebarVisible ? '1/2' : '1/12'} sm:w-1/6 transition-all ease-in-out`}>
+      <button
+        className="text-white p-2 bg-gray-800 cursor-pointer sm:hidden"
+        onClick={toggleSidebar}
+      >
+        &#9776;
+      </button>
+      <div className="p-4">
+        <h1 className="flex justify-center text-lg font-bold">Healty Food Recipes</h1>
+        <img className='rounded-full scale-75 mx-auto' src={myimage} alt="foto admin" />
+        <h2 className='flex justify-center text-lg font-bold pb-7 border-b-2'>Admin-01</h2>
+      </div>
+      <ul>
+        <li className="flex py-2 px-4 justify-center hover:bg-gray-700 cursor-pointer">Dashboard</li>
+        <li className="flex py-2 px-4 justify-center hover:bg-gray-700 cursor-pointer">Data Admin</li>
+        <li className="flex py-2 px-4 justify-center hover:bg-gray-700 cursor-pointer">Data User</li>
+        <li className="flex py-2 px-4 justify-center hover:bg-gray-700 cursor-pointer">Data Resep</li>
+      </ul>
+    </div>
+  );
+};
 
 export default Sidebar;

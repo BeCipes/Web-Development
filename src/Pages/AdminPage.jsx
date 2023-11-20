@@ -1,12 +1,12 @@
 import Sidebar from "../Component/SideBar";
-
+import Dropdown from "../Component/admindropdown";
+import Tes from "../Component/Tes";
 const AdminPage = () => {
   return (
-    <div>
+    <div className="flex-column">
       <Sidebar />
-      <div className="flex-1 p-4">
-        <h1 className="text-2xl font-bold mb-4">Main Content</h1>
-      </div>
+      <Dropdown/>
+      <Tes/>
     </div>
   );
 };
