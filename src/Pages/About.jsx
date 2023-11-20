@@ -29,7 +29,7 @@ const About = () => {
               langkah, dan pengembangan keterampilan dasar memasak.
             </h3>
             <h2 className="font-poppins">Kapanpun. Dimanapun</h2>
-            <button className=" bg-lime-500 mt-10 rounded-full px-8 h-8">Panduan Pengguna</button>
+            <button className=" bg-lime-500 mt-8 rounded-full px-8 h-8">Panduan Pengguna</button>
           </div>
           <div className="w-1/2 flex-1  pl-40">
             <img
