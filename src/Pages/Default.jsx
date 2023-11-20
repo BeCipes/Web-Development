@@ -10,7 +10,7 @@ const Default = () => {
 
       <div className="container mx-auto">
         {/* Content1 */}
-        <div className="columns-2 mt-20">
+        <div className="columns-2 mt-44">
           <div className="text-center align-middle ">
             <h3 className="text-black text-3xl font-semibold ">
               Selamat datang di Healthy Food
@@ -38,15 +38,14 @@ const Default = () => {
 
           <div className="flex justify-center">
             <img
-              className="rounded-full w-80 h-80"
+              className="rounded-full w-80 h-80 -mt-20"
               src="public/assets/Landingpage1.jpg"
               alt=""
             />
           </div>
         </div>
-
         {/* Content 2 */}
-        <div className="columns-1 mx-auto mt-16 mb-96">
+        <div className="columns-1 mx-auto mt-16">
           <div className="w-[750px] h-80 bg-primary rounded-lg mx-auto flex items-center justify-between">
             <img
               className="rounded-lg flex-auto h-80"
@@ -67,7 +66,97 @@ const Default = () => {
             </div>
           </div>
         </div>
+        {/* Content3 */}
+        <div className="columns-2  px-24 py-40">
+          <div className="text-center -ml-24">
+            <h3 className=" text-2xl font-semibold ">Temukan</h3>
+
+            <h3 className=" text-2xl font-semibold ">Healthy Food</h3>
+          </div>
+          <div>
+            <p className="font-medium">
+              Agar tubuh selalu sehat dan bugar, serta kebal penyakit,
+              <br /> kamu bisa andalkan daftar menu <br /> makanan sehat dan
+              bergizi setiap hari
+            </p>
+          </div>
+        </div>
+        {/* content4*/}
+        <div className="columns-2">
+          <div className="hero-content ">
+            <img
+              src="public/assets/Oatmeal.jpg"
+              className="max-w-sm rounded-full w-80 h-80 -mt-20"
+            />
+          </div>
+          <div className="mr-[140px]">
+            <h1 className="text-2xl font-bold">Gandum</h1>
+            <p className="py-6">
+              Oatmeal adalah salah satu makanan superfood yang biasa disantap
+              ketika sarapan. Kandungan serat yang tinggi dalam oatmeal sangat
+              baik untuk sistem pencernaan.
+            </p>
+          </div>
+        </div>
+        <div className="columns-2 mt-44">
+          <div className="ml-40">
+            <h1 className="text-2xl font-bold">Alpukat</h1>
+            <p className="py-6">
+              Alpukat merupakan buah yang sangat kaya akan nutrisi: serat,
+              vitamin, mineral, dan lemak lemak sehat yang dapat mengurangi
+              inflamasi dalam tubuh.
+            </p>
+          </div>
+          <div className="hero-content ">
+            <img
+              src="public/assets/Alpukat.jpg"
+              className="max-w-sm rounded-full w-80 h-80 -mt-20"
+            />
+          </div>
+        </div>
+        <div className="columns-2 mt-44">
+          <div className="hero-content ">
+            <img
+              src="public/assets/Yogurt.jpg"
+              className="max-w-sm rounded-full w-80 h-80 -mt-20"
+            />
+          </div>
+          <div className="mr-[140px]">
+            <h1 className="text-2xl font-bold">Yogurt</h1>
+            <p className="py-6">
+              Yogurt mengandung probiotik yang sehat untuk kesehatan usus dan
+              sistem pencernaan. Selain itu, terdapat juga kandungan lain yang
+              sangat baik untuk tubuh, yaitu kalsium, vitamin B12, kalium,
+              fosfor, dan zinc .
+            </p>
+          </div>
+        </div>
+
+        {/* content5 */}
+        <div
+          className="hero h-96 "
+          style={{ backgroundImage: "url(public/assets/landingpage..jpg" }}
+        >
+          <div className="hero-overlay bg-opacity-60"></div>
+          <div className="hero-content text-center text-neutral-content">
+            <div className="max-w-md ">
+              <h1 className="mb-5 text-4xl font-bold text-white position-fixed">
+                Yuk andalkan daftar menu makanan sehat dan bergizi setiap hari.
+              </h1>
+              <button className="btn bg-grab border-none hover:bg-primary rounded-3xl px-5 mr-5">
+                Beranda
+              </button>{" "}
+              <span>
+                <button className="btn bg-grab border-none hover:bg-primary rounded-3xl px-5">
+                  App
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div className="mb-96"></div>
     </body>
   );
 };

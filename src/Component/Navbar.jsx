@@ -30,7 +30,7 @@ const Navbar = () => {
 
   const content = (
     <>
-      <div className="lg:hidden block fixed top-16 w-full left-0 right-0 bg-grab transition">
+      <div className="lg:hidden block fixed top-16 w-full left-0 right-0 bg-grab transition ">
         <ul className="text-center text-xl p-20">
           <Link spy={true} smooth={true} to="/beranda">
             <li className="my-4 py-4 border-b border-lime-500 hover:bg-lime-400 hover:rounded font-semibold">
