@@ -6,7 +6,7 @@ const About = () => {
     <>
       <Navbar />
 
-      <div className="flex w-full items-center justify-center flex-col pt-24 bg-slate-200 pb-24">
+      <div className="flex w-full items-center justify-center flex-col pt-24  pb-24">
         <div className="flex items-center justify-center w-full ">
           <div className="text-center w-1/2 px-20">
             <h2 className="text-3xl font-poppins mt-5 font-semibold">
@@ -29,28 +29,28 @@ const About = () => {
               langkah, dan pengembangan keterampilan dasar memasak.
             </h3>
             <h2 className="font-poppins">Kapanpun. Dimanapun</h2>
-            <button className="bg-slate-500 mt-10">Panduan Pengguna</button>
+            <button className=" bg-slate-500 mt-10">Panduan Pengguna</button>
           </div>
-          <div className="w-1/2 flex-1 bg-slate-300 pl-40">
+          <div className="w-1/2 flex-1  pl-40">
             <img
               className="rounded-full w-80 h-80"
-              src={Image}
+              src="public/assets/Alpukat.jpg"
               alt="Alpukat"
             />
           </div>
         </div>
       </div>
-        <div className="flex w-full items-center justify-center flex-col pt-24 pb-24 bg-black">
+        <div className="flex w-full items-center justify-center flex-col  bg-black">
           
         <div className="flex items-center justify-center w-full ">
-        <div className="w-1/2 flex-1 bg-slate-300">
+        <div className="w-1/2 flex">
             <img
               
-              src={Image}
+              src="public/assets/Alpukat.jpg"
               alt="Alpukat"
             />
           </div>
-          <div className="text-center text-white w-1/2 px-10">
+          <div className="text-center flex-1 text-white w-1/2 px-10">
             <h2 className="text-3xl font-poppins mt-5 font-semibold">
               Cerita Kami
             </h2>
@@ -71,7 +71,6 @@ const About = () => {
         </div>
 
       </div>
-      <Footer/>
     </>
   );
 };
