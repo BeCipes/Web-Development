@@ -131,12 +131,11 @@ const Default = () => {
             </p>
           </div>
         </div>
-
-        {/* content5 */}
       </div>
 
+      {/* content5 */}
       <div
-        className="columns-1 w-full relative bg-no-repeat bg-cover mt-5"
+        className="columns-1 w-full relative bg-no-repeat bg-cover mt-16"
         style={{ backgroundImage: "url(public/assets/landingpage..jpg" }}
       >
         <div className="bg-opacity-60 absolute w-full h-full z-10 bg-black"></div>
@@ -144,10 +143,10 @@ const Default = () => {
           <h1 className="mb-5 text-4xl font-bold text-white w-1/2 mx-auto">
             Yuk andalkan daftar menu makanan sehat dan bergizi setiap hari.
           </h1>
-          <button className="btn bg-grab border-none hover:bg-primary rounded-3xl px-5 mr-5">
+          <button className="btn bg-grab border-none hover:bg-primary rounded-3xl px-5 mr-5 font-semibold">
             Beranda
           </button>{" "}
-          <button className="btn bg-grab border-none hover:bg-primary rounded-3xl px-5">
+          <button className="btn bg-grab border-none hover:bg-primary rounded-3xl px-5 w-[94px] font-semibold">
             App
           </button>
         </div>
