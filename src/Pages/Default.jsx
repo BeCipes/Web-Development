@@ -1,4 +1,5 @@
 import Navbar from "../Component/Navbar";
+import Footer from "../Component/Footer";
 
 const Default = () => {
   return (
@@ -153,6 +154,7 @@ const Default = () => {
       </div>
 
       <div className="mb-96"></div>
+      <Footer />
     </body>
   );
 };
