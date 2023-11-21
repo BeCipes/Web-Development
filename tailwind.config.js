@@ -9,6 +9,9 @@ export default {
       fontFamily: {
         poppins: ["Poppins"],
       },
+      height: {
+        '128': '32rem',
+      },
       colors: {
         primary: "#7DA557",
         grab: "#6FC81F",
