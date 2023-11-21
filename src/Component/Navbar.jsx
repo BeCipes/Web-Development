@@ -69,17 +69,15 @@ const Navbar = () => {
   return (
     <nav
       className={`${
-        navbarFixed
-          ? "fixed top-0 left-0 right-0 bg-grab shadow-md z-50"
-          : "bg-grab"
+        navbarFixed ? "fixed top-0 left-0 right-0 bg-grab shadow-md z-10" : "bg-grab"
       }`}
     >
-      <div className="h-10vh flex justify-between text-black lg:py-5 px-10 py-4 ">
+      <div className="h-10vh flex justify-between z-50 text-black lg:py-5 px-10 py-4 ">
         <div className="flex items-center flex-1">
-          <Link spy={true} smooth={true} to="/">
+          <Link spy={true} smooth={true} to="/beranda">
             <span className="text-2xl font-bold flex items-center ">
               <RiHealthBookLine />
-              <span className="ml-2">GoCipes</span>
+              <span className="ml-2">Healty Food</span>
             </span>
           </Link>
         </div>
