@@ -1,20 +1,48 @@
 const Footer = () => {
   return (
     <footer className="">
-      <footer className="footer p-10 bg-grab text-base-content">
+      <footer className="footer p-10 bg-grab text-base-content px-20">
         <nav>
-          <header className="footer-title">Services</header>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
+          <header className=" font-semibold text-lg text-black">
+            Website Healthy Food{" "}
+          </header>
+          <p className=" py-1 font-medium">
+            Platform kami memberikan pengguna panduan langkah <br /> demi
+            langkah untuk memasak makanan sehat dengan <br /> informasi nutrisi
+            yang lengkap, memungkinkan mereka <br />
+            untuk mencatat dan menganalisis asupan gizi harian, serta <br />
+            memberikan pelajaran tentang nilai gizi dan keterampilan <br />
+            memasak dasar.{" "}
+          </p>
+          <a className="link link-hover font-semibold text-lg text-black">
+            Panduan Informasi
+          </a>
+          <a className="link link-hover font-medium">Panduan Pengguna</a>
+          <a className="link link-hover font-medium">Tentang kami</a>
+          <a className="link link-hover font-medium">Kontak & Dukungan</a>
+          <a className="link link-hover font-medium">FAQ's</a>
+          <p className="text-black font-semibold">
+            © Eternal Light 2023. Hak Cipta Dilindungi
+          </p>
         </nav>
         <nav>
-          <header className="footer-title">Company</header>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <header className=" font-semibold text-lg text-black">
+            Kontak Kami
+          </header>{" "}
+          <div>
+            <p className="font-semibold text-black">Hotline</p>
+            <p>Jalan Peta No 17, Bandung, Jawa Barat, Indonesia</p>
+          </div>
+          <div>
+            {" "}
+            <p className="font-semibold text-black">Alamat</p>
+            <p> eternallight@gmail.com</p>
+          </div>
+          <div>
+            {" "}
+            <p className="font-semibold text-black">Email</p>
+            <p>+628-175-150-235</p>
+          </div>
         </nav>
         <nav>
           <header className="footer-title">Social</header>
