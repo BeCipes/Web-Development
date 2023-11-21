@@ -23,7 +23,7 @@ const GridBeranda = () => {
             <p className="text-white mb-4 text-center">
               Rasakan manfaat kesehatan yang akan Anda dapatkan dengan memilih makanan sehat. Kami selalu siap mendengar dari Anda dan memberikan dukungan yang Anda butuhkan.
             </p>
-            <button className="btn bg-grab border-none rounded-3xl px-10 text-black ">Kontak&Dukungan</button>
+            <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam ">Kontak&Dukungan</button>
           </div>
         </div>
 
@@ -46,7 +46,7 @@ const GridBeranda = () => {
             <p className="text-white mb-4 text-center">
               Bergabunglah dengan kami dalam perjalanan menuju gaya hidup yang lebih sehat dan nikmat dengan resep-resep terbaik dari Healty Food Recipes.
             </p>
-            <button className="btn bg-grab border-none rounded-3xl px-10 text-black">Download Aplikasi</button>
+            <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">Download Aplikasi</button>
           </div>
         </div>
       </div>

@@ -18,7 +18,7 @@ const CarouselBeranda = () => {
               Baik untuk kesehatan mata, berfungsi sebagaiantioksidan yang baik untuk kesehatan mata, dan mencerahkan kulit, membantu mencegah kulit keriput dan penuaan dini.
             </p>
             <div className="card-actions justify-end">
-              <button className="btn bg-grab border-none rounded-3xl px-10 text-black">Resep</button>
+              <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">Resep</button>
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@ const CarouselBeranda = () => {
               Brokoli mengandung kandungan yang bermanfaar untuk kesehatan. Ini karena kaya akan beragam vitamin, mineral, serat, dan senyawa bioaktif lainnya yang dibutuhkan oleh tubuh.
             </p>
             <div className="card-actions justify-end">
-              <button className="btn bg-grab border-none rounded-3xl px-10 text-black">Resep</button>
+              <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">Resep</button>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ const CarouselBeranda = () => {
               Kol ungu bermanfaat untuk pengurangan peradangan, jantung yang lebih sehat, tulang yang lebih kuat, fungsi usus yang lebih baik, dan bahkan risiko kanker yang lebih rendah.
             </p>
             <div className="card-actions justify-end">
-              <button className="btn bg-grab border-none rounded-3xl px-10 text-black">Resep</button>
+              <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">Resep</button>
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@ const CarouselBeranda = () => {
           </div>
         </div>
         <div className="absolute top-1/2 transform -translate-y-1/2 right-0">
-          <a href="#slide8" className="btn btn-circle text-black bg-white border-none hover:bg-white">
+          <a href="#slide8" className="btn btn-circle text-hitam bg-white border-none hover:bg-white">
             ❯
           </a>
         </div>
@@ -107,12 +107,12 @@ const CarouselBeranda = () => {
               Baik untuk kesehatan mata, berfungsi sebagaiantioksidan yang baik untuk kesehatan mata, dan mencerahkan kulit, membantu mencegah kulit keriput dan penuaan dini.
             </p>
             <div className="card-actions justify-end">
-              <button className="btn bg-grab border-none rounded-3xl px-10 text-black">Resep</button>
+              <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">Resep</button>
             </div>
           </div>
         </div>
         <div className="absolute top-1/2 transform -translate-y-1/2 left-0">
-          <a href="#slide1" className="btn btn-circle text-black bg-white border-none hover:bg-white">
+          <a href="#slide1" className="btn btn-circle text-hitam bg-white border-none hover:bg-white">
             ❮
           </a>
         </div>
@@ -133,7 +133,7 @@ const CarouselBeranda = () => {
               Brokoli mengandung kandungan yang bermanfaar untuk kesehatan. Ini karena kaya akan beragam vitamin, mineral, serat, dan senyawa bioaktif lainnya yang dibutuhkan oleh tubuh.
             </p>
             <div className="card-actions justify-end">
-              <button className="btn bg-grab border-none rounded-3xl px-10 text-black">Resep</button>
+              <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">Resep</button>
             </div>
           </div>
         </div>
@@ -154,7 +154,7 @@ const CarouselBeranda = () => {
               Kol ungu bermanfaat untuk pengurangan peradangan, jantung yang lebih sehat, tulang yang lebih kuat, fungsi usus yang lebih baik, dan bahkan risiko kanker yang lebih rendah.
             </p>
             <div className="card-actions justify-end">
-              <button className="btn bg-grab border-none rounded-3xl px-10 text-black">Resep</button>
+              <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">Resep</button>
             </div>
           </div>
         </div>
@@ -175,12 +175,12 @@ const CarouselBeranda = () => {
              Banana Pancake merupakan camilan sehat favorit keluarga. Cara membuat pancake pisang sederhana dengan resep yang mudah didapat.
             </p>
             <div className="card-actions justify-end">
-              <button className="btn bg-grab border-none rounded-3xl px-10 text-black">Resep</button>
+              <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">Resep</button>
             </div>
           </div>
         </div>
         <div className="absolute top-1/2 transform -translate-y-1/2 right-0">
-          <a href="#slide12" className="btn btn-circle text-black bg-white border-none hover:bg-white">
+          <a href="#slide12" className="btn btn-circle text-hitam bg-white border-none hover:bg-white">
             ❯
           </a>
         </div>
@@ -201,12 +201,12 @@ const CarouselBeranda = () => {
               Kol ungu bermanfaat untuk pengurangan peradangan, jantung yang lebih sehat, tulang yang lebih kuat, fungsi usus yang lebih baik, dan bahkan risiko kanker yang lebih rendah.
             </p>
             <div className="card-actions justify-end">
-              <button className="btn bg-grab border-none rounded-3xl px-10 text-black">Resep</button>
+              <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">Resep</button>
             </div>
           </div>
         </div>
         <div className="absolute top-1/2 transform -translate-y-1/2 left-0">
-          <a href="#slide5" className="btn btn-circle text-black bg-white border-none hover:bg-white">
+          <a href="#slide5" className="btn btn-circle text-hitam bg-white border-none hover:bg-white">
             ❮
           </a>
         </div>
@@ -227,7 +227,7 @@ const CarouselBeranda = () => {
               Baik untuk kesehatan mata, berfungsi sebagaiantioksidan yang baik untuk kesehatan mata, dan mencerahkan kulit, membantu mencegah kulit keriput dan penuaan dini.
             </p>
             <div className="card-actions justify-end">
-              <button className="btn bg-grab border-none rounded-3xl px-10 text-black">Resep</button>
+              <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">Resep</button>
             </div>
           </div>
         </div>
@@ -248,7 +248,7 @@ const CarouselBeranda = () => {
               Baik untuk kesehatan mata, berfungsi sebagaiantioksidan yang baik untuk kesehatan mata, dan mencerahkan kulit, membantu mencegah kulit keriput dan penuaan dini.
             </p>
             <div className="card-actions justify-end">
-              <button className="btn bg-grab border-none rounded-3xl px-10 text-black">Resep</button>
+              <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">Resep</button>
             </div>
           </div>
         </div>
@@ -269,7 +269,7 @@ const CarouselBeranda = () => {
               Salad Caesar merupakan camilan sehat favorit keluarga. Cara membuat salad caesar sederhana dengan resep yang mudah didapat.
             </p>
             <div className="card-actions justify-end">
-              <button className="btn bg-grab border-none rounded-3xl px-10 text-black">Resep</button>
+              <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">Resep</button>
             </div>
           </div>
         </div>
