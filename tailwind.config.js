@@ -13,7 +13,7 @@ export default {
         '128': '32rem',
       },
       colors: {
-        primary: "#7DA557",
+        primary: "#79E918",
         grab: "#6FC81F",
         secondary: {
           100: "#A1C086",

@@ -89,47 +89,51 @@ const ContactUs = () => {
         <h2 className=" flex justify-center mt-5 font-medium font-poppins text-2x1 text-label text-black">Masukkan Kritik dan Saran Untuk Pengembangan Aplikasi  yang Lebih Baik.</h2>
 
       </div>
-      <div className="mx-2" >
+      <div className="mx-2">
         < div className="container md:mx-auto md:mt-15 mt-5 bg-white round-lg shadow-lg p-5 pb-5" >
 
           < div className="md:grid grid-cols-2 gap-5 mt-4 font-bold" >
             < div >
               < label > Nama Depan </ label >
               < input
-                className="border-2 md:mt-2 w-full round-md h-10 pl-2 kursor-pointer font-thin focus:outline-none"
-                ketik="teks"
+                className="border-2 border-primary md:mt-2 w-full rounded h-10 pl-2 cursor-pointer font-thin focus:outline-none"
+                placeholder="teks" type="text"
               />
 
             </ div >
 
             < div >
               < label > Nama Belakang </ label >
-              < masukan
-                className="border-2 md:mt-2 w-full round-md h-10 pl-2 kursor-pointer font-thin focus: outline-none"
-                type="teks"
+              < input
+                className="border-2 border-primary md:mt-2 w-full rounded h-10 pl-2 cursor-pointer font-thin focus: outline-none"
+                placeholder="teks" type="text"
               />
             </ div >
+
+
             < div >
               < label > No Ponsel </ label >
               < input
-                className="border-2 md:mt-2 w-bulat penuh -md h-10 pr-2 pl-2 penunjuk kursor font-fokus tipis: garis besar-tidak ada"
-                type="angka"
+                className="border-2 border-primary md:mt-2 w-full rounded h-10 pl-2 cursor-pointer font-thin focus:outline-none"
+                type="number" placeholder="0812 1234 1234"
               />
             </ div >
             < div >
               < label > Email </ label >
-              < masukan
-                nama kelas=" border-2 md:mt-2 w-penuh -md h-10 pl-2 penunjuk kursor fokus tipis font:outline-none"
-                type="text"
+              < input
+                className="border-2 border-primary md:mt-2 w-full rounded h-10 pl-2 cursor-pointer font-thin focus:outline-none"
+                type="text" placeholder="youremail@mail.com"
               />
             </ div >
+
             < div className="col-span-2" >
               < label > Pesan </ label >
               < textarea
-                className="border-2 md:mt-2 w- penuh bulat-md pl-2 pt-2 penunjuk kursor font-tipis fokus:garis besar-tidak ada"
-                baris="4"
+                className="border-2 border-primary md:mt-2 w-full h-32 p-2 rounded h-10 pl-2 cursor-pointer font-thin focus:outline-none"
+                rows="4" cols={50} placeholder="Tulis pesan anda disini"
               > </textarea >
             </ div >
+
             < div className="col-span-2" >
               < button type="button" className="btn btn-rounded btn-dark px-md-5 mt-1 tombol3 rounded-full px-5 py-1 text-black" style={{ backgroundColor: '#79E018', fontWeight: 'bolder', fontFamily: 'poppins', witdth: '80px' }}>
                 Kirim Pesan
