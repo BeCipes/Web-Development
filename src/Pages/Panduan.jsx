@@ -22,7 +22,7 @@ const Panduan = () => {
           <div className="flex justify-star -z-50 flex-col text-justify lg:flex-row">
             <img src="public/assets/bowl2.png" className="max-w-sm ml-10 w-1/5 mt-5" />
             <div className="mt-16 mr-56 w-3/4">
-              <p className="py-8 text-lg mr-56 ml-16 text-hitam">Tapi guys, hidup sehat bukan berarti hanya mengkonsumsi makanan sehat saja, sesekali imbangi dengan olahraga ringan paling tidak 10 menit setiap harinya. Mengatur pola makan yang seimbang dan sesuai takaran tentu tidak mudah, apalagi di era yang erat dengan junk food, fast food ini lebih praktis dan enak karena mengandung banyak MSG atau penyedap lainnya sehingga banyak dikonsumsi baik remaja hingga orang tua. Jadi tunggu apa lagi? Mulailah gaya hidup sehat Anda sekarang.</p>
+              <p className="py-8 text-lg mr-56 ml-16 mt-5 text-hitam">Tapi guys, hidup sehat bukan berarti hanya mengkonsumsi makanan sehat saja, sesekali imbangi dengan olahraga ringan paling tidak 10 menit setiap harinya. Mengatur pola makan yang seimbang dan sesuai takaran tentu tidak mudah, apalagi di era yang erat dengan junk food, fast food ini lebih praktis dan enak karena mengandung banyak MSG atau penyedap lainnya sehingga banyak dikonsumsi baik remaja hingga orang tua. Jadi tunggu apa lagi? Mulailah gaya hidup sehat Anda sekarang.</p>
             </div>
           </div>
         </div>
@@ -54,7 +54,7 @@ const Panduan = () => {
               <FaApple className="mr-2" /> App Store
             </a>
             <a href="link/to/playstore" target="_blank" rel="noopener noreferrer" className="bg-hitam text-white px-4 py-2 rounded-full flex items-center justify-center hover:bg-gray-950 transition duration-300">
-              <FaGooglePlay className="mr-2" /> Play Store
+              <FaGooglePlay className="mr-2" /> Google Play
             </a>
           </div>
         </div>
