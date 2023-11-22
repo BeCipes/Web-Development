@@ -27,11 +27,11 @@ const Default = () => {
             </p>
             <div className="mt-4 font-semibold ">
               <a href="/beranda">
-                <button className="bg-grab rounded-full px-5 py-1 hover:bg-slate-100 ">
+                <button className="bg-grab rounded-full px-5 py-1 hover:bg-gray-100 ">
                   Beranda
                 </button>
               </a>
-              <button className="bg-grab rounded-full ml-5 px-4 py-1 hover:bg-slate-100">
+              <button className="bg-grab rounded-full ml-5 px-4 py-1 hover:bg-gray-100">
                 App
               </button>
             </div>
@@ -144,10 +144,10 @@ const Default = () => {
           <h1 className="mb-5 text-4xl font-bold text-white w-1/2 mx-auto">
             Yuk andalkan daftar menu makanan sehat dan bergizi setiap hari.
           </h1>
-          <button className="btn bg-grab border-none hover:bg-primary rounded-3xl px-5 mr-5 font-semibold">
+          <button className="btn bg-grab border-none hover:bg-gray-100 rounded-3xl px-5 mr-5 font-semibold">
             Beranda
           </button>{" "}
-          <button className="btn bg-grab border-none hover:bg-primary rounded-3xl px-5 w-[94px] font-semibold">
+          <button className="btn bg-grab border-none hover:bg-gray-100 rounded-3xl px-5 w-[94px] font-semibold">
             App
           </button>
         </div>

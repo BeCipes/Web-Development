@@ -15,16 +15,16 @@ const Footer = () => {
             memasak dasar.{" "}
           </p>
           <a className="font-semibold text-lg text-black">Panduan Informasi</a>
-          <a href="/panduan" className=" font-medium">
+          <a href="/panduan" className=" font-medium hover:text-white">
             Panduan Pengguna
           </a>
-          <a href="/about" className=" font-medium">
+          <a href="/about" className=" font-medium hover:text-white ">
             Tentang kami
           </a>
-          <a href="/contact" className=" font-medium">
+          <a href="/contact" className=" font-medium hover:text-white">
             Kontak & Dukungan
           </a>
-          <a href="/panduan" className=" font-medium">
+          <a href="/panduan" className=" font-medium hover:text-white">
             FAQ's
           </a>
           <p className="text-black font-semibold">

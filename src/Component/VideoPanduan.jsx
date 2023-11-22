@@ -1,10 +1,11 @@
 // src/YoutubeVideo.js
-import React from 'react';
+import React from "react";
 
 const VideoPanduan = ({ videoId }) => {
   return (
     <div className="w-full max-w-2xl mx-auto">
       <iframe
+        className="rounded-xl"
         width="100%"
         height="315"
         src={`https://www.youtube.com/embed/${videoId}`}

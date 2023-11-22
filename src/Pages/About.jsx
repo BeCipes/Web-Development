@@ -1,16 +1,15 @@
 import Navbar from "../Component/Navbar";
+import Footer from "../Component/Footer";
 
 const About = () => {
   return (
-    <div className="Poppins">
+    <div className="">
       <Navbar />
 
       <div className="flex w-full items-center justify-center flex-col pt-24  pb-24">
         <div className="flex items-center justify-center w-full ">
           <div className="text-center w-1/2 px-20 text-black">
-            <h2 className="text-3xl font-poppins mt-5 font-semibold">
-              Visi & Misi
-            </h2>
+            <h2 className="text-3xl  mt-5 font-semibold">Visi & Misi</h2>
             <h3 className=" mt-5">
               Kami menyediakan panduan untuk optimalisasi aplikasi mobile,
               informasi mendalam tentang pola makan seimbang, resep makanan
@@ -30,9 +29,11 @@ const About = () => {
               keterampilan dasar memasak.
             </h3>
             <h2 className="">Kapanpun, Dimanapun.</h2>
-            <button className=" bg-grab mt-7 rounded-full px-5 py-5 text-black">
-              Panduan Pengguna
-            </button>
+            <a href="/panduan">
+              <button className=" bg-grab hover:bg-slate-100 mt-7 rounded-full px-5 py-3 text-black">
+                Panduan Pengguna
+              </button>
+            </a>
           </div>
           <div className="w-1/2 flex-1  pl-40">
             <img
@@ -50,10 +51,8 @@ const About = () => {
             <img src="public/assets/community.jpg" alt="community" />
           </div>
           <div className="text-center flex-1 text-white w-1/2 px-10">
-            <h2 className="text-3xl font-poppins mt-5 font-semibold">
-              Cerita Kami
-            </h2>
-            <h3 className="font-poppins mt-5">
+            <h2 className="text-3xl  mt-5 font-semibold">Cerita Kami</h2>
+            <h3 className=" mt-5">
               Di sebuah dunia digital yang penuh dengan tantangan kesehatan dan
               kebutuhan untuk hidup lebih sehat, kami, sebagai sebuah tim
               berkomitmen, memiliki visi besar. Kami ingin menjadi pilar utama
@@ -62,17 +61,15 @@ const About = () => {
               menyusun panduan yang rinci untuk mengoptimalkan penggunaan
               aplikasi mobile, memberikan informasi mendalam tentang pola makan
               seimbang, serta berbagi resep makanan sehat dan manfaat kesehatan
-              yang dapat dicapai melalui kebiasaan makan yang tepat.
+              yang dapat dicapai melalui kebiasaan makan yang tepat. Kapanpun,
+              Dimanapun.
             </h3>
-            <h2 className="font-poppins">Kapanpun. Dimanapun</h2>
           </div>
         </div>
       </div>
 
       <div className="text-center text-black justify-center mt-20 ">
-        <h1 className="text-3xl font-poppins mt-5 font-semibold">
-          Tim Developer
-        </h1>
+        <h1 className="text-3xl  mt-5 font-semibold">Tim Developer</h1>
       </div>
 
       <div
@@ -199,6 +196,7 @@ const About = () => {
           />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
