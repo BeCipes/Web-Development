@@ -144,9 +144,11 @@ const Default = () => {
           <h1 className="mb-5 text-4xl font-bold text-white w-1/2 mx-auto">
             Yuk andalkan daftar menu makanan sehat dan bergizi setiap hari.
           </h1>
-          <button className="btn bg-grab border-none hover:bg-gray-100 rounded-3xl px-5 mr-5 font-semibold">
-            Beranda
-          </button>{" "}
+          <a href="/beranda">
+            <button className="btn bg-grab border-none hover:bg-gray-100 rounded-3xl px-5 mr-5 font-semibold">
+              Beranda
+            </button>{" "}
+          </a>
           <button className="btn bg-grab border-none hover:bg-gray-100 rounded-3xl px-5 w-[94px] font-semibold">
             App
           </button>
