@@ -1,4 +1,5 @@
 import Navbar from "../Component/Navbar";
+import Footer from "../Component/Footer";
 
 const ContactUs = () => {
   return (
@@ -182,6 +183,10 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="mt-20">
+        <Footer/>
       </div>
     </div>
   );
