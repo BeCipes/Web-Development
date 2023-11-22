@@ -159,7 +159,7 @@ const ContactUs = () => {
             <div className="col-span-2">
               <label> Pesan </label>
               <textarea
-                className="border-2 border-primary md:mt-2 w-full h-32 p-2 rounded h-10 pl-2 cursor-pointer font-thin focus:outline-none"
+                className="border-2 border-primary md:mt-2 w-full  p-2 rounded h-10 pl-2 cursor-pointer font-thin focus:outline-none"
                 rows="4"
                 cols={50}
                 placeholder="Tulis pesan anda disini"
