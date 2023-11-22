@@ -8,8 +8,12 @@ const ContactUs = () => {
       <div className="py-5 relative h-128">
         <div className="flex items-center justify-center w-full h-full">
           <div className="w-1/2 px-40">
-            <h2 className="text-3xl  mt-5 font-semibold text-hitam">Hubungi Kami</h2>
-            <h2 className=" mt-5 font-medium text-hitam">Silahkan Hubungi Kami Secara Nyaman</h2>
+            <h2 className="text-3xl  mt-5 font-semibold text-hitam">
+              Hubungi Kami
+            </h2>
+            <h2 className=" mt-5 font-medium text-hitam">
+              Silahkan Hubungi Kami Secara Nyaman
+            </h2>
             <h2 className=" font-medium text-hitam">Kapanpun. Dimanapun</h2>
           </div>
           <div className="w-1/2 flex-1 flex justify-center">
@@ -20,7 +24,7 @@ const ContactUs = () => {
           </div>
         </div>
         <img
-          className="w-48 -right-8 top-10 absolute"
+          className="w-48 right-0 top-10 absolute"
           src="public/assets/blueberry.png"
         />
       </div>
@@ -29,7 +33,7 @@ const ContactUs = () => {
           className="flex flex-col flex-1 gap-y-3 p-10 m-10 rounded-lg"
           style={{ backgroundColor: "#79E018" }}
         >
-          <img className="w-12 mx-auto" src="public/assets/alamat.png" />
+          <img className="w-8 mx-auto" src="public/assets/alamat.png" />
           <h2 className="font-bold">
             <center>Alamat</center>
           </h2>
@@ -42,7 +46,7 @@ const ContactUs = () => {
           className="flex flex-col flex-1 gap-y-3 p-10 m-10 rounded-lg"
           style={{ backgroundColor: "#79E018" }}
         >
-          <img className="w-20 mx-auto" src="public/assets/hotline.png" />
+          <img className="w-14 mx-auto" src="public/assets/hotline.png" />
           <h2 className="font-bold">
             <center>Hotline</center>
           </h2>
@@ -52,8 +56,8 @@ const ContactUs = () => {
           className="flex flex-col flex-1 gap-y-3 p-10 m-10 rounded-lg"
           style={{ backgroundColor: "#79E018" }}
         >
-          <img className="w-20 mx-auto" src="public/assets/email.png" />
-          <h2 className="font-bold">
+          <img className="w-12 mx-auto" src="public/assets/email.png" />
+          <h2 className="font-bold ">
             <center>Email</center>
           </h2>
           <p>eternallight@gmail.com</p>
@@ -61,19 +65,19 @@ const ContactUs = () => {
       </div>
       <div className="flex justify-center">
         <img
-          className="flex justify-center p-5 m-5"
+          className="flex justify-center p-5 m-5 w-24 h-24 "
           src="public/assets/fb.png"
         />
         <img
-          className="flex justify-center p-5 m-5"
+          className="flex justify-center p-5 m-5 w-24 h-24 "
           src="public/assets/twitter.png"
         />
         <img
-          className="flex justify-center p-5 m-5"
+          className="flex justify-center p-5 m-5 w-24 h-24 "
           src="public/assets/instagram.png"
         />
         <img
-          className="flex justify-center p-5 m-5"
+          className="flex justify-center p-5 m-5 w-24 h-24 "
           src="public/assets/wa.png"
         />
       </div>
@@ -186,7 +190,7 @@ const ContactUs = () => {
       </div>
 
       <div className="mt-20">
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );
