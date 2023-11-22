@@ -7,13 +7,9 @@ const ContactUs = () => {
       <div className="py-5 relative h-128">
         <div className="flex items-center justify-center w-full h-full">
           <div className="w-1/2 px-40">
-            <h2 className="text-3xl font-poppins mt-5 font-semibold">
-              Hubungi Kami
-            </h2>
-            <h2 className="font-poppins">
-              Silahkan Hubungi Kami Secara Nyaman
-            </h2>
-            <h2 className="font-poppins">Kapanpun. Dimanapun</h2>
+            <h2 className="text-3xl  mt-5 font-semibold">Hubungi Kami</h2>
+            <h2 className="">Silahkan Hubungi Kami Secara Nyaman</h2>
+            <h2 className="">Kapanpun. Dimanapun</h2>
           </div>
           <div className="w-1/2 flex-1 flex justify-center">
             <img
@@ -23,8 +19,8 @@ const ContactUs = () => {
           </div>
         </div>
         <img
-          className="w-32 right-0 top-10 absolute"
-          src="public/assets/cherry.png"
+          className="w-48 -right-8 top-10 absolute"
+          src="public/assets/blueberry.png"
         />
       </div>
       <div className="w-3/4 mx-auto flex justify-center text-center">
@@ -88,25 +84,24 @@ const ContactUs = () => {
           />
         </div>
         <div className="flex flex-col flex-1 text-center h-96 gap-y-10 bg-black justify-center">
-          <h2 className="text-3xl font-poppins font-bold text-white">
+          <h2 className="text-3xl  font-bold text-white">
             Masih memiliki pertanyaan?
           </h2>
-          <h1 className="font-medium font-poppins text-2x1 text-label text-white">
+          <h1 className="font-medium  text-2x1 text-label text-white">
             Kami punya semua jawaban yang Anda butuhkan di menu Panduan
             Pengguna.
           </h1>
           <a href="#">
             <button
               type="button"
-              className="btn btn-rounded btn-dark px-md-5 mt-1 tombol3 rounded-full px-5 py-1 text-black"
+              className="btn btn-rounded bg-grab px-md-5 mt-1 tombol3 rounded-full px-5 py-1 text-black border-none hover:bg-white hover:text-white"
               style={{
                 backgroundColor: "#79E018",
-                fontWeight: "bolder",
-                fontFamily: "poppins",
+
                 witdth: "80px",
               }}
             >
-              Panduan Pengguna
+              <p>Panduan Pengguna</p>
             </button>
           </a>
         </div>
@@ -115,10 +110,10 @@ const ContactUs = () => {
       <div>
         <div className="flex justify-center"></div>
         <div className="w-1/2 px-40"></div>
-        <h3 className="flex justify-center text-3xl font-poppins mt-5 font-bold text-black">
+        <h3 className="flex justify-center text-3xl  mt-5 font-bold text-black">
           Kirimi Kami Pesan
         </h3>
-        <h2 className=" flex justify-center mt-5 font-medium font-poppins text-2x1 text-label text-black">
+        <h2 className=" flex justify-center mt-5 font-medium  text-2x1 text-label text-black">
           Masukkan Kritik dan Saran Untuk Pengembangan Aplikasi yang Lebih Baik.
         </h2>
       </div>
@@ -178,12 +173,11 @@ const ContactUs = () => {
                 className="btn btn-rounded btn-dark px-md-5 mt-1 tombol3 rounded-full px-5 py-1 text-black"
                 style={{
                   backgroundColor: "#79E018",
-                  fontWeight: "bolder",
-                  fontFamily: "poppins",
+
                   witdth: "80px",
                 }}
               >
-                Kirim Pesan
+                <p>Kirim Pesan</p>
               </button>
             </div>
           </div>
