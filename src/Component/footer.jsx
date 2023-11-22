@@ -14,13 +14,19 @@ const Footer = () => {
             memberikan pelajaran tentang nilai gizi dan keterampilan <br />
             memasak dasar.{" "}
           </p>
-          <a className="link link-hover font-semibold text-lg text-black">
-            Panduan Informasi
+          <a className="font-semibold text-lg text-black">Panduan Informasi</a>
+          <a href="/panduan" className=" font-medium">
+            Panduan Pengguna
           </a>
-          <a className="link link-hover font-medium">Panduan Pengguna</a>
-          <a className="link link-hover font-medium">Tentang kami</a>
-          <a className="link link-hover font-medium">Kontak & Dukungan</a>
-          <a className="link link-hover font-medium">FAQ's</a>
+          <a href="/about" className=" font-medium">
+            Tentang kami
+          </a>
+          <a href="/contact" className=" font-medium">
+            Kontak & Dukungan
+          </a>
+          <a href="/panduan" className=" font-medium">
+            FAQ's
+          </a>
           <p className="text-black font-semibold">
             © Eternal Light 2023. Hak Cipta Dilindungi
           </p>

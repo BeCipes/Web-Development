@@ -10,9 +10,12 @@ export default {
       circle: 'circle',
     },
     daisyui: {
-      themes: ["light"]
+      themes: ["light"],
     },
     extend: {
+      animation: {
+        "spin-slow": "spin 3s linear infinite",
+      },
       fontFamily: {
         poppins: ["Poppins"],
       },

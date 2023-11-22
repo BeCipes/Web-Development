@@ -78,12 +78,8 @@ const Navbar = () => {
         <div className="flex items-center flex-1">
           <Link spy={true} smooth={true} to="/">
             <span className="text-2xl font-bold flex items-center ">
-              <img
-                src="public/assets/gocipes.png"
-                className="w-8 h-auto"
-                alt=""
-              />
-              <span className="ml-2 hover:text-white">GoCipes</span>
+              <RiHealthBookLine />
+              <span className="ml-2">GoCipes</span>
             </span>
           </Link>
         </div>

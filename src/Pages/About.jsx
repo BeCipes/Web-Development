@@ -8,7 +8,9 @@ const About = () => {
       <div className="flex w-full items-center justify-center flex-col pt-24  pb-24">
         <div className="flex items-center justify-center w-full ">
           <div className="text-center w-1/2 px-20 text-black">
-            <h2 className="text-3xl  mt-5 font-semibold">Visi & Misi</h2>
+            <h2 className="text-3xl font-poppins mt-5 font-semibold">
+              Visi & Misi
+            </h2>
             <h3 className=" mt-5">
               Kami menyediakan panduan untuk optimalisasi aplikasi mobile,
               informasi mendalam tentang pola makan seimbang, resep makanan
