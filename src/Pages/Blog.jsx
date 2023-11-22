@@ -250,10 +250,14 @@ const Blog = () => {
         </h3>
         <div className="column-2 flex justify-between px-24 mt-24">
           <div className="bg-hitam w-[500px] h-[700px] px-40 py-20 rounded-xl">
-            {" "}
+            <img
+              className="animate-spin-slow  -ml-56 -mt-28 "
+              src="public/assets/bunga.png"
+              alt=""
+            />{" "}
             <img
               src="public/assets/profile.jpg"
-              className="rounded-full w-[100px] h-[100px] -ml-36"
+              className="rounded-full w-[100px] h-[100px] animate-spin -ml-36"
               alt=""
             />{" "}
             <p className="text-white -ml-[367px] mt-5 text-center">
@@ -267,16 +271,16 @@ const Blog = () => {
               sehingga bisa membuat saya tidak lupa langkah-langkah memasak
               sambil menelepon”
             </div>
-          </div>
-
-          <div className="w-96 h-auto py-20">
-            {" "}
-            <img src="public/assets/flower.svg"></img>{" "}
             <img
-              className="animate-spin-slow"
+              className="animate-spin-slow  ml-56 py-4 "
               src="public/assets/bunga.png"
               alt=""
             />
+          </div>
+
+          <div className="w-96 h-auto py-32">
+            {" "}
+            <img src="public/assets/flower.svg"></img>{" "}
           </div>
         </div>
       </div>

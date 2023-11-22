@@ -18,7 +18,7 @@ const Footer = () => {
           <a href="/panduan" className=" font-medium">
             Panduan Pengguna
           </a>
-          <a href="" className=" font-medium">
+          <a href="/about" className=" font-medium">
             Tentang kami
           </a>
           <a href="/contact" className=" font-medium">

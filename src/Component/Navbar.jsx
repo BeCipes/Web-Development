@@ -76,10 +76,10 @@ const Navbar = () => {
     >
       <div className="h-10vh flex justify-between z-50 text-black lg:py-5 px-10 py-4 ">
         <div className="flex items-center flex-1">
-          <Link spy={true} smooth={true} to="/beranda">
+          <Link spy={true} smooth={true} to="/">
             <span className="text-2xl font-bold flex items-center ">
               <RiHealthBookLine />
-              <span className="ml-2">Healty Food</span>
+              <span className="ml-2">GoCipes</span>
             </span>
           </Link>
         </div>
