@@ -8,9 +8,9 @@ const ContactUs = () => {
       <div className="py-5 relative h-128">
         <div className="flex items-center justify-center w-full h-full">
           <div className="w-1/2 px-40">
-            <h2 className="text-3xl  mt-5 font-semibold">Hubungi Kami</h2>
-            <h2 className="">Silahkan Hubungi Kami Secara Nyaman</h2>
-            <h2 className="">Kapanpun. Dimanapun</h2>
+            <h2 className="text-3xl  mt-5 font-semibold text-hitam">Hubungi Kami</h2>
+            <h2 className=" mt-5 font-medium text-hitam">Silahkan Hubungi Kami Secara Nyaman</h2>
+            <h2 className=" font-medium text-hitam">Kapanpun. Dimanapun</h2>
           </div>
           <div className="w-1/2 flex-1 flex justify-center">
             <img
@@ -26,7 +26,7 @@ const ContactUs = () => {
       </div>
       <div className="w-3/4 mx-auto flex justify-center text-center">
         <div
-          className="flex flex-col flex-1 gap-y-3 p-10 m-10"
+          className="flex flex-col flex-1 gap-y-3 p-10 m-10 rounded-lg"
           style={{ backgroundColor: "#79E018" }}
         >
           <img className="w-12 mx-auto" src="public/assets/alamat.png" />
@@ -39,7 +39,7 @@ const ContactUs = () => {
           </p>
         </div>
         <div
-          className="flex flex-col flex-1 gap-y-3 p-10 m-10"
+          className="flex flex-col flex-1 gap-y-3 p-10 m-10 rounded-lg"
           style={{ backgroundColor: "#79E018" }}
         >
           <img className="w-20 mx-auto" src="public/assets/hotline.png" />
@@ -49,7 +49,7 @@ const ContactUs = () => {
           <p>+628-175-150-235</p>
         </div>
         <div
-          className="flex flex-col flex-1 gap-y-3 p-10 m-10"
+          className="flex flex-col flex-1 gap-y-3 p-10 m-10 rounded-lg"
           style={{ backgroundColor: "#79E018" }}
         >
           <img className="w-20 mx-auto" src="public/assets/email.png" />
@@ -81,7 +81,7 @@ const ContactUs = () => {
         <div className="flex-1 h-full">
           <img
             className="w-full h-96 object-cover object-center"
-            src="public/assets/homemade-salad.jpg"
+            src="public/assets/homemade-salad.png"
           />
         </div>
         <div className="flex flex-col flex-1 text-center h-96 gap-y-10 bg-black justify-center">
@@ -95,7 +95,7 @@ const ContactUs = () => {
           <a href="#">
             <button
               type="button"
-              className="btn btn-rounded bg-grab px-md-5 mt-1 tombol3 rounded-full px-5 py-1 text-black border-none hover:bg-white hover:text-white"
+              className="btn rounded-3xl bg-grab px-md-5 mt-1  px-5 py-1 text-black border-none hover:bg-gray-100"
               style={{
                 backgroundColor: "#79E018",
 
@@ -111,7 +111,7 @@ const ContactUs = () => {
       <div>
         <div className="flex justify-center"></div>
         <div className="w-1/2 px-40"></div>
-        <h3 className="flex justify-center text-3xl  mt-5 font-bold text-black">
+        <h3 className="flex justify-center text-3xl  mt-10 font-bold text-black">
           Kirimi Kami Pesan
         </h3>
         <h2 className=" flex justify-center mt-5 font-medium  text-2x1 text-label text-black">

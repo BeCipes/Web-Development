@@ -8,7 +8,7 @@ const Beranda = () => {
     <div className="Poppins">
       <Navbar />
       <div className="hero">
-        <div className="hero-content -z-50 flex-col text-center lg:flex-row-reverse">
+        <div className="hero-content -z-0 flex-col text-center lg:flex-row-reverse">
           <img
             src="public/assets/home1.jpg"
             className="max-w-sm rounded-full mx-10 mt-10"
@@ -21,11 +21,7 @@ const Beranda = () => {
               Tempat inspirasi dan kreasi dalam memasak makanan sehat. <br />
               Mari mulai menjelajahi dunia kuliner kami.
             </p>
-            <a href="/blog">
-              <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam ">
-                Blog
-              </button>
-            </a>
+            <a href="/Blog"><button className="rounded-3xl bg-grab px-10 h-10 text-semibold hover:bg-gray-100 text-hitam">Blog</button></a>
           </div>
         </div>
       </div>
@@ -47,7 +43,7 @@ const Beranda = () => {
               baik.
             </p>
             <a href="">
-              <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+              <button className="btn bg-grab hover:bg-gray-100 border-none rounded-3xl px-10 text-hitam">
                 Landing Page
               </button>
             </a>
