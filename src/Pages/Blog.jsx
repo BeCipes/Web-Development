@@ -1,4 +1,5 @@
 import Navbar from "../Component/Navbar";
+import Footer from "../Component/Footer";
 
 const Blog = () => {
   return (
@@ -11,7 +12,7 @@ const Blog = () => {
         <div className="py-12 ">
           <h2 className="font-semibold text-3xl text-center mb-28">Artikel</h2>
           {/* card1 */}
-          <div className=" columns-3 px-16 flex justify-between ">
+          <div className=" columns-3 px-16 flex justify-between">
             <div className="card w-64 bg-base-100 shadow-xl border">
               <figure>
                 <img src="public/assets/sayur.jpg" alt="Shoes" />
@@ -27,7 +28,9 @@ const Blog = () => {
                     href="https://www.sehatq.com/artikel/manfaat-sayuran-tak-ada-habisnya-ini-pentingnya-dikonsumsi-setiap-hari"
                     target="_blank"
                   >
-                    <div className="badge badge-outline">Selengkapnya</div>
+                    <div className="badge badge-outline h-8 hover:bg-gray-500 hover:text-white">
+                      Selengkapnya
+                    </div>
                   </a>
                 </div>
               </div>
@@ -51,7 +54,9 @@ const Blog = () => {
                       target="_blank"
                     >
                       {" "}
-                      <div className="badge badge-outline">Selengkapnya</div>
+                      <div className="badge badge-outline h-8 hover:bg-gray-500 hover:text-white">
+                        Selengkapnya
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -74,7 +79,9 @@ const Blog = () => {
                       href="https://yankes.kemkes.go.id/view_artikel/1755/tempe-makanan-sederhana-yang-bergizi"
                       target="_blank"
                     >
-                      <div className="badge badge-outline">Selengkapnya</div>
+                      <div className="badge badge-outline h-8 hover:bg-gray-500 hover:text-white">
+                        Selengkapnya
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -98,7 +105,9 @@ const Blog = () => {
                     href="https://ykpbankbjb.or.id/content/post/74/manfaat-yang-terkandung-dalam-sayuran-brokoli"
                     target="_blank"
                   >
-                    <div className="badge badge-outline">Selengkapnya</div>
+                    <div className="badge badge-outline h-8 hover:bg-gray-500 hover:text-white">
+                      Selengkapnya
+                    </div>
                   </a>
                 </div>
               </div>
@@ -121,7 +130,9 @@ const Blog = () => {
                       href="https://www.ayoindonesia.com/lifestyle/pr-012245094/melihat-foto-wanita-cantik-bermanfaat-bagi-kesehatan-otak"
                       target="_blank"
                     >
-                      <div className="badge badge-outline">Selengkapnya</div>
+                      <div className="badge badge-outline h-8 hover:bg-gray-500 hover:text-white">
+                        Selengkapnya
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -146,7 +157,9 @@ const Blog = () => {
                       href="https://hellosehat.com/nutrisi/fakta-gizi/pengertian-kalori/"
                       target="_blank"
                     >
-                      <div className="badge badge-outline">Selengkapnya</div>
+                      <div className="badge badge-outline h-8 hover:bg-gray-500 hover:text-white">
+                        Selengkapnya
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -170,7 +183,9 @@ const Blog = () => {
                     href="https://www.gooddoctor.co.id/hidup-sehat/nutrisi/buah-yang-harus-dihindari-saat-diet/"
                     target="_blank"
                   >
-                    <div className="badge badge-outline">Selengkapnya</div>
+                    <div className="badge badge-outline h-8 hover:bg-gray-500 hover:text-white">
+                      Selengkapnya
+                    </div>
                   </a>
                 </div>
               </div>
@@ -193,7 +208,9 @@ const Blog = () => {
                       href="https://www.gramedia.com/literasi/jenis-dan-manfaat-jamu-serta-penjelasannya/"
                       target="_blank"
                     >
-                      <div className="badge badge-outline">Selengkapnya</div>
+                      <div className="badge badge-outline h-8 hover:bg-gray-500 hover:text-white">
+                        Selengkapnya
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -216,7 +233,9 @@ const Blog = () => {
                       href="https://amp.kontan.co.id/news/kesulitan-memasak-ikuti-5-tips-belajar-masak-untuk-pemula-yang-ingin-pandai-memasak"
                       target="_blank"
                     >
-                      <div className="badge badge-outline">Selengkapnya</div>
+                      <div className="badge badge-outline h-8 hover:bg-gray-500 hover:text-white">
+                        Selengkapnya
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -229,12 +248,16 @@ const Blog = () => {
         <h3 className="text-3xl font-semibold text-center">
           Cerita Menarik Pengguna
         </h3>
-        <div className="column-2 px-24 mt-24">
+        <div className="column-2 flex justify-between px-24 mt-24">
           <div className="bg-hitam w-[500px] h-[700px] px-40 py-20 rounded-xl">
-            {" "}
+            <img
+              className="animate-spin-slow  -ml-56 -mt-28 "
+              src="public/assets/bunga.png"
+              alt=""
+            />{" "}
             <img
               src="public/assets/profile.jpg"
-              className="rounded-full w-[100px] h-[100px] -ml-36"
+              className="rounded-full w-[100px] h-[100px] animate-spin -ml-36"
               alt=""
             />{" "}
             <p className="text-white -ml-[367px] mt-5 text-center">
@@ -248,12 +271,21 @@ const Blog = () => {
               sehingga bisa membuat saya tidak lupa langkah-langkah memasak
               sambil menelepon”
             </div>
+            <img
+              className="animate-spin-slow  ml-56 py-4 "
+              src="public/assets/bunga.png"
+              alt=""
+            />
+          </div>
+
+          <div className="w-96 h-auto py-32">
+            {" "}
+            <img src="public/assets/flower.svg"></img>{" "}
           </div>
         </div>
-
-        <img src="" alt="" />
       </div>
-      <div className="mb-96"></div>
+      <div className="mb-60"></div>
+      <Footer />
     </body>
   );
 };
