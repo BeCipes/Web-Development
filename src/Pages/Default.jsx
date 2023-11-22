@@ -27,11 +27,11 @@ const Default = () => {
             </p>
             <div className="mt-4 font-semibold ">
               <a href="/beranda">
-                <button className="bg-secondary-100 rounded-full px-5 py-1 hover:bg-primary ">
+                <button className="bg-grab rounded-full px-5 py-1 hover:bg-slate-100 ">
                   Beranda
                 </button>
               </a>
-              <button className="bg-secondary-100 rounded-full ml-5 px-4 py-1 hover:bg-primary">
+              <button className="bg-grab w-[99px] rounded-full ml-5 px-4 py-1 hover:bg-slate-100">
                 App
               </button>
             </div>
@@ -47,7 +47,7 @@ const Default = () => {
         </div>
         {/* Content 2 */}
         <div className="columns-1 mx-auto mt-16">
-          <div className="w-[750px] h-80 bg-primary rounded-lg mx-auto flex items-center justify-between">
+          <div className="w-[750px] h-80 bg-grab rounded-lg mx-auto flex items-center justify-between">
             <img
               className="rounded-lg flex-auto h-80"
               src="public/assets/Landing page2.jpg"
@@ -144,16 +144,15 @@ const Default = () => {
           <h1 className="mb-5 text-4xl font-bold text-white w-1/2 mx-auto">
             Yuk andalkan daftar menu makanan sehat dan bergizi setiap hari.
           </h1>
-          <button className="btn bg-grab border-none hover:bg-primary rounded-3xl px-5 mr-5 font-semibold">
+          <button className="btn bg-grab border-none hover:bg-slate-100 rounded-3xl px-5 mr-5 font-semibold">
             Beranda
           </button>{" "}
-          <button className="btn bg-grab border-none hover:bg-primary rounded-3xl px-5 w-[94px] font-semibold">
+          <button className="btn bg-grab border-none hover:bg-slate-100 rounded-3xl px-5 w-[94px] font-semibold">
             App
           </button>
         </div>
       </div>
 
-      <div className="mb-96"></div>
       <Footer />
     </body>
   );
