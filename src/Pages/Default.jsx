@@ -26,12 +26,7 @@ const Default = () => {
               </p>
             </p>
             <div className="mt-4 font-semibold ">
-              <a href="/beranda">
-                <button className="bg-grab rounded-full px-5 py-1 hover:bg-gray-100 ">
-                  Beranda
-                </button>
-              </a>
-              <button className="bg-grab rounded-full ml-5 px-4 py-1 hover:bg-gray-100">
+              <button className="bg-grab rounded-full px-8 py-2 hover:bg-gray-100">
                 App
               </button>
             </div>

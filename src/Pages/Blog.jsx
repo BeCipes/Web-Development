@@ -257,7 +257,7 @@ const Blog = () => {
             />{" "}
             <img
               src="public/assets/profile.jpg"
-              className="rounded-full w-[100px] h-[100px] animate-spin -ml-36"
+              className="rounded-full w-[100px] h-[100px] -ml-36"
               alt=""
             />{" "}
             <p className="text-white -ml-[367px] mt-5 text-center">
