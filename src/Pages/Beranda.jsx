@@ -21,7 +21,11 @@ const Beranda = () => {
               Tempat inspirasi dan kreasi dalam memasak makanan sehat. <br />
               Mari mulai menjelajahi dunia kuliner kami.
             </p>
-            <a href="/Blog"><button className="rounded-3xl bg-grab px-10 h-10 text-semibold hover:bg-gray-100 text-hitam">Blog</button></a>
+            <a href="/Blog">
+              <button className="rounded-3xl bg-grab px-10 h-10 text-semibold hover:bg-gray-100 text-hitam">
+                Blog
+              </button>
+            </a>
           </div>
         </div>
       </div>

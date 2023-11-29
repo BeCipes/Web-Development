@@ -12,7 +12,7 @@ const Blog = () => {
         <div className="py-12 ">
           <h2 className="font-semibold text-3xl text-center mb-28">Artikel</h2>
           {/* card1 */}
-          <div className=" columns-3 px-16 flex justify-between">
+          <div className=" columns-3 px-20 flex justify-between">
             <div className="card w-64 bg-base-100 shadow-xl border">
               <figure>
                 <img src="public/assets/sayur.jpg" alt="Shoes" />
@@ -89,7 +89,7 @@ const Blog = () => {
             </div>
           </div>
           {/* card4 */}
-          <div className=" columns-3 px-16 flex justify-between py-24">
+          <div className=" columns-3 px-20 flex justify-between py-24">
             <div className="card w-64 bg-base-100 shadow-xl border">
               <figure>
                 <img src="public/assets/brokoli.jpg" alt="Shoes" />
@@ -167,7 +167,7 @@ const Blog = () => {
             </div>
           </div>
           {/* card7 */}{" "}
-          <div className=" columns-3 px-16 flex justify-between py-24">
+          <div className=" columns-3 px-20 flex justify-between py-24">
             <div className="card w-64 bg-base-100 shadow-xl border">
               <figure>
                 <img src="public/assets/alpukat.jpg" alt="Shoes" />
@@ -280,7 +280,7 @@ const Blog = () => {
 
           <div className="w-96 h-auto py-32">
             {" "}
-            <img src="public/assets/flower.svg"></img>{" "}
+            <img src=""></img>{" "}
           </div>
         </div>
       </div>
