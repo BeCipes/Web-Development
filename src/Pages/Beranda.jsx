@@ -8,14 +8,6 @@ const Beranda = () => {
     <div className="Poppins" >
       <Navbar />
       <div className="hero">
-<<<<<<< Updated upstream
-        <div className="hero-content -z-50 flex-col text-center lg:flex-row-reverse">
-          <img src="public/assets/home1.jpg" className="max-w-sm rounded-full mx-10 mt-10" />
-          <div>
-            <h1 className="text-3xl font-bold text-hitam">Selamat Datang di Website Healthy Food Recipes</h1>
-            <p className="py-8 text-lg text-hitam">Tempat inspirasi dan kreasi dalam memasak makanan sehat. <br />Mari mulai menjelajahi dunia kuliner kami.</p>
-            <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam ">Blog</button>
-=======
         <div className="hero-content -z-0 flex-col text-center lg:flex-row-reverse">
           <img
             src="public/assets/avocado.png"
@@ -29,7 +21,6 @@ const Beranda = () => {
               Tempat inspirasi dan kreasi dalam memasak makanan sehat. <br />
               Mari mulai menjelajahi dunia kuliner kami.
             </p>
->>>>>>> Stashed changes
           </div>
         </div>
       </div>
@@ -38,11 +29,6 @@ const Beranda = () => {
         <div className="flex justify-start-z-50 flex-col text-center lg:flex-row">
           <img src="public/assets/blueberry.png" className="max-w-sm mx-0 mb-20 flex justify-start -ml-20" />
           <div className="mb-20 mt-40 mx-10">
-<<<<<<< Updated upstream
-            <h1 className="text-3xl font-bold text-hitam">Terima kasih telah mengunjungi situs web kami!</h1>
-            <p className="py-8 text-lg  text-hitam">Healthy Food Recipes adalah tempat yang tepat untuk mencari resep makanan sehat yang lezat. Saatnya mengenali keajaiban resep makanan sehat dan memulai perjalanan menuju gaya hidup yang lebih baik.</p>
-            <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">Landing Page</button>
-=======
             <h1 className="text-3xl font-bold text-hitam">
               Terima kasih telah mengunjungi situs web kami!
             </h1>
@@ -52,7 +38,6 @@ const Beranda = () => {
               makanan sehat dan memulai perjalanan menuju gaya hidup yang lebih
               baik.
             </p>
->>>>>>> Stashed changes
           </div>
         </div>
       </div>
@@ -69,12 +54,7 @@ const Beranda = () => {
             className="w-1/2 h-52 rounded-lg object-cover"
           />
           <h1 className="text-2xl font-bold text-hitam absolute top-0 left-0 p-1 mx-20 my-10">
-<<<<<<< Updated upstream
-            Kami mengajak Anda untuk mengeksplorasi dunia resep makanan sehat, karena
-            makanan yang baik adalah awal dari hidup yang sehat
-=======
            
->>>>>>> Stashed changes
           </h1>
         </div>
       </div>
@@ -129,10 +109,6 @@ const Beranda = () => {
         <div className="hero-overlay bg-opacity-20"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-<<<<<<< Updated upstream
-            <h1 className="mb-5 text-4xl font-bold text-white">Jelajahi <br/>Healthy Food Recipes</h1>
-            <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam mr-5">App </button> <span><button className="btn bg-grab border-none rounded-3xl px-10 text-black ">Blog</button></span>
-=======
             <h1 className="mb-5 text-4xl font-bold text-white">
               Jelajahi <br />
               Healthy Food Recipes
@@ -140,7 +116,6 @@ const Beranda = () => {
             <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam mr-5">
               App{" "}
             </button>{" "}
->>>>>>> Stashed changes
           </div>
         </div>
       </div>

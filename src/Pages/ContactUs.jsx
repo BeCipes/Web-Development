@@ -4,9 +4,6 @@ const ContactUs = () => {
   return (
     <div>
       <Navbar />
-<<<<<<< Updated upstream
-      <h2>INI Contact Us</h2>
-=======
       <div className="py-5 relative h-128">
         <div className="flex items-center justify-center w-full h-full">
           <div className="w-1/2 px-36">
@@ -158,7 +155,6 @@ const ContactUs = () => {
       <div className="mt-20">
         <Footer/>
       </div>
->>>>>>> Stashed changes
     </div>
   );
 };
