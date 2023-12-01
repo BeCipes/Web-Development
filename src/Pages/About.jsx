@@ -6,8 +6,8 @@ const About = () => {
     <html className="scroll-smooth">
       <div className="">
         <Navbar />
-        <div className="h-80 bg-cover bg-[url(public/assets/teamwork.jpg)] flex flex-col items-center justify-center">
-          <p className="font-poppins text-4xl font-bold text-white text-shadow-lg px-48 text-center">
+        <div className="h-80 bg-cover opacity-75 bg-[url(public/assets/teamwork.jpg)] flex flex-col items-center justify-center">
+          <p className="font-poppins text-4xl font-bold text-black text-shadow-lg  px-48 text-center">
             Cobalah Hidup Sehat dengan Makanan Sehat <br /> Cobalah GoCipes{" "}
             <br /> Tentang Kami
           </p>
@@ -39,18 +39,12 @@ const About = () => {
                 kebiasaan makan yang tepat.
                 <br />
                 <br />
-                Melalui kontak dan dukungan yang mudah diakses, kami membantu
-                pengguna menyelesaikan masalah seputar aplikasi mobile dan
-                memberikan panduan yang diperlukan dalam perjalanan mereka
-                menuju gaya hidup sehat.
-                <br />
-                <br />
                 Platform kami dirancang khusus untuk memantapkan individu dalam
                 perjalanan mereka menuju gaya hidup yang lebih sehat dengan
                 memberikan panduan langkah demi langkah, dan pengembangan
-                keterampilan dasar memasak.
+                keterampilan dasar memasak. Kapanpun, Dimanapun.
               </h3>
-              <h2 className="text-lg">Kapanpun, Dimanapun.</h2>
+
               <a href="/panduan">
                 <button className=" mb-8 bg-grab hover:bg-slate-100 mt-7 rounded-full px-5 py-3 font-semibold text-black">
                   Panduan Pengguna
@@ -76,9 +70,9 @@ const About = () => {
                 className="rounded-lg"
               />
             </div>
-            <div className="text-center flex-1 text-white w-1/2 px-10">
+            <div className="text-center flex-1 text-slate-200 w-1/2 px-10">
               <h2 className="text-3xl  mt-5 font-semibold">Cerita Kami</h2>
-              <h3 className=" mt-5">
+              <h3 className=" text-lg mt-5">
                 Di sebuah dunia digital yang penuh dengan tantangan kesehatan
                 dan kebutuhan untuk hidup lebih sehat, kami, sebagai sebuah tim
                 berkomitmen, memiliki visi besar. Kami ingin menjadi pilar utama
