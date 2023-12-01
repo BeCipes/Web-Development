@@ -65,19 +65,19 @@ const ContactUs = () => {
       </div>
       <div className="flex justify-center">
         <img
-          className="flex justify-center p-5 m-5 w-24 h-24 "
+          className="flex justify-center p-5 m-5 w-20 h-20 "
           src="public/assets/fb.png"
         />
         <img
-          className="flex justify-center p-5 m-5 w-24 h-24 "
+          className="flex justify-center p-5 m-5 w-20 h-20 "
           src="public/assets/twitter.png"
         />
         <img
-          className="flex justify-center p-5 m-5 w-24 h-24 "
+          className="flex justify-center p-5 m-5 w-20 h-20 "
           src="public/assets/instagram.png"
         />
         <img
-          className="flex justify-center p-5 m-5 w-24 h-24 "
+          className="flex justify-center p-5 m-5 w-20 h-20 "
           src="public/assets/wa.png"
         />
       </div>
