@@ -26,7 +26,7 @@ const About = () => {
         </div>
 
         <div
-          id="slide1"
+          id=""
           className="flex w-full items-center justify-center flex-col pt-24   pb-24"
         >
           <div className="flex items-center justify-center bg-hitam rounded-lg  w-full ">
@@ -61,7 +61,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="flex w-full items-center justify-center flex-col  bg-hitam">
+        <div className="flex w-full items-center justify-center flex-col rounded-lg bg-hitam">
           <div className="flex items-center justify-center w-full ">
             <div>
               <img
@@ -89,136 +89,262 @@ const About = () => {
         </div>
 
         <div
-          id="slide2"
-          className="text-center text-black justify-center mt-20 "
+          id=""
+          className="text-center mb-12 text-black justify-center mt-20 "
         >
           <h1 className="text-3xl  mt-5 font-semibold">Tim Developer</h1>
         </div>
 
-        <div
-          className="carousel relative rounded-box mx-10 space-x-6  mt-20 mb-20"
-          style={{ zIndex: 0 }}
-        >
-          <div id="slide1" className="carousel-item relative">
-            <img
-              src="public/assets/foto kelompok/dila.jpg"
-              alt="Burger"
-              className="rounded-box w-72 h-3/4"
-            />
-          </div>
+        {/* Carousel */}
+        <div className="carousel mb-24 w-full">
+          <div id="slide1" className="carousel-item relative w-full">
+            <div className="w-full ">
+              <div className=" px-4 flex   mt-6 mb-6 justify-between">
+                {/* dila */}
+                <div className="card w-72 bg-transparent">
+                  <figure>
+                    <img
+                      src="public/assets/foto kelompok/dila.jpg"
+                      alt="Dila"
+                      className="rounded-lg"
+                    />
+                  </figure>
+                  <div className="items-center text-center">
+                    <p className="text-lg font-bold">Project Manager</p>
+                    <p>Fadhila Risfaniatul Z</p>
+                  </div>
+                </div>
+                {/* alfin */}
+                <div className="card w-72 bg-base-100 ">
+                  <figure>
+                    <img
+                      src="public/assets/foto kelompok/alfin.jpeg"
+                      alt="Alfin"
+                      className="rounded-lg"
+                    />
+                  </figure>
+                  <div className="items-center text-center">
+                    <p className="text-lg font-bold">SM-Hacker</p>
+                    <p>Alfin Syatriawan</p>
+                  </div>
+                </div>
+                {/* aina */}
+                <div className="card w-72 bg-base-100 ">
+                  <figure>
+                    <img
+                      src="public/assets/foto kelompok/aina fazla.jpg"
+                      alt="Aina"
+                      className="rounded-lg"
+                    />
+                  </figure>
+                  <div className="items-center text-center">
+                    <p className="text-lg font-bold">Hipster</p>
+                    <p>Aina Fazla</p>
+                  </div>
+                </div>
+                {/* Rizka */}
+                <div className="card w-72 bg-base-100 ">
+                  <figure>
+                    <img
+                      src="public/assets/foto kelompok/rizka hilmi.jpg"
+                      alt="Rizka"
+                      className="rounded-lg"
+                    />
+                  </figure>
+                  <div className="items-center text-center">
+                    <p className="text-lg font-bold">Hipster</p>
+                    <p>Rizka Hilmi Putri</p>
+                  </div>
+                </div>
+              </div>
 
-          <div id="slide2" className="carousel-item relative ">
-            <img
-              src="public/assets/foto kelompok/alfin.jpeg"
-              alt="Burger"
-              className="rounded-box w-72 h-3/4"
-            />
-          </div>
-
-          <div id="slide3" className="carousel-item relative">
-            <img
-              src="public/assets/foto kelompok/aina fazla.jpg"
-              alt="Burger"
-              className="rounded-box w-72 h-3/4"
-            />
-          </div>
-
-          <div id="slide4" className="carousel-item relative">
-            <img
-              src="public/assets/foto kelompok/rizka hilmi.jpg"
-              alt="Burger"
-              className="rounded-box w-72 h-3/4"
-            />
-            <div className="absolute top-1/3 transform -translate-y-1/2 right-8">
-              <a
-                href="#slide8"
-                className="btn btn-circle text-black bg-white border-none hover:bg-white"
-              >
-                ❯
-              </a>
+              <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide4" className="btn btn-circle">
+                  ❮
+                </a>
+                <a href="#slide2" className="btn btn-circle">
+                  ❯
+                </a>
+              </div>
             </div>
           </div>
+          {/* Batas1 */}
+          <div id="slide2" className="carousel-item relative w-full">
+            <div className="w-full ">
+              <div className=" px-4 flex   mt-6 mb-6 justify-between">
+                {/* Kayla */}
+                <div className="card w-72 bg-transparent">
+                  <figure>
+                    <img
+                      src="public/assets/foto kelompok/kayla.jpg"
+                      alt="Kayla"
+                      className="rounded-lg"
+                    />
+                  </figure>
+                  <div className="items-center text-center">
+                    <p className="text-lg font-bold">Hacker</p>
+                    <p>Kayla Vyanca Atalaya</p>
+                  </div>
+                </div>
+                {/* Mute */}
+                <div className="card w-72 bg-base-100 ">
+                  <figure>
+                    <img
+                      src="public/assets/foto kelompok/mutiara sabrina.jpg"
+                      alt="mute"
+                      className="rounded-lg"
+                    />
+                  </figure>
+                  <div className="items-center text-center">
+                    <p className="text-lg font-bold">Hipster</p>
+                    <p>Mutiara Sabrina Jauhari</p>
+                  </div>
+                </div>
+                {/* Austin */}
+                <div className="card w-72 bg-base-100 ">
+                  <figure>
+                    <img
+                      src="public/assets/foto kelompok/austin.jpg"
+                      alt="Austin"
+                      className="rounded-lg"
+                    />
+                  </figure>
+                  <div className="items-center text-center">
+                    <p className="text-lg font-bold">Hacker</p>
+                    <p>Austin Nicholas Tam</p>
+                  </div>
+                </div>
+                {/* Adit */}
+                <div className="card w-72 bg-base-100 ">
+                  <figure>
+                    <img
+                      src="public/assets/foto kelompok/adit.jpg"
+                      alt="Rizka"
+                      className="rounded-lg"
+                    />
+                  </figure>
+                  <div className="items-center text-center">
+                    <p className="text-lg font-bold">Hacker</p>
+                    <p>Adityo Khori Ramadhan</p>
+                  </div>
+                </div>
+              </div>
 
-          <div id="slide5" className="carousel-item">
-            <img
-              src="public/assets/foto kelompok/kayla.jpg"
-              alt="Burger"
-              className="rounded-box w-72 h-3/4"
-            />
-            <div className="absolute top-1/3 transform -translate-y-1/2 -right-30">
-              <a
-                href="#slide1"
-                className="btn btn-circle text-black bg-white border-none hover:bg-white"
-              >
-                ❮
-              </a>
+              <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide1" className="btn btn-circle">
+                  ❮
+                </a>
+                <a href="#slide3" className="btn btn-circle">
+                  ❯
+                </a>
+              </div>
             </div>
           </div>
+          {/* batas slide2 */}
+          {/* slide3 */}
+          <div id="slide3" className="carousel-item relative w-full">
+            <div className="w-full ">
+              <div className=" px-4 flex   mt-6 mb-6 justify-between">
+                {/* Firdaus */}
+                <div className="card w-72 bg-transparent">
+                  <figure>
+                    <img
+                      src="public/assets/foto kelompok/firdaus.jpg"
+                      alt="Firdaus"
+                      className="rounded-lg"
+                    />
+                  </figure>
+                  <div className="items-center text-center">
+                    <p className="text-lg font-bold">Hipster</p>
+                    <p>Muhammad Firdaus</p>
+                  </div>
+                </div>
+                {/* Ikhasn */}
+                <div className="card w-72 bg-base-100 ">
+                  <figure>
+                    <img
+                      src="public/assets/foto kelompok/ikhsan.jpg"
+                      alt="Ikhsan"
+                      className="rounded-lg"
+                    />
+                  </figure>
+                  <div className="items-center text-center">
+                    <p className="text-lg font-bold">Hacker</p>
+                    <p>Rahmad Noor Ikhsan</p>
+                  </div>
+                </div>
+                {/* Dito */}
+                <div className="card w-72 bg-base-100 ">
+                  <figure>
+                    <img
+                      src="public/assets/foto kelompok/dito.jpg"
+                      alt="Dito"
+                      className="rounded-lg"
+                    />
+                  </figure>
+                  <div className="items-center text-center">
+                    <p className="text-lg font-bold">Hacker</p>
+                    <p>Dito Iqbal Kusuma</p>
+                  </div>
+                </div>
+                {/* Adit */}
+                <div className="card w-72 bg-base-100 ">
+                  <figure>
+                    <img
+                      src="public/assets/foto kelompok/rina.jpg"
+                      alt="Rina"
+                      className="rounded-lg"
+                    />
+                  </figure>
+                  <div className="items-center text-center">
+                    <p className="text-lg font-bold">AI</p>
+                    <p>Rina Wati Nurlia Br Sihite</p>
+                  </div>
+                </div>
+              </div>
 
-          <div id="slide6" className="carousel-item">
-            <img
-              src="public/assets/foto kelompok/mutiara sabrina.jpg"
-              alt="Burger"
-              className="rounded-box w-72 h-3/4"
-            />
-          </div>
-
-          <div id="slide7" className="carousel-item">
-            <img
-              src="public/assets/foto kelompok/austin.jpg"
-              alt="Burger"
-              className="rounded-box w-72 h-3/4"
-            />
-          </div>
-
-          <div id="slide8" className="carousel-item relative">
-            <img
-              src="public/assets/foto kelompok/adit.jpg"
-              alt="Burger"
-              className="rounded-box w-72 h-3/4"
-            />
-            <div className="absolute top-1/3 right-0 transform -translate-y-1/2">
-              <a
-                href="#slide11"
-                className="btn btn-circle text-black bg-white border-none hover:bg-white"
-              >
-                ❯
-              </a>
+              <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide2" className="btn btn-circle">
+                  ❮
+                </a>
+                <a href="#slide4" className="btn btn-circle">
+                  ❯
+                </a>
+              </div>
             </div>
           </div>
+          {/* Batas slide3 */}
+          <div id="slide4" className="carousel-item relative w-full">
+            <div className="w-full ">
+              <div className=" px-4 flex   mt-6 mb-6 justify-between">
+                {/* Detu */}
+                <div className="card w-72 bg-transparent">
+                  <figure>
+                    <img
+                      src="public/assets/foto kelompok/firdaus.jpg"
+                      alt="Detu"
+                      className="rounded-lg"
+                    />
+                  </figure>
+                  <div className="items-center text-center">
+                    <p className="text-lg font-bold">AI</p>
+                    <p>I Gede Putu Agus Pranatha Jaya</p>
+                  </div>
+                </div>
+              </div>
 
-          <div id="slide9" className="carousel-item">
-            <img
-              src="public/assets/foto kelompok/dito.jpg"
-              alt="Burger"
-              className="rounded-box w-72 h-3/4"
-            />
-            <div className="absolute top-1/3 transform -translate-y-1/2 -right-30">
-              <a
-                href="#slide5"
-                className="btn btn-circle text-black bg-white border-none hover:bg-white"
-              >
-                ❮
-              </a>
+              <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide3" className="btn btn-circle">
+                  ❮
+                </a>
+                <a href="#slide1" className="btn btn-circle">
+                  ❯
+                </a>
+              </div>
             </div>
-          </div>
-
-          <div id="slide10" className="carousel-item">
-            <img
-              src="public/assets/foto kelompok/ikhsan.jpg"
-              alt="Burger"
-              className="rounded-box w-72 h-3/4"
-            />
-          </div>
-
-          <div id="slide11" className="carousel-item">
-            <img
-              src="public/assets/foto kelompok/firdaus.jpg"
-              alt="Burger"
-              className="rounded-box w-72 h-3/4"
-            />
           </div>
         </div>
+
         <Footer />
       </div>
     </html>
