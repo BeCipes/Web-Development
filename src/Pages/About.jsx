@@ -12,12 +12,12 @@ const About = () => {
             <br /> Tentang Kami
           </p>
           <div className="flex space-x-4">
-            <a href="#slide1" className="data-te-smooth-scroll-init">
+            <a href="#visi" className="data-te-smooth-scroll-init">
               <button className="items-center bg-grab hover:bg-slate-100 mt-7 rounded-full px-5 py-3 font-semibold text-black">
                 Visi Misi
               </button>
             </a>
-            <a href="#slide2" className="data-te-smooth-scroll-init">
+            <a href="#developer" className="data-te-smooth-scroll-init">
               <button className="items-center bg-grab hover:bg-slate-100 mt-7 rounded-full px-5 py-3 font-semibold text-black">
                 Tim Developer
               </button>
@@ -26,7 +26,7 @@ const About = () => {
         </div>
 
         <div
-          id=""
+          id="visi"
           className="flex w-full items-center justify-center flex-col pt-24   pb-24"
         >
           <div className="flex items-center justify-center bg-hitam rounded-lg  w-full ">
@@ -89,7 +89,7 @@ const About = () => {
         </div>
 
         <div
-          id=""
+          id="developer"
           className="text-center mb-12 text-black justify-center mt-20 "
         >
           <h1 className="text-3xl  mt-5 font-semibold">Tim Developer</h1>
@@ -159,10 +159,16 @@ const About = () => {
               </div>
 
               <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide4" className="btn btn-circle">
+                <a
+                  href="#slide4"
+                  className="btn bg-slate-100 border-none hover:bg-grab btn-circle"
+                >
                   ❮
                 </a>
-                <a href="#slide2" className="btn btn-circle">
+                <a
+                  href="#slide2"
+                  className="btn bg-slate-100 border-none hover:bg-grab btn-circle"
+                >
                   ❯
                 </a>
               </div>
@@ -231,10 +237,16 @@ const About = () => {
               </div>
 
               <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide1" className="btn btn-circle">
+                <a
+                  href="#slide1"
+                  className="btn btn-circle bg-slate-100 border-none hover:bg-grab"
+                >
                   ❮
                 </a>
-                <a href="#slide3" className="btn btn-circle">
+                <a
+                  href="#slide3"
+                  className="btn btn-circle bg-slate-100 border-none hover:bg-grab"
+                >
                   ❯
                 </a>
               </div>
@@ -304,10 +316,16 @@ const About = () => {
               </div>
 
               <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide2" className="btn btn-circle">
+                <a
+                  href="#slide2"
+                  className="btn btn-circle bg-slate-100 border-none hover:bg-grab"
+                >
                   ❮
                 </a>
-                <a href="#slide4" className="btn btn-circle">
+                <a
+                  href="#slide4"
+                  className="btn btn-circle bg-slate-100 border-none hover:bg-grab"
+                >
                   ❯
                 </a>
               </div>
@@ -321,7 +339,7 @@ const About = () => {
                 <div className="card w-72 bg-transparent">
                   <figure>
                     <img
-                      src="public/assets/foto kelompok/firdaus.jpg"
+                      src="public/assets/foto kelompok/detu.jpg"
                       alt="Detu"
                       className="rounded-lg"
                     />
@@ -334,10 +352,16 @@ const About = () => {
               </div>
 
               <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide3" className="btn btn-circle">
+                <a
+                  href="#slide3"
+                  className="btn btn-circle bg-slate-100 border-none hover:bg-grab"
+                >
                   ❮
                 </a>
-                <a href="#slide1" className="btn btn-circle">
+                <a
+                  href="#slide1"
+                  className="btn btn-circle bg-slate-100 border-none hover:bg-grab"
+                >
                   ❯
                 </a>
               </div>
