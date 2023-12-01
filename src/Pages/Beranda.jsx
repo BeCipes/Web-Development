@@ -5,7 +5,7 @@ import GridBeranda from "../Component/GridBeranda";
 
 const Beranda = () => {
   return (
-    <div className="Poppins" >
+    <div className="Poppins">
       <Navbar />
       <div className="hero">
         <div className="hero-content -z-0 flex-col text-center lg:flex-row-reverse">
@@ -27,7 +27,10 @@ const Beranda = () => {
 
       <div className="hero">
         <div className="flex justify-start-z-50 flex-col text-center lg:flex-row">
-          <img src="public/assets/blueberry.png" className="max-w-sm mx-0 mb-20 flex justify-start -ml-20" />
+          <img
+            src="public/assets/blueberry.png"
+            className="max-w-sm mx-0 mb-20 flex justify-start -ml-20"
+          />
           <div className="mb-20 mt-40 mx-10">
             <h1 className="text-3xl font-bold text-hitam">
               Terima kasih telah mengunjungi situs web kami!
@@ -43,7 +46,7 @@ const Beranda = () => {
       </div>
 
       <div className="flex justify-center items-center">
-        <CarouselBeranda/>
+        <CarouselBeranda />
       </div>
 
       <div className="text-center lg:flex-row">
@@ -51,58 +54,83 @@ const Beranda = () => {
           <img
             src="public/assets/home8.png"
             alt="daun"
-            className="w-1/2 h-52 rounded-lg object-cover"
+            className="w-1/2 -mt-28 h-52 rounded-lg object-cover"
           />
-          <h1 className="text-2xl font-bold text-hitam absolute top-0 left-0 p-1 mx-20 my-10">
-           
-          </h1>
+          <h1 className="text-2xl font-bold text-hitam absolute top-0 left-0 p-1 mx-20 my-10"></h1>
         </div>
       </div>
 
       <div className="flex bg-stone-950 text-white rounded-md mb-16 mx-16 max-w-full h-96">
         {/* Image Side */}
         <div className="w-1/2">
-          <img src="public/assets/home2.jpg" alt="Card" className="w-full h-full object-cover rounded-md" />
+          <img
+            src="public/assets/home2.jpg"
+            alt="Card"
+            className="w-full h-full object-cover rounded-md"
+          />
         </div>
         {/* Text Side */}
         <div className="flex flex-col justify-center items-center h-full w-1/2 px-10 py-10 text-left">
-          <div className="text-lg mb-10 text-center">Kami punya semua jawaban yang Anda butuhkan di mneu "Panduan Pengguna". Silahkan klik untuk melihat</div>
-          <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">Panduan Pengguna</button>
+          <div className="text-lg mb-10 text-center">
+            Kami punya semua jawaban yang Anda butuhkan di mneu "Panduan
+            Pengguna". Silahkan klik untuk melihat
+          </div>
+          <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+            Panduan Pengguna
+          </button>
         </div>
       </div>
 
       <div className="bg-stone-950 w-full h-fit px-3 py-3 relative">
-          <div className="flex bg-white text-hitam rounded-md my-32 mx-32 max-w-full h-96">
-            {/* Text Side */}
-            <div className="flex flex-col justify-center items-center h-full w-1/2 px-10 py-10 text-left" style={{ zIndex: 1 }}>
-              <div className="text-xl mb-10 text-center">Kami mengundang Anda untuk menjelajahi <br />beragam resep makanan sehat yang kami <br /> sajikan, mengenai tim kami yang penuh <br /> semangat di halaman "Tentang Kami".</div>
-              <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">Tentang Kami</button>
+        <div className="flex bg-white text-hitam rounded-md my-32 mx-32 max-w-full h-96">
+          {/* Text Side */}
+          <div
+            className="flex flex-col justify-center items-center h-full w-1/2 px-10 py-10 text-left"
+            style={{ zIndex: 1 }}
+          >
+            <div className="text-xl mb-10 text-center">
+              Kami mengundang Anda untuk menjelajahi <br />
+              beragam resep makanan sehat yang kami <br /> sajikan, mengenai tim
+              kami yang penuh <br /> semangat di halaman "Tentang Kami".
             </div>
-            {/* Image Side */}
-            <div className="w-1/2 relative" style={{ transform: "translateY(-30px) translateX(30px)", zIndex: 2 }}>
-              <img
-                src="public/assets/home3.jpg"
-                alt="Card"
-                className="w-full h-full object-cover rounded-md"
-                style={{
-                  boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
-                  borderRadius: "8px",
-                }}
-              />
-            </div>
+            <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+              Tentang Kami
+            </button>
           </div>
+          {/* Image Side */}
+          <div
+            className="w-1/2 relative"
+            style={{
+              transform: "translateY(-30px) translateX(30px)",
+              zIndex: 2,
+            }}
+          >
+            <img
+              src="public/assets/home3.jpg"
+              alt="Card"
+              className="w-full h-full object-cover rounded-md"
+              style={{
+                boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
+                borderRadius: "8px",
+              }}
+            />
+          </div>
+        </div>
       </div>
-
 
       <div className="text-center lg:flex-row">
-        <div className='my-20 mx-20'>
-          <h1 className="text-2xl font-bold text-hitam">Kenali Resep Makanan Sehat</h1>
+        <div className="my-20 mx-20">
+          <h1 className="text-2xl font-bold text-hitam">
+            Kenali Resep Makanan Sehat
+          </h1>
         </div>
-        <GridBeranda/>
+        <GridBeranda />
       </div>
 
-
-      <div className="hero h-96 -z-50" style={{backgroundImage: 'url(public/assets/home6.jpg'}}>
+      <div
+        className="hero h-96 -z-50"
+        style={{ backgroundImage: "url(public/assets/home6.jpg" }}
+      >
         <div className="absolute min-h-full -right-0 -z-0">
           <img src="public/assets/home55.png" alt="Additional Image" />
         </div>
@@ -119,7 +147,7 @@ const Beranda = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

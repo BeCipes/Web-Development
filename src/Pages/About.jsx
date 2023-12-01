@@ -309,7 +309,7 @@ const About = () => {
                     />
                   </figure>
                   <div className="items-center text-center">
-                    <p className="text-lg font-bold">AI</p>
+                    <p className="text-lg font-bold">AI Practioners</p>
                     <p>Rina Wati Nurlia Br Sihite</p>
                   </div>
                 </div>
@@ -345,7 +345,7 @@ const About = () => {
                     />
                   </figure>
                   <div className="items-center text-center">
-                    <p className="text-lg font-bold">AI</p>
+                    <p className="text-lg font-bold">AI Practioners</p>
                     <p>I Gede Putu Agus Pranatha Jaya</p>
                   </div>
                 </div>

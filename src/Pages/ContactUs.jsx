@@ -5,12 +5,17 @@ const ContactUs = () => {
   return (
     <div>
       <Navbar />
+
       <div className="py-5 relative h-128">
         <div className="flex items-center justify-center w-full h-full">
           <div className="w-1/2 px-36">
             <h1 className="text-3xl font-bold text-hitam">Hubungi Kami</h1>
-            <h2 className=" mt-5 text-xl font-normal text-hitam">Silahkan Hubungi Kami Secara Nyaman</h2>
-            <h2 className="text-xl font-normal text-hitam">Kapanpun. Dimanapun.</h2>
+            <h2 className=" mt-5 text-xl font-normal text-hitam">
+              Silahkan Hubungi Kami Secara Nyaman
+            </h2>
+            <h2 className="text-xl font-normal text-hitam">
+              Kapanpun. Dimanapun.
+            </h2>
           </div>
           <div className="w-1/2 flex-1 flex justify-center">
             <img
@@ -59,7 +64,24 @@ const ContactUs = () => {
           <p className="text-sm">eternallight@gmail.com</p>
         </div>
       </div>
-      
+      <div className="flex justify-center">
+        <img
+          className="flex justify-center p-5 my-5 mb-10 w-20 h-20 "
+          src="public/assets/fb.png"
+        />
+        <img
+          className="flex justify-center p-5 my-5 mb-10 w-20 h-20 "
+          src="public/assets/twitter.png"
+        />
+        <img
+          className="flex justify-center p-5 my-5 mb-10 w-20 h-20 "
+          src="public/assets/instagram.png"
+        />
+        <img
+          className="flex justify-center p-5 my-5 mb-10 w-20 h-20 "
+          src="public/assets/wa.png"
+        />
+      </div>
       <div className="flex">
         <div className="flex-1 h-full">
           <img
@@ -72,7 +94,8 @@ const ContactUs = () => {
             Masih memiliki pertanyaan?
           </h2>
           <h1 className="font-normal text-l text-label text-white px-10">
-            Silahkan hubungi kami atau Anda dapat menemukan jawaban seputar aplikasi kami di menu "Panduan Pengguna"
+            Silahkan hubungi kami atau Anda dapat menemukan jawaban seputar
+            aplikasi kami di menu "Panduan Pengguna"
           </h1>
           <a href="/panduan">
             <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
@@ -136,25 +159,24 @@ const ContactUs = () => {
                 className="border-2 border-primary md:mt-2 w-full  p-2 rounded pl-2 cursor-pointer font-thin focus:outline-none"
                 rows="4"
                 cols={50}
-                placeholder="Tulis pesan Anda disini"
               >
                 {" "}
               </textarea>
             </div>
 
             <div className="col-span-2">
-            <a href="">
-            <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
-              Kirim Pesan
-            </button>
-          </a>
+              <a href="">
+                <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+                  Kirim Pesan
+                </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
 
       <div className="mt-20">
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );
