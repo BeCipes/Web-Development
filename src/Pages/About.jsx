@@ -8,7 +8,7 @@ const About = () => {
         <Navbar />
         <div className="h-80 bg-cover opacity-75 bg-[url(public/assets/teamwork.jpg)] flex flex-col items-center justify-center">
           <p className="font-poppins text-4xl font-bold text-black text-shadow-lg  px-48 text-center">
-            Cobalah Hidup Sehat dengan Makanan Sehat <br /> Cobalah GoCipes{" "}
+            Cobalah Hidup Sehat dengan Makanan Sehat <br /> Cobalah BeCipes{" "}
             <br /> Tentang Kami
           </p>
           <div className="flex space-x-4">

@@ -78,7 +78,7 @@ const Navbar = () => {
                 className="w-8 h-auto"
                 alt=""
               />
-              <span className="ml-2 hover:text-white">GoCipes</span>
+              <span className="ml-2 hover:text-white">BeCipes</span>
             </span>
           </Link>
         </div>

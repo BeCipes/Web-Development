@@ -11,7 +11,9 @@ const Panduan = () => {
 
       <div className="container mx-auto">
         <div className="py-12 ">
-          <h2 className="font-bold text-2xl text-hitam text-center mb-16">Artikel Terbaru</h2>
+          <h2 className="font-bold text-2xl text-hitam text-center mb-16">
+            Artikel Terbaru
+          </h2>
           {/* card1 */}
           <div className=" columns-3 px-16 flex justify-between">
             <div className="card w-80 bg-base-100 shadow-xl border">
@@ -21,7 +23,8 @@ const Panduan = () => {
               <div className="card-body">
                 <h2 className="card-title">Alpukat, Buah Kaya Manfaat</h2>
                 <p>
-                  Kamu tahu ga sih bahwa alpukat memiliki beragam manfaat bagi tubuh kita loh...
+                  Kamu tahu ga sih bahwa alpukat memiliki beragam manfaat bagi
+                  tubuh kita loh...
                 </p>
                 <div className="card-actions justify-end">
                   <a
@@ -43,9 +46,12 @@ const Panduan = () => {
                   <img src="public/assets/salmon.jpeg" alt="Shoes" />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title">Kaya Omega, Kenali Manfaat Salmon</h2>
+                  <h2 className="card-title">
+                    Kaya Omega, Kenali Manfaat Salmon
+                  </h2>
                   <p>
-                    Selain kaya akan omega, ikan salmon memiliki segudang manfaat yang perlu Anda tahu...
+                    Selain kaya akan omega, ikan salmon memiliki segudang
+                    manfaat yang perlu Anda tahu...
                   </p>
                   <div className="card-actions justify-end">
                     <a
@@ -68,9 +74,12 @@ const Panduan = () => {
                   <img src="public/assets/tahu putih.jpeg" alt="Shoes" />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title">Murah dan Tinggi Protein, Kenali Manfaat Tahu</h2>
+                  <h2 className="card-title">
+                    Murah dan Tinggi Protein, Kenali Manfaat Tahu
+                  </h2>
                   <p>
-                    Meskipun terbilang lauk yang murah, tahu memiliki protein nabati yang baik loh...
+                    Meskipun terbilang lauk yang murah, tahu memiliki protein
+                    nabati yang baik loh...
                   </p>
                   <div className="card-actions justify-end">
                     <a
@@ -95,10 +104,14 @@ const Panduan = () => {
             <VideoPanduan videoId="iGKF5fgtdWs" />
           </div>
           <div className="mt-5 mr-5 w-3/5">
-            <h1 className="text-justify mr-10  mt-5 text-2xl text-hitam Poppins font-bold">Video Tutorial</h1>
+            <h1 className="text-justify mr-10  mt-5 text-2xl text-hitam Poppins font-bold">
+              Video Tutorial
+            </h1>
             <p className="py-5 text-lg text-justify mr-10 text-hitam">
-              GoCipes merupakan aplikasi yang memberikan panduan memasak kepada pengguna dengan beragam fitur unggulan. Download aplikasi kami melalui Play Store untuk pengalaman lebih baik. Panduan pengguna dapat diakses melalui video tutorial
-              aplikasi kami. 
+              BeCipes merupakan aplikasi yang memberikan panduan memasak kepada
+              pengguna dengan beragam fitur unggulan. Download aplikasi kami
+              melalui Play Store untuk pengalaman lebih baik. Panduan pengguna
+              dapat diakses melalui video tutorial aplikasi kami.
             </p>
           </div>
         </div>
@@ -108,15 +121,20 @@ const Panduan = () => {
         {/* Kolom Kiri */}
         <div className="w-2/3 p-8 flex flex-col items-justify mx-10">
           <h2 className="text-white text-2xl font-bold mb-4">
-            Download GoCipes Mobile App
+            Download BeCipes Mobile App
           </h2>
           <p className="text-white text-lg text-justify mb-6">
-            Unduh aplikasi GoCipes sekarang dan mulai perjalanan Anda
-            menuju gaya hidup yang lebih sehat!
+            Unduh aplikasi BeCipes sekarang dan mulai perjalanan Anda menuju
+            gaya hidup yang lebih sehat!
           </p>
 
           <div className="flex space-x-4">
-            <a href="link/to/playstore" target="_blank" rel="noopener noreferrer" className="bg-hitam text-white px-4 py-2 rounded-full flex items-center justify-center hover:bg-white hover:text-hitam transition duration-300">
+            <a
+              href="link/to/playstore"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-hitam text-white px-4 py-2 rounded-full flex items-center justify-center hover:bg-white hover:text-hitam transition duration-300"
+            >
               <FaGooglePlay className="mr-2" /> Google Play
             </a>
           </div>
@@ -131,12 +149,11 @@ const Panduan = () => {
         </div>
       </div>
 
-
       <div className="flex justify-center text-2xl text-hitam Poppins my-20 font-bold">
         <h1>FAQ</h1>
       </div>
-      <DropdownPanduan/>
-      <Footer/>
+      <DropdownPanduan />
+      <Footer />
     </div>
   );
 };

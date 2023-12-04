@@ -5,7 +5,6 @@ const ContactUs = () => {
   return (
     <div>
       <Navbar />
-
       <div className="py-5 relative h-128">
         <div className="flex items-center justify-center w-full h-full">
           <div className="w-1/2 px-36">
@@ -29,39 +28,53 @@ const ContactUs = () => {
           src="public/assets/blueberry.png"
         />
       </div>
-      <div className="w-3/4 mx-auto flex justify-center text-center mt-10 mb-16">
-        <div
-          className="flex flex-col flex-1 gap-y-3 px-10 m-10 py-16 rounded-lg"
-          style={{ backgroundColor: "#79E018" }}
-        >
-          <img className="w-8 mx-auto" src="public/assets/alamat.png" />
-          <h2 className="font-bold">
-            <center>Alamat</center>
-          </h2>
-          <p className="text-sm">
-            Jalan Peta No 17, Bandung,
-            <br /> Jawa Barat, Indonesia
-          </p>
-        </div>
-        <div
-          className="flex flex-col flex-1 gap-y-3 px-10 m-10 py-16 rounded-lg"
-          style={{ backgroundColor: "#79E018" }}
-        >
-          <img className="w-12 mx-auto" src="public/assets/hotline.png" />
-          <h2 className="font-bold">
-            <center>Hotline</center>
-          </h2>
-          <p className="text-sm">+628-175-150-235</p>
-        </div>
-        <div
-          className="flex flex-col flex-1 gap-y-3 px-10 m-10 py-16 rounded-lg"
-          style={{ backgroundColor: "#79E018" }}
-        >
-          <img className="w-12 mx-auto" src="public/assets/email.png" />
-          <h2 className="font-bold">
-            <center>Email</center>
-          </h2>
-          <p className="text-sm">eternallight@gmail.com</p>
+      <div className="flex justify-center text-center mt-10 mb-16">
+        <div className="w-3/4 mx-auto flex justify-center space-x-8">
+          <div
+            className="flex flex-col flex-1 gap-y-5 px-5 m-4 py-10 rounded-lg"
+            style={{ backgroundColor: "#79E018", margin: "0 20px" }}
+          >
+            <img
+              className="w-5 mx-auto"
+              src="public/assets/alamat.png"
+              alt="Alamat Icon"
+            />
+            <h2 className="font-bold">
+              <center>Alamat</center>
+            </h2>
+            <p className="text-sm">
+              Jalan Peta No 17, Bandung,
+              <br /> Jawa Barat, Indonesia
+            </p>
+          </div>
+          <div
+            className="flex flex-col flex-1 gap-y-5 px-5 m-4 py-10 rounded-lg"
+            style={{ backgroundColor: "#79E018", margin: "0 20px" }}
+          >
+            <img
+              className="w-9 mx-auto"
+              src="public/assets/hotline.png"
+              alt="Hotline Icon"
+            />
+            <h2 className="font-bold">
+              <center>Hotline</center>
+            </h2>
+            <p className="text-sm">+628-175-150-235</p>
+          </div>
+          <div
+            className="flex flex-col flex-1 gap-y-5 px-5 m-4 py-10 rounded-lg"
+            style={{ backgroundColor: "#79E018", margin: "0 20px" }}
+          >
+            <img
+              className="w-7 mx-auto"
+              src="public/assets/email.png"
+              alt="Email Icon"
+            />
+            <h2 className="font-bold">
+              <center>Email</center>
+            </h2>
+            <p className="text-sm">eternallight@gmail.com</p>
+          </div>
         </div>
       </div>
       <div className="flex justify-center">
@@ -159,6 +172,7 @@ const ContactUs = () => {
                 className="border-2 border-primary md:mt-2 w-full  p-2 rounded pl-2 cursor-pointer font-thin focus:outline-none"
                 rows="4"
                 cols={50}
+                placeholder="Tulis pesan Anda disini"
               >
                 {" "}
               </textarea>

@@ -75,9 +75,11 @@ const Beranda = () => {
             Kami punya semua jawaban yang Anda butuhkan di mneu "Panduan
             Pengguna". Silahkan klik untuk melihat
           </div>
-          <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
-            Panduan Pengguna
-          </button>
+          <a href="/panduan">
+            <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+              Panduan Pengguna
+            </button>
+          </a>
         </div>
       </div>
 
