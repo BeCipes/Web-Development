@@ -10,8 +10,8 @@ const Beranda = () => {
       <div className="hero">
         <div className="hero-content -z-0 flex-col text-center lg:flex-row-reverse">
           <img
-            src="public/assets/home1.jpg"
-            className="max-w-sm rounded-full mx-10 mt-10"
+            src="public/assets/avocado.png"
+            className="max-w-sm rounded-full mx-10 mt-0"
           />
           <div>
             <h1 className="text-3xl font-bold text-hitam">
@@ -21,7 +21,6 @@ const Beranda = () => {
               Tempat inspirasi dan kreasi dalam memasak makanan sehat. <br />
               Mari mulai menjelajahi dunia kuliner kami.
             </p>
-            <a href="/Blog"><button className="rounded-3xl bg-grab px-10 h-10 text-semibold hover:bg-gray-100 text-hitam">Blog</button></a>
           </div>
         </div>
       </div>
@@ -42,11 +41,6 @@ const Beranda = () => {
               makanan sehat dan memulai perjalanan menuju gaya hidup yang lebih
               baik.
             </p>
-            <a href="">
-              <button className="btn bg-grab hover:bg-gray-100 border-none rounded-3xl px-10 text-hitam">
-                Landing Page
-              </button>
-            </a>
           </div>
         </div>
       </div>
@@ -60,12 +54,9 @@ const Beranda = () => {
           <img
             src="public/assets/home8.png"
             alt="daun"
-            className="w-1/2 h-52 rounded-lg object-cover"
+            className="w-1/2 -mt-28 h-52 rounded-lg object-cover"
           />
-          <h1 className="text-2xl font-bold text-hitam absolute top-0 left-0 p-1 mx-20 my-10">
-            Kami mengajak Anda untuk mengeksplorasi dunia resep makanan sehat,
-            karena makanan yang baik adalah awal dari hidup yang sehat
-          </h1>
+          <h1 className="text-2xl font-bold text-hitam absolute top-0 left-0 p-1 mx-20 my-10"></h1>
         </div>
       </div>
 
@@ -104,11 +95,9 @@ const Beranda = () => {
               beragam resep makanan sehat yang kami <br /> sajikan, mengenai tim
               kami yang penuh <br /> semangat di halaman "Tentang Kami".
             </div>
-            <a href="/about">
-              <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
-                Tentang Kami
-              </button>
-            </a>
+            <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+              Tentang Kami
+            </button>
           </div>
           {/* Image Side */}
           <div
@@ -157,13 +146,6 @@ const Beranda = () => {
             <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam mr-5">
               App{" "}
             </button>{" "}
-            <span>
-              <a href="/blog">
-                <button className="btn bg-grab border-none rounded-3xl px-10 text-black ">
-                  Blog
-                </button>
-              </a>
-            </span>
           </div>
         </div>
       </div>

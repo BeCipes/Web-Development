@@ -56,11 +56,6 @@ const Navbar = () => {
               Blog
             </li>
           </Link>
-          <Link  to="/login">
-            <li className="my-4 py-4 border-b border-lime-500 hover:bg-lime-400 hover:rounded font-semibold">
-              Login
-            </li>
-          </Link>
         </ul>
       </div>
     </>
@@ -82,7 +77,7 @@ const Navbar = () => {
                 className="w-8 h-auto"
                 alt=""
               />
-              <span className="ml-2 hover:text-white">GoCipes</span>
+              <span className="ml-2 hover:text-white">BeCipes</span>
             </span>
           </Link>
         </div>
@@ -112,11 +107,6 @@ const Navbar = () => {
               <Link spy={true} smooth={true} to="/blog">
                 <li className="hover:text-blue-50 transition border-b-2 border-grab hover:border-blue-50 cursor-pointer">
                   Blog
-                </li>
-              </Link>
-              <Link spy={true} smooth={true} to="/login">
-                <li className="hover:text-blue-50 transition border-b-2 border-grab hover:border-blue-50 cursor-pointer">
-                  Login
                 </li>
               </Link>
             </ul>

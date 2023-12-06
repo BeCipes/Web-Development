@@ -12,9 +12,9 @@ const Blog = () => {
         <div className="py-12 ">
           <h2 className="font-semibold text-3xl text-center mb-28">Artikel</h2>
           {/* card1 */}
-          <div className=" columns-3 px-16 flex justify-between">
-            <div className="card w-64 bg-base-100 shadow-xl border">
-              <figure>
+          <div className=" columns-3 px-20 flex justify-between">
+            <div className="card w-72 bg-base-100 shadow-xl border">
+              <figure className="w-72 h-auto">
                 <img src="public/assets/sayur.jpg" alt="Shoes" />
               </figure>
               <div className="card-body">
@@ -37,16 +37,17 @@ const Blog = () => {
             </div>
 
             {/* card2 */}
-            <div className="">
-              <div className="card w-64 bg-base-100 shadow-xl border">
-                <figure>
+            <div className="w-72 h-[550px]">
+              <div className="card h-full w-72 bg-base-100 shadow-xl border">
+                <figure className="w-72 h-auto">
                   <img src="public/assets/kacanghijau.jpg" alt="Shoes" />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title">Kacang hijau?</h2>
+                  <h2 className="card-title">Benda itu hijau?</h2>
                   <p>
-                    Siapa sih yang tidak tau kacang hijau ? Salah satu
-                    polong-polongan dan berprotein nabati tinggi ini...
+                    Oooommmmaaaagaaaaa Siapa sih yang tidak tau kacang hijau?
+                    Salah satu polong-polongan dan berprotein nabati tinggi
+                    ini...
                   </p>
                   <div className="card-actions justify-end">
                     <a
@@ -63,16 +64,17 @@ const Blog = () => {
               </div>
             </div>
             {/* card3 */}
-            <div className="">
-              <div className="card w-64 bg-base-100 shadow-xl border">
-                <figure>
+            <div className="w-72 h-[550px]">
+              <div className="card w-72 h-full bg-base-100 shadow-xl border">
+                <figure className="w-72 h-auto ">
                   <img src="public/assets/tahu.jpg" alt="Shoes" />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title">Tempe Sehat tauuu</h2>
+                  <h2 className="card-title">Tempe Sehat tahu</h2>
                   <p>
                     Meskipun terbilang lauk yang murah,tempe merupakan
-                    penghasilan protein nabati yang baik loh...
+                    penghasilan protein nabati yang baik wajib dicoba bagi anak
+                    kost...
                   </p>
                   <div className="card-actions justify-end">
                     <a
@@ -89,9 +91,9 @@ const Blog = () => {
             </div>
           </div>
           {/* card4 */}
-          <div className=" columns-3 px-16 flex justify-between py-24">
-            <div className="card w-64 bg-base-100 shadow-xl border">
-              <figure>
+          <div className=" columns-3 px-20 flex justify-between py-24">
+            <div className="card w-72 bg-base-100 shadow-xl border">
+              <figure className="w-72 h-auto ">
                 <img src="public/assets/brokoli.jpg" alt="Shoes" />
               </figure>
               <div className="card-body">
@@ -114,9 +116,9 @@ const Blog = () => {
             </div>
 
             {/* card5 */}
-            <div className="">
-              <div className="card w-64 bg-base-100 shadow-xl border">
-                <figure>
+            <div className=" w-72 h-[550px] ">
+              <div className="card w-72 bg-base-100 h-full shadow-xl border">
+                <figure className="w-72 h-auto ">
                   <img src="public/assets/ciwi.jpg" alt="Shoes" />
                 </figure>
                 <div className="card-body">
@@ -139,18 +141,16 @@ const Blog = () => {
               </div>
             </div>
             {/* card6 */}
-            <div className="">
-              <div className="card w-64 bg-base-100 shadow-xl border">
-                <figure>
+            <div className="w-72 h-[550px] ">
+              <div className="card w-72 bg-base-100 h-full shadow-xl border">
+                <figure className="w-72 h-auto ">
                   <img src="public/assets/viral.jpg" alt="Shoes" />
                 </figure>
                 <div className="card-body">
                   <h2 className="card-title">OOommmaaaggga?</h2>
                   <p>
-                    VIRALLL!!! <br />
-                    Ternyata makanan ini tinggi kalori <br />
-                    berbahaya sekali, <br />
-                    gen z wajib waspada...
+                    VIRALLL!!! Ternyata makanan ini tinggi kalori berbahaya
+                    sekali, gen z wajib waspada...
                   </p>
                   <div className="card-actions justify-end">
                     <a
@@ -167,8 +167,8 @@ const Blog = () => {
             </div>
           </div>
           {/* card7 */}{" "}
-          <div className=" columns-3 px-16 flex justify-between py-24">
-            <div className="card w-64 bg-base-100 shadow-xl border">
+          <div className=" columns-3 px-20 flex justify-between py-24">
+            <div className="card w-72 h-[550px] bg-base-100 shadow-xl border">
               <figure>
                 <img src="public/assets/alpukat.jpg" alt="Shoes" />
               </figure>
@@ -192,8 +192,8 @@ const Blog = () => {
             </div>
 
             {/* card8 */}
-            <div className="">
-              <div className="card w-64 bg-base-100 shadow-xl border">
+            <div className="w-72 h-[550px]">
+              <div className="card w-72 bg-base-100 h-full shadow-xl border">
                 <figure>
                   <img src="public/assets/jamu.jpg" alt="Shoes" />
                 </figure>
@@ -217,8 +217,8 @@ const Blog = () => {
               </div>
             </div>
             {/* card9 */}
-            <div className="">
-              <div className="card w-64 bg-base-100 shadow-xl border">
+            <div className="w-72 h-[550px]">
+              <div className="card w-72 h-full bg-base-100 shadow-xl border">
                 <figure>
                   <img src="public/assets/masak.jpg" alt="Shoes" />
                 </figure>
@@ -257,7 +257,7 @@ const Blog = () => {
             />{" "}
             <img
               src="public/assets/profile.jpg"
-              className="rounded-full w-[100px] h-[100px] animate-spin -ml-36"
+              className="rounded-full w-[100px] h-[100px] -ml-36"
               alt=""
             />{" "}
             <p className="text-white -ml-[367px] mt-5 text-center">
@@ -280,7 +280,7 @@ const Blog = () => {
 
           <div className="w-96 h-auto py-32">
             {" "}
-            <img src="public/assets/flower.svg"></img>{" "}
+            <img src=""></img>{" "}
           </div>
         </div>
       </div>

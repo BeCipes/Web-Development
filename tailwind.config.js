@@ -6,11 +6,11 @@ export default {
   ],
   theme: {
     listStyleType: {
-      none: 'none',
-      disc: 'disc',
-      decimal: 'decimal',
-      square: 'square',
-      circle: 'circle',
+      none: "none",
+      disc: "disc",
+      decimal: "decimal",
+      square: "square",
+      circle: "circle",
     },
     daisyui: {
       themes: ["light"],
