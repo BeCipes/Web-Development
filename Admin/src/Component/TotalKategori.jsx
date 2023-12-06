@@ -18,10 +18,10 @@ const TotalKategori= () => {
   }, []);
 
   return (
-    <div className="sm:ml-60 bg-blue-500 text-white p-4 rounded-md mt-4 flex items-center w-48">
+    <div className="sm:ml-60 bg-blue-500 text-white p-4 rounded-md mt-4 flex items-center w-60">
       <BiSolidCategory className="mr-4" size={30}/>
       <div>
-      <h2 className="text-lg font-semibold mb-2">Total Kategori</h2>
+      <h2 className="text-2xl font-semibold mb-2">Total Kategori</h2>
       <p className="text-3xl font-bold">{totalKategori}</p>
       </div>
     </div>

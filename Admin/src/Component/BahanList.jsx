@@ -108,7 +108,7 @@ const BahanList = () => {
       </div>
       
       {selectedBahanId && (
-        <DeleteFile user="ingredient" onDelete={confirmDelete} onCancel={cancelDelete} />
+        <DeleteFile user="bahan" onDelete={confirmDelete} onCancel={cancelDelete} />
       )}
 
     </div>

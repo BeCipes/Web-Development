@@ -75,7 +75,7 @@ const VideoList = () => {
         </div>
       </div>
       {selectedKategoriId && (
-        <DeleteFile user="category" onDelete={confirmDelete} onCancel={cancelDelete} />
+        <DeleteFile user="kategori" onDelete={confirmDelete} onCancel={cancelDelete} />
       )}
     </div>
   );

@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 import { RiLogoutCircleLine, RiReactjsLine } from "react-icons/ri";
 import { IoHomeOutline } from "react-icons/io5";
 import logo from "../assets/BeCipes.png"
+import { MdArticle } from "react-icons/md";
+import { BiSolidFoodMenu } from "react-icons/bi";
+import { IoBookSharp } from "react-icons/io5";
+import { FaFileVideo } from "react-icons/fa6";
+import { BiSolidCategory } from "react-icons/bi";
+import { FaUser } from 'react-icons/fa';
+import { FaRegUser } from "react-icons/fa";
+
 
 const Sidebar = () => {
   return (
@@ -22,49 +30,49 @@ const Sidebar = () => {
         <li className="flex py-2 px-4 justify-start hover:bg-gray-200 cursor-pointer">
           <Link to="/DataAdmin">
               <span className="flex items-center text-lg">
-                <IoHomeOutline className="mr-2" /> Data Admin
+                <FaRegUser  className="mr-2" /> Admin
               </span>
           </Link>
         </li>
         <li className="flex py-2 px-4 justify-start hover:bg-gray-200 cursor-pointer">
           <Link to="/DataUser">
           <span className="flex items-center text-lg">
-                <IoHomeOutline className="mr-2" /> Data User
+                <FaUser className="mr-2" /> User
               </span>
           </Link>
         </li>
         <li className="flex py-2 px-4 justify-start hover:bg-gray-200 cursor-pointer">
           <Link to="/DataResep">
           <span className="flex items-center text-lg">
-                <IoHomeOutline className="mr-2" /> Data Resep
+                <IoBookSharp  className="mr-2" /> Resep
               </span>
           </Link>
         </li>
         <li className="flex py-2 px-4 justify-start hover:bg-gray-200 cursor-pointer">
           <Link to="/DataBahan">
           <span className="flex items-center text-lg">
-                <IoHomeOutline className="mr-2" /> Data Bahan
+                <BiSolidFoodMenu className="mr-2" /> Bahan
               </span>
           </Link>
         </li>
         <li className="flex py-2 px-4 justify-start hover:bg-gray-200 cursor-pointer">
           <Link to="/DataKategori">
           <span className="flex items-center text-lg">
-                <IoHomeOutline className="mr-2" /> Data Kategori
+                <BiSolidCategory className="mr-2" /> Kategori
               </span>
           </Link>
         </li>
         <li className="flex py-2 px-4 justify-start hover:bg-gray-200 cursor-pointer">
           <Link to="/DataArtikel">
           <span className="flex items-center text-lg">
-                <IoHomeOutline className="mr-2" /> Data Artikel
+                <MdArticle className="mr-2" /> Artikel
               </span>
           </Link>
         </li>
         <li className="flex py-2 px-4 justify-start hover:bg-gray-200 cursor-pointer">
           <Link to="/DataVideo">
           <span className="flex items-center text-lg">
-                <IoHomeOutline className="mr-2" /> Data Video
+                <FaFileVideo className="mr-2" /> Video
               </span>
           </Link>
         </li>

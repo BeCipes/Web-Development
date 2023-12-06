@@ -1,3 +1,4 @@
+import React from "react";
 import Beranda from "./Pages/Beranda";
 import About from "./Pages/About";
 import Default from "./Pages/Default";
@@ -5,9 +6,9 @@ import Panduan from "./Pages/Panduan";
 import Login from "./Pages/Login";
 import ContactUs from "./Pages/ContactUs";
 import Blog from "./Pages/Blog";
-import AdminPage from "./Pages/AdminPage";
+import AdminPage from "./Admin/AdminPage";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React from "react";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/login" element={<Login/>} />
-        <Route path="/admin" element={<AdminPage/>} />
+        <Route path ="/admin" element={<AdminPage/>} />
       </Routes>
     </Router>
   );

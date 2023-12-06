@@ -20,8 +20,8 @@ const DeleteFile = ({ user, onDelete, onCancel }) => {
       className="fixed inset-0 flex items-center justify-center"
     > 
       <div className="bg-white p-5 rounded-md w-full sm:w-96 shadow-lg">
-        <h2 className="text-xl font-semibold mb-3">Confirm Deletion</h2>
-        <p className="mb-5">Are you sure you want to delete this {user}?</p>
+        <h2 className="text-xl font-semibold mb-3">Konfirmasi Penghapusan</h2>
+        <p className="mb-5">Apakah kamu yakin ingin menghapus data {user} ini?</p>
         <div className="flex justify-end">
           <button
             onClick={handleDelete}
