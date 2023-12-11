@@ -1,52 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaGooglePlay, FaTimes } from "react-icons/fa";
-import axios from "axios";
-import {useNavigate} from "react-router-dom"
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const navigateTo = useNavigate()
-
-  const handleLogin = async (e) => {
-    e.preventDefault();
-  
-    try {
-      const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
-        {
-          email,
-          password,
-        }
-      );
-  
-      console.log("Login Response:", response.data);
-      console.log("Login Response:", response.data.data);
-  
-      const { role, token } = response.data.data;
-  
-      if (role === "admin" && token) {
-        const { accessToken, refreshToken } = token;
-  
-        localStorage.setItem("accessToken", accessToken);
-        localStorage.setItem("refreshToken", refreshToken);
-  
-        axios.defaults.headers.common[
-          "Authorization"
-        ] = `Bearer ${accessToken}`;
-  
-        console.log("Headers:", axios.defaults.headers);
-        navigateTo("/adminpage");
-      } else {
-        console.error("User does not have admin role or tokens not found.");
-      }
-    } catch (error) {
-      console.error("Login failed", error);
-    }
-  };
-  
-  
-
   return (
     <div>
       <div className="hero min-h-screen bg-base-200  Poppins">
@@ -76,7 +31,7 @@ const Login = () => {
                   Selamat datang kembali! Kami senang Anda kembali ke akun Anda.
                   Mohon masukkan informasi login Anda.
                 </p>
-                <form onSubmit={handleLogin}>
+                <form>
                   <div className="form-control mb-4 text-hitam">
                     <label className="label">
                       <span className="label-text text-md font-semibold">
@@ -88,8 +43,6 @@ const Login = () => {
                       placeholder="Masukkan alamat email"
                       className="input input-bordered text-sm"
                       required
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                   <div className="form-control mb-4 text-hitam">
@@ -103,8 +56,6 @@ const Login = () => {
                       placeholder="Masukkan kata sandi"
                       className="input input-bordered text-sm"
                       required
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
                     />
                   </div>
                   <div className="form-control flex mb-4 text-hitam">
@@ -119,7 +70,7 @@ const Login = () => {
                     className="text-end -mt-12 text-black"
                     style={{ textDecoration: "underline" }}
                   >
-                    <a href="/reset">Lupa Password?</a>
+                    <a href="/reset">Reset Password</a>
                   </div>
 
                   <div className="form-control mt-6">
