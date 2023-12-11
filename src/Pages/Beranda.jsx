@@ -1,9 +1,13 @@
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../Component/Navbar";
 import Footer from "../Component/Footer";
 import CarouselBeranda from "../Component/CarouselBeranda";
 import GridBeranda from "../Component/GridBeranda";
+import axios from "axios";
 
 const Beranda = () => {
+
   return (
     <div className="Poppins">
       <Navbar />

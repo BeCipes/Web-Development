@@ -70,7 +70,7 @@ const Navbar = () => {
     >
       <div className="h-10vh flex justify-between z-50 text-black lg:py-5 px-10 py-4 ">
         <div className="flex items-center flex-1">
-          <Link spy={true} smooth={true} to="/">
+          <Link  to="/">
             <span className="text-2xl font-bold flex items-center ">
               <img
                 src="public/assets/gocipes.png"
@@ -84,27 +84,27 @@ const Navbar = () => {
         <div className="lg:flex md:flex lg: flex-1 items-center justify-end font-normal hidden">
           <div className="flex-10">
             <ul className="flex gap-10 text-[18px] font-semibold">
-              <Link spy={true} smooth={true} to="/beranda">
+              <Link  to="/beranda">
                 <li className="hover:text-blue-50 transition border-b-2 border-grab hover:border-blue-50 cursor-pointer">
                   Beranda
                 </li>
               </Link>
-              <Link spy={true} smooth={true} to="/panduan">
+              <Link  to="/panduan">
                 <li className="hover:text-blue-50 transition border-b-2 border-grab hover:border-blue-50 cursor-pointer whitespace-nowrap">
                   Panduan Pengguna
                 </li>
               </Link>
-              <Link spy={true} smooth={true} to="/about">
+              <Link  to="/about">
                 <li className="hover:text-blue-50 transition border-b-2 border-grab hover:border-blue-50 cursor-pointer whitespace-nowrap">
                   Tentang Kami
                 </li>
               </Link>
-              <Link spy={true} smooth={true} to="/contactus">
+              <Link  to="/contactus">
                 <li className="hover:text-blue-50 transition border-b-2 border-grab hover:border-blue-50 cursor-pointer whitespace-nowrap">
                   Kontak Dukungan
                 </li>
               </Link>
-              <Link spy={true} smooth={true} to="/blog">
+              <Link  to="/blog">
                 <li className="hover:text-blue-50 transition border-b-2 border-grab hover:border-blue-50 cursor-pointer">
                   Blog
                 </li>
