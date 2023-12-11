@@ -70,7 +70,7 @@ const Login = () => {
                     className="text-end -mt-12 text-black"
                     style={{ textDecoration: "underline" }}
                   >
-                    <a href="/reset">Reset Password</a>
+                    <a href="/reset">Lupa Password?</a>
                   </div>
 
                   <div className="form-control mt-6">
