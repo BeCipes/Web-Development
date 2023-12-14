@@ -1,8 +1,8 @@
 import Navbar from "../Component/Navbar";
 import Footer from "../Component/Footer";
+import { Link } from "react-router-dom";
 
 const Default = () => {
-
   return (
     <body>
       <div>
@@ -21,15 +21,16 @@ const Default = () => {
             <p className="mt-3 text-lg">
               Sebuah platform yang dirancang untuk memantapkan{" "}
               <p className="text-lg">
-                {" "}
                 individu dalam perjalanan mereka menuju gaya hidup yang lebih
                 sehat.
               </p>
             </p>
             <div className="mt-4 font-semibold mr-7 ">
-              <button className="bg-grab rounded-full px-8 py-2 hover:bg-gray-100">
-                App
-              </button>
+              <Link to="/beranda">
+                <button className="bg-grab rounded-full px-8 py-2 hover:bg-gray-100">
+                  App
+                </button>
+              </Link>
             </div>
           </div>
 
