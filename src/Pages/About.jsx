@@ -1,5 +1,6 @@
 import Navbar from "../Component/Navbar";
 import Footer from "../Component/Footer";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -45,11 +46,11 @@ const About = () => {
                 keterampilan dasar memasak. Kapanpun, Dimanapun.
               </h3>
 
-              <a href="/panduan">
+              <Link to="/panduan">
                 <button className=" mb-8 bg-grab hover:bg-slate-100 mt-7 rounded-full px-5 py-3 font-semibold text-black">
                   Panduan Pengguna
                 </button>
-              </a>
+              </Link>
             </div>
             <div className="w-1/2 flex-1  pl-40">
               <img

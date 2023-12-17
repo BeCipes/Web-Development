@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CarouselBeranda = () => {
   return (
@@ -6,7 +7,7 @@ const CarouselBeranda = () => {
       <div id="slide1" className="carousel-item relative w-full">
         <div className="w-full ">
           <div className=" px-4 flex   mt-6 mb-6 justify-between">
-            {/* dila */}
+           
             <div className="carousel-item relative">
               <div className="card card-compact w-72 bg-black shadow-xl">
                 <figure className="h-1/2">
@@ -24,14 +25,16 @@ const CarouselBeranda = () => {
                     juga memberikan manfaat yang baik bagi tubuh Anda.
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
-                      Resep
-                    </button>
+                    <Link to="">
+                      <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+                        Resep
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
-            {/* alfin */}
+            
             <div className="carousel-item relative">
               <div className="card card-compact w-72 bg-black shadow-xl">
                 <figure className="h-1/2">
@@ -49,14 +52,16 @@ const CarouselBeranda = () => {
                     senyawa bioaktif lainnya yang dibutuhkan oleh tubuh.
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
-                      Resep
-                    </button>
+                    <Link to="">
+                      <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+                        Resep
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
-            {/* aina */}
+           
             <div className="carousel-item relative">
               <div className="card card-compact w-72 bg-black shadow-xl">
                 <figure className="h-1/2">
@@ -74,14 +79,16 @@ const CarouselBeranda = () => {
                     lebih baik, dan bahkan risiko kanker yang lebih rendah.
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
-                      Resep
-                    </button>
+                    <Link to="">
+                      <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+                        Resep
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
-            {/* Rizka */}
+            
             <div className="carousel-item relative">
               <div className="card card-compact w-72 bg-black shadow-xl">
                 <figure className="h-1/2">
@@ -99,9 +106,11 @@ const CarouselBeranda = () => {
                     mudah didapat.
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn bg-grab border-none rounded-3xl px-10">
-                      Resep
-                    </button>
+                    <Link to="">
+                      <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+                        Resep
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -128,7 +137,7 @@ const CarouselBeranda = () => {
       <div id="slide2" className="carousel-item relative w-full">
         <div className="w-full ">
           <div className=" px-4 flex   mt-6 mb-6 justify-between">
-            {/* Kayla */}
+           
             <div className="carousel-item relative">
               <div className="card card-compact w-72 bg-black shadow-xl">
                 <figure className="h-1/2">
@@ -147,14 +156,16 @@ const CarouselBeranda = () => {
                     tubuh Anda.
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
-                      Resep
-                    </button>
+                    <Link to="">
+                      <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+                        Resep
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
-            {/* Mute */}
+            
             <div className="carousel-item relative">
               <div className="card card-compact w-72 bg-black shadow-xl">
                 <figure className="h-1/2">
@@ -173,14 +184,16 @@ const CarouselBeranda = () => {
                     pencernaan Anda.
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
-                      Resep
-                    </button>
+                    <Link to="">
+                      <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+                        Resep
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
-            {/* Austin */}
+            
             <div className="carousel-item relative">
               <div className="card card-compact w-72 bg-black shadow-xl">
                 <figure className="h-1/2">
@@ -200,14 +213,16 @@ const CarouselBeranda = () => {
                     akan nutrisi, sumber protein, dan rendah kalori.
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
-                      Resep
-                    </button>
+                    <Link to="">
+                      <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+                        Resep
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
-            {/* Adit */}
+            
             <div className="carousel-item relative">
               <div className="card card-compact w-72 bg-black shadow-xl">
                 <figure className="h-1/2">
@@ -225,9 +240,11 @@ const CarouselBeranda = () => {
                     kesehatan jantung, mengandung vitamin C, dan kaya serat.
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn bg-grab border-none rounded-3xl px-10">
-                      Resep
-                    </button>
+                    <Link to="">
+                      <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+                        Resep
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -255,7 +272,7 @@ const CarouselBeranda = () => {
       <div id="slide3" className="carousel-item relative w-full">
         <div className="w-full ">
           <div className=" px-4 flex   mt-6 mb-6 justify-between">
-            {/* Firdaus */}
+            
             <div className="carousel-item relative">
               <div className="card card-compact w-72 bg-black shadow-xl">
                 <figure className="h-1/2">
@@ -273,14 +290,16 @@ const CarouselBeranda = () => {
                     sehat dan mengandung serat tinggi.
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
-                      Resep
-                    </button>
+                    <Link to="">
+                      <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+                        Resep
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
-            {/* Ikhasn */}
+           
             <div className="carousel-item relative">
               <div className="card card-compact w-72 bg-black shadow-xl">
                 <figure className="h-1/2">
@@ -298,14 +317,16 @@ const CarouselBeranda = () => {
                     senyawa bioaktif lainnya yang dibutuhkan oleh tubuh.
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
-                      Resep
-                    </button>
+                    <Link to="">
+                      <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+                        Resep
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
-            {/* Dito */}
+            
             <div className="carousel-item relative">
               <div className="card card-compact w-72 bg-black shadow-xl">
                 <figure className="h-1/2">
@@ -323,14 +344,16 @@ const CarouselBeranda = () => {
                     kesehatan dan nutrisi.
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
-                      Resep
-                    </button>
+                    <Link to="">
+                      <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+                        Resep
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
-            {/* Adit */}
+            
             <div className="carousel-item relative">
               <div className="card card-compact w-72 bg-black shadow-xl">
                 <figure className="h-1/2">
@@ -348,9 +371,11 @@ const CarouselBeranda = () => {
                     pasta memberikan nutrisi dan kaya akan serat.
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn bg-grab border-none rounded-3xl px-10">
-                      Resep
-                    </button>
+                    <Link to="">
+                      <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+                        Resep
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

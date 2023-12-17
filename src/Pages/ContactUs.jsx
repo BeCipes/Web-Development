@@ -1,5 +1,6 @@
 import Navbar from "../Component/Navbar"
 import Footer from "../Component/Footer";
+import { Link } from "react-router-dom";
 
 const ContactUs = () => {
   return (
@@ -110,11 +111,11 @@ const ContactUs = () => {
             Silahkan hubungi kami atau Anda dapat menemukan jawaban seputar
             aplikasi kami di menu "Panduan Pengguna"
           </h1>
-          <a href="/panduan">
+          <Link to="/panduan">
             <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
               Panduan Pengguna
             </button>
-          </a>
+          </Link>
         </div>
       </div>
 
