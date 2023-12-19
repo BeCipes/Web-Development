@@ -42,30 +42,23 @@ const EditStep = () => {
   }, [id]);
 
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === "gambar") {
-      setStepData((prevData) => ({
-        ...prevData,
-        [name]: files[0].name,
-      }));
-    } else {
-      setStepData((prevData) => ({
-        ...prevData,
-        [name]: value,
-      }));
-    }
+    setStepData({
+      ...stepData,
+      [e.target.name]: e.target.value,
+    });
   };
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    console.log("Submitting Step Data:", stepData);
     try {
-      await axios.put(`http://localhost:5000/api/step/${id}`, stepData);
-      navigate("/DataStep");
+      await axios.put(`http://localhost:5000/api/step/${id}/${stepData.id_resep}`, stepData);
+      navigate("/DataResepDetail");
     } catch (error) {
       console.error("Error editing step:", error.message);
     }
   };
+  
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 flex items-center justify-center">
       <div className="bg-white w-1/2 p-8 rounded-lg">
@@ -76,7 +69,6 @@ const EditStep = () => {
               Resep:
             </label>
             <select
-              id="id_resep"
               name="id_resep"
               value={stepData.id_resep}
               onChange={handleChange}
@@ -98,7 +90,6 @@ const EditStep = () => {
             </label>
             <input
               type="text"
-              id="step_no"
               name="step_no"
               value={stepData.step_no}
               onChange={handleChange}
@@ -111,7 +102,6 @@ const EditStep = () => {
             </label>
             <input
               type="text"
-              id="step_desc"
               name="step_desc"
               value={stepData.step_desc}
               onChange={handleChange}
@@ -124,7 +114,6 @@ const EditStep = () => {
             </label>
             <input
               type="text"
-              id="waktu"
               name="waktu"
               value={stepData.waktu}
               onChange={handleChange}
