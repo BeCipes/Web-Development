@@ -8,17 +8,20 @@ import ArtikelList from "../Component/ArtikelList";
 import ButtonAddAdmin from "../Component/ButtonAddAdmin"
 
 const DataArtikel = () => {
-  const [userData, setUserData] = useState([]);
+  const [artikelData, setArtikelData] = useState([]);
   const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/user");
-        const filteredUsers = response.data.data.filter(
-          (user) => user.role.role_name === "admin"
-        );
-        setUserData(filteredUsers);
+        const accessToken = localStorage.getItem("accessToken");
+        if (!accessToken) {
+          navigate("/login");
+          return;
+        }
+        const response = await axios.get("http://localhost:5000/api/artikel");
+        console.log("Login Response:", response.data);
+        setArtikelData(response.data);
       } catch (error) {
         console.error("Error fetching user data:", error);
         navigate("/login");
@@ -27,10 +30,7 @@ const DataArtikel = () => {
 
     fetchData();
   }, [navigate]);
-
-  if (!userData.length) {
-    navigate("/login");
-  }
+  
   return (
     <div className="flex-column">
       <Sidebar />
@@ -39,12 +39,6 @@ const DataArtikel = () => {
         <div className="flex px-6 sm:ml-56 mt-5">
           <div className="flex items-center justify-between h-16 w-full">
             <div className="text-2xl font-bold">List Artikel</div>
-            <div className="w-1/2 text-center">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="w-full px-4 py-1 rounded border border-gray-300 focus:outline-none focus:shadow-outline"/>
-            </div>
             <Link to="/add-artikel" >
                 <ButtonAddAdmin className="ml-auto" nama="Add Artikel"/>
             </Link>

@@ -4,11 +4,10 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios"
 import Sidebar from "../Component/SideBar";
 import Header from "../Component/Header";
-import ResepList from "../Component/ResepList";
+import ResepDetail from "../Component/ResepDetail";
 import ButtonAddAdmin from "../Component/ButtonAddAdmin"
 
-const DataResep = () => {
-  const [userData, setUserData] = useState([]);
+const DataResepDetail = () => {
   const navigate = useNavigate(); 
 
   useEffect(() => {
@@ -27,6 +26,7 @@ const DataResep = () => {
 
     fetchData();
   }, [navigate]);
+
   return (
     <div className="flex-column">
       <Sidebar />
@@ -36,15 +36,20 @@ const DataResep = () => {
           <div className="flex items-center justify-between h-16 w-full">
             <div className="text-2xl font-bold">List Resep</div>
 
-            <Link to="/add-resep" >
-                <ButtonAddAdmin className="ml-auto" nama="Add Resep"/>
-            </Link>
+            <div className="flex ml-auto space-x-4">
+                <Link to="/add-resep">
+                  <ButtonAddAdmin nama="Add Resep" />
+                </Link>
+                <Link to="/add-step">
+                  <ButtonAddAdmin nama="Add Step" />
+                </Link>
+              </div>
           </div>
         </div>
-        <ResepList />
+        <ResepDetail/>
       </div>
     </div>
   );
 };
 
-export default DataResep;
+export default DataResepDetail;

@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import EditButton from "../Component/EditButton";
-import DeleteButton from "../Component/DeleteButton";
+import EditButton from "./EditButton";
+import DeleteButton from "./DeleteButton";
 import SearchBar from "./SearchBar";
 
-const KategoriList = () => {
-  const [kategoriData, setKategoriData] = useState([]);
-  const [filteredKategoriData, setFilteredKategoriData] = useState([]);
+const JenisList = () => {
+  const [jenisData, setJenisData] = useState([]);
+  const [filteredJenisData, setFilteredJenisData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/kategori");
-        setKategoriData(response.data.data);
-        setFilteredKategoriData(response.data.data);
+        const response = await axios.get("http://localhost:5000/api/jenis-kategori");
+        setJenisData(response.data.data);
+        setFilteredJenisData(response.data.data);
 
       } catch (error) {
         console.error("Error fetching user data:", error);
@@ -25,20 +25,21 @@ const KategoriList = () => {
 
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/kategori/${id}`);
-      const response = await axios.get("http://localhost:5000/api/kategori");
-      setKategoriData(response.data.data);
-      setFilteredKategoriData(response.data.data);
+      await axios.delete(`http://localhost:5000/api/jenis-kategori/${id}`);
+      const response = await axios.get("http://localhost:5000/api/jenis-kategori");
+      setJenisData(response.data.data);
+      setFilteredJenisData(response.data.data);
 
     } catch (error) {
-      console.error("Error deleting Kategori:", error.message);
+      console.error("Error deleting Bahan:", error.message);
     }
   };
+
   const handleSearch = (searchTerm) => {
-    const filteredData = kategoriData.filter((video) =>
-      video.nama_kategori.toLowerCase().includes(searchTerm.toLowerCase())
+    const filteredData = jenisData.filter((video) =>
+      video.nama_jenis.toLowerCase().includes(searchTerm.toLowerCase())
     );
-    setFilteredKategoriData(filteredData);
+    setFilteredJenisData(filteredData);
   };
 
   return (
@@ -52,26 +53,22 @@ const KategoriList = () => {
                 <th className="py-3 px-1 text-center">No</th>
                 <th className="py-3 px-6">ID</th>
                 <th className="py-3 px-6">Name</th>
-                <th className="py-3 px-6">Gambar</th>
-                <th className="py-3 px-6">id jenis</th>
                 <th className="py-3 px-1 text-center">Action</th>
               </tr>
             </thead>
             <tbody>
-              {filteredKategoriData.map((kategori, index) => (
-                <tr key={kategori.id} className="bg-white border-b">
+              {filteredJenisData.map((jenis, index) => (
+                <tr key={jenis.id} className="bg-white border-b">
                   <td className="py-3 px-1 text-center">{index + 1}</td>
-                  <td className="py-3 px-6">{kategori.id}</td>
+                  <td className="py-3 px-6">{jenis.id}</td>
                   <td className="py-3 px-6 font-medium text-gray-900">
-                    {kategori.nama_kategori}
+                    {jenis.nama_jenis}
                   </td>
-                  <td className="py-3 px-6">{kategori.gambar}</td>
-                  <td className="py-3 px-6">{kategori.id_jenis}</td>
                   <td className="py-3 px-1 text-center">
-                    <Link to={`/edit-kategori/${kategori.id}`}>
+                    <Link to={`/edit-jenis/${jenis.id}`}>
                       <EditButton />
                     </Link>
-                    <Link onClick={() => deleteProduct(kategori.id)}>
+                    <Link onClick={() => deleteProduct(jenis.id)}>
                       <DeleteButton />
                     </Link>
                   </td>
@@ -85,4 +82,4 @@ const KategoriList = () => {
   );
 };
 
-export default KategoriList;
+export default JenisList;
