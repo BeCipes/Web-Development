@@ -26,7 +26,7 @@ const Default = () => {
               </p>
             </p>
             <div className="mt-4 font-semibold mr-7 ">
-              <Link to="/beranda">
+              <Link to="#">
                 <button className="bg-grab rounded-full px-8 py-2 hover:bg-gray-100">
                   App
                 </button>
