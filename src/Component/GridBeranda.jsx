@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const GridBeranda = () => {
   return (
     <div className="mb-40 mx-10 max-w-full">
       <div className="grid grid-cols-2 gap-10">
         {/* Card 1 */}
-        <div className="flex bg-black text-white rounded-md h-72 -z-20">
+        <div className="flex bg-black text-white rounded-md h-72 -z-0">
           {/* Image Side */}
-          <div className="w-1/2 relative -z-10" style={{ transform: "translateY(-20px) translateX(-15px)" }}>
+          <div className="w-1/2 relative -z-0" style={{ transform: "translateY(-20px) translateX(-15px)" }}>
             <img
               src="public/assets/home4.jpg"
               alt="Card"
@@ -23,18 +24,18 @@ const GridBeranda = () => {
             <p className="text-white mb-4 text-center">
               Rasakan manfaat kesehatan yang akan Anda dapatkan dengan memilih makanan sehat. Kami selalu siap mendengar dari Anda dan memberikan dukungan yang Anda butuhkan.
             </p>
-            <a href="/ContactUs">
-              <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
-                Panduan Pengguna
+            <Link to="/ContactUs">
+              <button className="btn bg-grab hover:bg-slate-300 border-none rounded-3xl px-10 text-hitam">
+                Kontak & Dukungan
               </button>
-            </a>
+            </Link>
           </div>
         </div>
 
         {/* Card 2 */}
-        <div className="flex bg-black text-white rounded-md h-72 -z-20">
+        <div className="flex bg-black text-white rounded-md h-72 -z-0">
           {/* Image Side */}
-          <div className="w-1/2 relative -z-10" style={{ transform: "translateY(-20px) translateX(-15px)" }}>
+          <div className="w-1/2 relative -z-0" style={{ transform: "translateY(-20px) translateX(-15px)" }}>
             <img
               src="public/assets/home.jpg"
               alt="Card"
@@ -50,11 +51,11 @@ const GridBeranda = () => {
             <p className="text-white mb-4 text-center">
               Bergabunglah dengan kami dalam perjalanan menuju gaya hidup yang lebih sehat dan nikmat dengan resep-resep terbaik dari Healty Food Recipes.
             </p>
-            <a href="">
+            <Link to="">
             <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
               Download Aplikasi
             </button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

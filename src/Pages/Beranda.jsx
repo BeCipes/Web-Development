@@ -5,6 +5,7 @@ import Footer from "../Component/Footer";
 import CarouselBeranda from "../Component/CarouselBeranda";
 import GridBeranda from "../Component/GridBeranda";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Beranda = () => {
 
@@ -79,11 +80,11 @@ const Beranda = () => {
             Kami punya semua jawaban yang Anda butuhkan di mneu "Panduan
             Pengguna". Silahkan klik untuk melihat
           </div>
-          <a href="/panduan">
+          <Link to="/panduan">
             <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
               Panduan Pengguna
             </button>
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -99,9 +100,11 @@ const Beranda = () => {
               beragam resep makanan sehat yang kami <br /> sajikan, mengenai tim
               kami yang penuh <br /> semangat di halaman "Tentang Kami".
             </div>
-            <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
-              Tentang Kami
-            </button>
+            <Link to="/about">
+              <button className="btn bg-grab border-none rounded-3xl px-10 text-hitam">
+                Tentang Kami
+              </button>
+            </Link>
           </div>
           {/* Image Side */}
           <div
