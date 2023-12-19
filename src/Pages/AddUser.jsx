@@ -1,23 +1,75 @@
 import React, { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import axios from "axios"
+import { Link, useParams, useNavigate } from "react-router-dom";
 import AddButton from "../Component/AddButton"
 
 const AddUser = () => {
+  const navigate = useNavigate();
 
+  const [userData, setUserData] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value, files } = e.target;
+
+    if (name === "gambar") {
+      setUserData((prevData) => ({
+        ...prevData,
+        [name]: files[0].name,
+      }));
+    } else {
+      setUserData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post("http://localhost:5000/api/user", userData);
+
+      console.log("Server Response:", response);
+
+      navigate("/DataUser");
+    } catch (error) {
+      console.error("Error adding User:", error.message);
+    }
+  };
+
+  
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 flex items-center justify-center">
       <div className="bg-white w-1/2 p-8 rounded-lg">
         <h2 className="text-2xl font-bold mb-4">Add User</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">
-              Name
+              First Name
             </label>
             <input
               type="text"
-              name="name"
-            //   value={admin.name}
-              // onChange={}
+              name="first_name"
+              value={userData.first_name}
+              onChange={handleChange}
+              className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700 text-sm font-bold mb-2">
+              Last Name
+            </label>
+            <input
+              type="text"
+              name="last_name"
+              value={userData.last_name}
+              onChange={handleChange}
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
@@ -28,8 +80,8 @@ const AddUser = () => {
             <input
               type="email"
               name="email"
-            //   value={admin.email}
-              // onChange={}
+              value={userData.email}
+              onChange={handleChange}
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
@@ -40,24 +92,18 @@ const AddUser = () => {
             <input
               type="password"
               name="password"
-            //   value={admin.password}
-              // onChange={}
-              className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">
-              Photo
-            </label>
-            <input
-              type="file"
-              name="photo"
-              // onChange={}
+              value={userData.password}
+              onChange={handleChange}
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
           <div className="flex items-center">
-            <AddButton/>
+          <button
+              type="submit"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
+            >
+              Add User
+            </button>
             <Link to="/DataUser">
               <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
                 Cancel

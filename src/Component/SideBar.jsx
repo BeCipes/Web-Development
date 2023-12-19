@@ -4,14 +4,13 @@ import { Link } from "react-router-dom";
 import { RiLogoutCircleLine, RiReactjsLine } from "react-icons/ri";
 import { IoHomeOutline } from "react-icons/io5";
 import logo from "../assets/BeCipes.png"
-import { MdArticle } from "react-icons/md";
-import { BiSolidFoodMenu } from "react-icons/bi";
-import { IoBookSharp } from "react-icons/io5";
-import { FaFileVideo } from "react-icons/fa6";
-import { BiSolidCategory } from "react-icons/bi";
-import { FaUser } from 'react-icons/fa';
 import { FaRegUser } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { IoBookOutline } from "react-icons/io5";
+import { BiFoodMenu } from "react-icons/bi";
+import { BiCategory } from "react-icons/bi";
+import { MdOutlineArticle } from "react-icons/md";
+import { FaRegFileVideo } from "react-icons/fa";
 
 const Sidebar = () => {
   const navigateTo = useNavigate();
@@ -25,9 +24,9 @@ const Sidebar = () => {
     navigateTo("/login");
   };
   return (
-    <div className="p-4 bg-white shadow fixed text-black h-screen w-56">
+    <div className="p-4 bg-white shadow fixed text-black h-screen w-56 flex flex-col items-center">
       <div>
-        <img src = {logo}/>
+        <img src = {logo} className="w-32 h-32" alt="Logo"/>
       </div>
       <ul>
         <li className="flex py-2 px-4 justify-start hover:bg-gray-200 cursor-pointer">
@@ -48,42 +47,49 @@ const Sidebar = () => {
         <li className="flex py-2 px-4 justify-start hover:bg-gray-200 cursor-pointer">
           <Link to="/DataUser">
           <span className="flex items-center text-lg">
-                <FaUser className="mr-2" /> User
+                <FaRegUser className="mr-2" /> User
               </span>
           </Link>
         </li>
-        <li className="flex py-2 px-4 justify-start hover:bg-gray-200 cursor-pointer">
-          <Link to="/DataResep">
+                <li className="flex py-2 px-4 justify-start hover:bg-gray-200 cursor-pointer">
+          <Link to="/DataResepDetail">
           <span className="flex items-center text-lg">
-                <IoBookSharp  className="mr-2" /> Resep
+                <IoBookOutline  className="mr-2" /> Resep Detail
               </span>
           </Link>
         </li>
         <li className="flex py-2 px-4 justify-start hover:bg-gray-200 cursor-pointer">
           <Link to="/DataBahan">
           <span className="flex items-center text-lg">
-                <BiSolidFoodMenu className="mr-2" /> Bahan
+                <BiFoodMenu className="mr-2" /> Bahan
+              </span>
+          </Link>
+        </li>
+        <li className="flex py-2 px-4 justify-start hover:bg-gray-200 cursor-pointer">
+          <Link to="/DataJenis">
+          <span className="flex items-center text-lg">
+                <BiCategory className="mr-2" /> Jenis Kategori
               </span>
           </Link>
         </li>
         <li className="flex py-2 px-4 justify-start hover:bg-gray-200 cursor-pointer">
           <Link to="/DataKategori">
           <span className="flex items-center text-lg">
-                <BiSolidCategory className="mr-2" /> Kategori
+                <BiCategory className="mr-2" /> Kategori
               </span>
           </Link>
         </li>
         <li className="flex py-2 px-4 justify-start hover:bg-gray-200 cursor-pointer">
           <Link to="/DataArtikel">
           <span className="flex items-center text-lg">
-                <MdArticle className="mr-2" /> Artikel
+                <MdOutlineArticle className="mr-2" /> Artikel
               </span>
           </Link>
         </li>
         <li className="flex py-2 px-4 justify-start hover:bg-gray-200 cursor-pointer">
           <Link to="/DataVideo">
           <span className="flex items-center text-lg">
-                <FaFileVideo className="mr-2" /> Video
+                <FaRegFileVideo className="mr-2" /> Video
               </span>
           </Link>
         </li>
@@ -91,12 +97,12 @@ const Sidebar = () => {
       <div className="p-4 mt-16">
         <ul>
         <li
-            className="flex items-center py-2 px-4 justify-between hover:bg-gray-200 cursor-pointer"
+            className="flex items-center py-2 px-4 justify-between hover:bg-red-200 cursor-pointer"
             onClick={handleLogout}
           >
             <Link to="/login">
               <span className="flex items-center">
-                <RiLogoutCircleLine className="mr-2" /> Logout
+                <RiLogoutCircleLine /> Logout
               </span>
             </Link>
           </li>

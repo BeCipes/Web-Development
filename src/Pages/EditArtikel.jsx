@@ -1,43 +1,84 @@
-import React, { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useParams, useNavigate } from "react-router-dom";
+import axios from "axios"
 import CancelButton from "../Component/CancelButton";
 import UpdateButton from "../Component/UpdateButton";
-import axios from "axios"
-import { useNavigate } from "react-router-dom";
 
 const EditArtikel = () => {
-  const [userData, setUserData] = useState([]);
-  const navigate = useNavigate(); 
+  const { id } = useParams();
+  const navigate = useNavigate();
+
+  const [artikelData, setArtikelData] = useState({
+    headline: "",
+    gambar: null,
+    isi: "",
+    penulis: "",
+    sumber: "",
+    id_kategori: "",
+  });
+
+  const [kategoriOptions, setKategoriOptions] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchArtikelData = async () => {
       try {
-        const accessToken = localStorage.getItem("accessToken");
-        if (!accessToken) {
-          navigate("/login");
-          return;
-        }
-        const response = await axios.get("http://localhost:5000/api/user");
-        console.log("Login Response:", response.data);
-        
-        const filteredUsers = response.data.data.filter(
-          (user) => user.role.role_name === "admin"
-        );
-        setUserData(filteredUsers);
+        const artikelResponse = await axios.get(`http://localhost:5000/api/artikel/${id}`);
+        setArtikelData(artikelResponse.data.data);
       } catch (error) {
-        console.error("Error fetching user data:", error);
-        navigate("/login");
+        console.error("Error fetching artikel data:", error.message);
       }
     };
 
-    fetchData();
-  }, [navigate]);
+    const fetchKategoriOptions = async () => {
+      try {
+        const kategoriResponse = await axios.get("http://localhost:5000/api/kategori");
+        setKategoriOptions(kategoriResponse.data.data);
+      } catch (error) {
+        console.error("Error fetching jenis options:", error.message);
+      }
+    };
+
+    fetchArtikelData();
+    fetchKategoriOptions();
+  }, [id]);
+  
+  const handleChange = (e) => {
+    const { name, value, files } = e.target;
+    if (name === "gambar") {
+      setArtikelData((prevData) => ({
+        ...prevData,
+        [name]: files[0].name,
+      }));
+    } else {
+      setArtikelData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
+  };
+  const handleKategoriChange = (e) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      id_kategori: e.target.value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await axios.put(`http://localhost:5000/api/artikel/${id}`, artikelData);
+      navigate("/DataArtikel");
+    } catch (error) {
+      console.error("Error editing artikel:", error.message);
+    }
+  };
 
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 flex items-center justify-center">
       <div className="bg-white w-1/2 p-8 rounded-lg">
         <h2 className="text-2xl font-bold mb-4">Edit Artikel</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">
               Headline
@@ -45,8 +86,8 @@ const EditArtikel = () => {
             <input
               type="text"
               name="headline"
-            //   value={admin.name}
-              // onChange={}
+              value={artikelData.headline}
+              onChange={handleChange}
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
@@ -56,8 +97,8 @@ const EditArtikel = () => {
             </label>
             <input
               type="file"
-              name="photo"
-              // onChange={}
+              name="gambar"
+              onChange={handleChange}
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
@@ -68,8 +109,8 @@ const EditArtikel = () => {
             <input
               type="text"
               name="isi"
-            //   value={admin.email}
-              // onChange={}
+              value={artikelData.isi}
+              onChange={handleChange}
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
@@ -80,7 +121,8 @@ const EditArtikel = () => {
             <input
               type="text"
               name="penulis"
-              // onChange={}
+              value={artikelData.penulis}
+              onChange={handleChange}
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
@@ -91,25 +133,36 @@ const EditArtikel = () => {
             <input
               type="url"
               name="sumber"
-              // onChange={}
+              value={artikelData.sumber}
+              onChange={handleChange}
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">
-              Kategori
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="id_kategori">
+              Kategori:
             </label>
-            <input
-              type="text"
-              name="kategori"
-              // onChange={}
+            <select
+              id="id_kategori"
+              name="id_kategori"
+              value={artikelData.id_kategori}
+              onChange={handleChange}
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-            />
+            >
+              <option value="" disabled>
+                Select Kategori
+              </option>
+              {kategoriOptions.map((kategori) => (
+                <option key={kategori.id} value={kategori.id}>
+                  {kategori.nama_kategori}
+                </option>
+              ))}
+            </select>
           </div>
           <div className="flex items-center">
-            <UpdateButton/>
+          <UpdateButton onClick={handleSubmit} />
             <Link to="/DataArtikel">
-                <CancelButton/>
+              <CancelButton />
             </Link>
           </div>
         </form>

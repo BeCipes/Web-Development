@@ -10,7 +10,7 @@ const Header = (props) => {
           {props.nama || "Dashboard"}
         </div>
         <span className="flex items-center text-lg">
-                <CgProfile className="mr-2" /> admin austin
+                <CgProfile className="mr-2" /> Admin
         </span>
       </div>
     </header>

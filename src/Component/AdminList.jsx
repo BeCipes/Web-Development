@@ -29,10 +29,10 @@ const AdminList = () => {
       <div className="w-4/5 sm:ml-56">
         <div className="relative shadow rounded-lg mt-3">
           <table className="w-full text-sm text-left text-green-500">
-            <thead className="text-xs text-green-700 uppercase bg-slate-300">
+            <thead className="text-xs text-white uppercase bg-black">
               <tr>
                 <th className="py-3 px-1 text-center">No</th>
-                <th className="py-3 px-6">ID</th>
+                <th className="py-3 px-6">UUID</th>
                 <th className="py-3 px-6">First Name</th>
                 <th className="py-3 px-6">Last Name</th>
                 <th className="py-3 px-6">Email</th>

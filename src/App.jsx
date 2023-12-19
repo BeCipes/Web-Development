@@ -31,7 +31,13 @@ import DataKategori from "./Pages/DataKategori"
 import AddKategori from "./Pages/AddKategori"
 import EditKategori from "./Pages/EditKategori"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import DataJenis from "./Pages/DataJenis";
+import EditJenis from "./Pages/EditJenis";
+import AddJenis from "./Pages/AddJenis"
+import DataStep from "./Pages/DataStep";
+import AddStep from "./Pages/AddStep"
+import EditStep from "./Pages/EditStep"
+import DataResepDetail from "./Pages/DataResepDetail"
 
 function App() {
   return (
@@ -53,21 +59,28 @@ function App() {
         <Route path="/add-admin" element={<AddAdmin />} />
         <Route path="/add-user" element={<AddUser />} />
         <Route path="/edit-user" element={<EditUser />} />
-        <Route path="/DataResep" element={<DataResep />} />
         <Route path="/add-resep" element={<AddResep />} />
-        <Route path="/edit-resep" element={<EditResep />} />
+        <Route path="/edit-resep/:id" element={<EditResep />} />
         <Route path="/DataBahan" element={<DataBahan />} />
         <Route path="/add-bahan" element={<AddBahan />} />
-        <Route path="/edit-bahan" element={<EditBahan />} />
+        <Route path="/edit-bahan/:id" element={<EditBahan />} />
         <Route path="/DataArtikel" element={<DataArtikel />} />
         <Route path="/add-artikel" element={<AddArtikel />} />
-        <Route path="/edit-artikel" element={<EditArtikel />} />
+        <Route path="/edit-artikel/:id" element={<EditArtikel />} />
         <Route path="/DataVideo" element={<DataVideo/>} />
         <Route path="/add-video" element={<AddVideo />} />
-        <Route path="/edit-video" element={<EditVideo />} />
+        <Route path="/edit-video/:id" element={<EditVideo />} />
         <Route path="/DataKategori" element={<DataKategori/>} />
         <Route path="/add-kategori" element={<AddKategori />} />
-        <Route path="/edit-kategori" element={<EditKategori />} />
+        <Route path="/edit-kategori/:id" element={<EditKategori />} />
+        <Route path="/DataJenis" element={<DataJenis />} />
+        <Route path="/edit-jenis/:id" element={<EditJenis/>} />
+        <Route path="/add-jenis" element={<AddJenis />} />
+        <Route path="/edit-step/:id" element={<EditStep/>} />
+        <Route path="/add-step" element={<AddStep />} />
+
+        <Route path="/DataResepDetail" element={<DataResepDetail />} />
+
       </Routes>
     </Router>
   );

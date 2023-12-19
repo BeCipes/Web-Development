@@ -19,13 +19,17 @@ const DataBahan = () => {
           navigate("/login");
           return;
         }
-        const response = await axios.get("http://localhost:5000/api/user");
-        console.log("Login Response:", response.data);
+        const response = await axios.get("http://localhost:5000/api/bahan");
+
+        if (response.data && response.data.data && Array.isArray(response.data.data)) {
+          const dataArray = response.data.data;
+          const namaBahanList = dataArray.map(bahan => bahan.nama_bahan);
+          setUserData(namaBahanList);
+          console.log("List Nama Bahan:", namaBahanList);
+        } else {
+          console.error("Data tidak valid atau tidak ada dalam respons.");
+        }
         
-        const filteredUsers = response.data.data.filter(
-          (user) => user.role.role_name === "admin"
-        );
-        setUserData(filteredUsers);
       } catch (error) {
         console.error("Error fetching user data:", error);
         navigate("/login");
@@ -34,6 +38,7 @@ const DataBahan = () => {
 
     fetchData();
   }, [navigate]);
+  
   return (
     <div className="flex-column">
       <Sidebar />
@@ -42,12 +47,6 @@ const DataBahan = () => {
         <div className="flex px-6 sm:ml-56 mt-5">
           <div className="flex items-center justify-between h-16 w-full">
             <div className="text-2xl font-bold">List Bahan</div>
-            <div className="w-1/2 text-center">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="w-full px-4 py-1 rounded border border-gray-300 focus:outline-none focus:shadow-outline"/>
-            </div>
             <Link to="/add-bahan" >
                 <ButtonAddAdmin className="ml-auto" nama="Add Bahan"/>
             </Link>

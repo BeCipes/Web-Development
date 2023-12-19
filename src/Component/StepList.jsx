@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 import EditButton from "../Component/EditButton";
 import DeleteButton from "../Component/DeleteButton";
 
-const ResepList = () => {
-  const [resepData, setResepData] = useState([]);
+const StepList = () => {
+  const [stepData, setStepData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const resepResponse = await axios.get(
-          "http://localhost:5000/api/resep"
+        const stepResponse = await axios.get(
+          "http://localhost:5000/api/step"
         );
-        setResepData(resepResponse.data.data);
+        setStepData(stepResponse.data.data);
       } catch (error) {
         console.error("Error fetching data:", error.message);
       }
@@ -24,9 +24,9 @@ const ResepList = () => {
 
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/resep/${id}`);
-      const response = await axios.get("http://localhost:5000/api/resep");
-      setResepData(response.data.data);
+      await axios.delete(`http://localhost:5000/api/step/${id}`);
+      const response = await axios.get("http://localhost:5000/api/step");
+      setStepData(response.data.data);
     } catch (error) {
       console.error("Error deleting Resep:", error.message);
     }
@@ -39,33 +39,31 @@ const ResepList = () => {
             <thead className="text-xs text-green-700 uppercase bg-slate-300">
               <tr>
                 <th className="py-3 px-1 text-center">No</th>
-                <th className="py-3 px-6">Id</th>
-                <th className="py-3 px-6">Name</th>
-                <th className="py-3 px-6">Deskripsi</th>
-                <th className="py-3 px-6">Gambar</th>
-                <th className="py-3 px-6">Bahan</th>
-                <th className="py-3 px-6">Informasi Gizi</th>
+                <th className="py-3 px-6">id</th>
+                <th className="py-3 px-6">id_resep</th>
+                <th className="py-3 px-6">step_no</th>
+                <th className="py-3 px-6">step_desc</th>
+                <th className="py-3 px-6">waktu</th>
                 <th className="py-3 px-1 text-center">Action</th>
               </tr>
             </thead>
             <tbody>
-              {resepData.map((resep, index) => (
-                <tr key={resep.id} className="bg-white border-b">
+              {stepData.map((step, index) => (
+                <tr key={step.id} className="bg-white border-b">
                   <td className="py-3 px-1 text-center">{index + 1}</td>
-                  <td className="py-3 px-6">{resep.id}</td>
+                  <td className="py-3 px-6">{step.id}</td>
                   <td className="py-3 px-6 font-medium text-gray-900">
-                    {resep.nama_resep}
+                    {step.id_resep}
                   </td>
-                  <td className="py-3 px-6">{resep.deskripsi}</td>
-                  <td className="py-3 px-6">{resep.gambar}</td>
-                  <td className="py-3 px-6">{resep.bahan}</td>
-                  <td className="py-3 px-6">{resep.informasi_gizi}</td>
+                  <td className="py-3 px-6">{step.step_no}</td>
+                  <td className="py-3 px-6">{step.step_desc}</td>
+                  <td className="py-3 px-6">{step.waktu}</td>
                   <td className="py-3 px-1 text-center">
                     <div className="flex">
-                      <Link to={`/edit-resep/${resep.id}`} className="mr-2">
+                      <Link to={`/edit-step/${step.id}`} className="mr-2">
                         <EditButton />
                       </Link>
-                      <Link onClick={() => deleteProduct(resep.id)}>
+                      <Link onClick={() => deleteProduct(step.id)}>
                         <DeleteButton />
                       </Link>
                     </div>
@@ -80,4 +78,4 @@ const ResepList = () => {
   );
 };
 
-export default ResepList;
+export default StepList;
