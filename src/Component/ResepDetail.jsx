@@ -46,7 +46,6 @@ const RecipeDetail = () => {
       const resepResponse = await axios.get("http://localhost:5000/api/resep");
       setResepData(resepResponse.data.data);
       // Jika resep dihapus, tutup dropdown jika sedang terbuka
-      setOpenDropdownId(null);
     } catch (error) {
       console.error("Error deleting Recipe:", error.message);
     }
