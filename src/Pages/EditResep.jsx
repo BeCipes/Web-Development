@@ -12,8 +12,12 @@ const EditResep = () => {
     nama_resep: "",
     deskripsi: "",
     gambar: null,
-    bahan: "",
-    informasi_gizi: "",
+    bahan: [],
+    informasi_gizi: {
+      protein: "",
+      karbohidrat: "",
+      lemak: "",
+    },
   });
   useEffect(() => {
     const fetchResepOptions = async () => {
@@ -30,10 +34,28 @@ const EditResep = () => {
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
+
     if (name === "gambar") {
       setResepData((prevData) => ({
         ...prevData,
         [name]: files[0].name,
+      }));
+    } else if (name === "bahan") {
+      // Split the input value into an array on each Enter key press
+      const ingredientsArray = value.split(/\n/);
+      setResepData((prevData) => ({
+        ...prevData,
+        [name]: ingredientsArray,
+      }));
+    } else if (name.startsWith("gizi_")) {
+      // If the input name starts with "gizi_", update the nutrition information
+      const nutrient = name.split("_")[1];
+      setResepData((prevData) => ({
+        ...prevData,
+        informasi_gizi: {
+          ...prevData.informasi_gizi,
+          [nutrient]: value,
+        },
       }));
     } else {
       setResepData((prevData) => ({
@@ -47,10 +69,10 @@ const EditResep = () => {
     e.preventDefault();
 
     try {
-      await axios.put(`http://localhost:5000/api/reseo/${id}`, resepData);
-      navigate("/DataStep");
+      await axios.put(`http://localhost:5000/api/resep/${id}`, resepData);
+      navigate("/DataResepDetail");
     } catch (error) {
-      console.error("Error editing step:", error.message);
+      console.error("Error editing resep:", error.message);
     }
   };
   return (
@@ -97,10 +119,9 @@ const EditResep = () => {
             <label className="block text-gray-700 text-sm font-bold mb-2">
               Bahan
             </label>
-            <input
-              type="text"
+            <textarea
               name="bahan"
-              value={resepData.bahan}
+              value={resepData.bahan.join("\n")}
               onChange={handleChange}
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             />
@@ -109,13 +130,32 @@ const EditResep = () => {
             <label className="block text-gray-700 text-sm font-bold mb-2">
               Informasi Gizi
             </label>
-            <input
-              type="text"
-              name="informasi_gizi"
-              value={resepData.informasi_gizi}
-              onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-            />
+            <div className="flex">
+              <input
+                type="text"
+                name="gizi_protein"
+                value={resepData.informasi_gizi.protein}
+                onChange={handleChange}
+                placeholder="Protein"
+                className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline mr-2"
+              />
+              <input
+                type="text"
+                name="gizi_karbohidrat"
+                value={resepData.informasi_gizi.karbohidrat}
+                onChange={handleChange}
+                placeholder="Karbohidrat"
+                className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline mr-2"
+              />
+              <input
+                type="text"
+                name="gizi_lemak"
+                value={resepData.informasi_gizi.lemak}
+                onChange={handleChange}
+                placeholder="Lemak"
+                className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
           </div>
           <div className="flex items-center">
           <UpdateButton onClick={handleSubmit} />
