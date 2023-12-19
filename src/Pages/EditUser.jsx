@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import CancelButton from "../Component/CancelButton";
 import UpdateButton from "../Component/UpdateButton";
-import axios from "axios";
 
 const EditUser = () => {
 
@@ -19,15 +19,27 @@ const EditUser = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        console.log("Fetching user data for id:", id);
         const response = await axios.get(`http://localhost:5000/api/user/${id}`);
-        setUserData(response.data.data)
+        console.log("Server Response:", response.data.data);
+
+        const publikData = response.data.data;
+
+        setUserData((prevData) => ({
+          ...prevData,
+          first_name: publikData.first_name,
+          last_name: publikData.last_name,
+          email: publikData.email,
+          password: publikData.password,
+        }));
       } catch (error) {
         console.error("Error fetching User data:", error.message);
       }
     };
-
+  
     fetchData();
   }, [id]);
+  
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
@@ -49,16 +61,14 @@ const EditUser = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.put(
-        `http://localhost:5000/api/user/${id}`,
-        userData,
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
+      const response = await axios.put(`http://localhost:5000/api/user/${id}`, 
+      userData,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
       );
-
       console.log("Server Response:", response);
 
       navigate("/DataUser");
