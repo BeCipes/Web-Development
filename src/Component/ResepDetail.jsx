@@ -190,7 +190,7 @@ const RecipeDetail = () => {
                             </tbody>
                           </table>
                            ) : (
-                            <p className="text-red-500">Data step masih kosong</p>
+                            <p className="text-red-500">Data "Langkah-langkah" masih kosong</p>
                            )}
                         </div>
                       </td>

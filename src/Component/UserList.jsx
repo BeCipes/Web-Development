@@ -24,6 +24,16 @@ const UserList = () => {
     fetchData();
   }, []);
 
+  const deleteProduct = async (id) => {
+    try {
+      await axios.delete(`http://localhost:5000/api/user/${id}`);
+      const response = await axios.get("http://localhost:5000/api/user");
+      setUserData(response.data.data);
+    } catch (error) {
+      console.error("Error deleting user :", error.message);
+    }
+  };
+
   return (
     <div className="flex justify-center mt-5">
       <div className="w-4/5 sm:ml-56">
@@ -53,10 +63,10 @@ const UserList = () => {
 
                   <td className="py-3 px-6">{user.email}</td>
                   <td className="py-3 px-1 text-center">
-                    <Link>
+                    <Link to={`/edit-user/${user.id}`}>
                       <EditButton />
                     </Link>
-                    <Link>
+                    <Link onClick={() => deleteProduct(user.id)}>
                       <DeleteButton />
                     </Link>
                   </td>

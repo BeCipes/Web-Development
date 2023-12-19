@@ -58,7 +58,7 @@ function App() {
         <Route path="/edit-admin" element={<EditAdmin />} />
         <Route path="/add-admin" element={<AddAdmin />} />
         <Route path="/add-user" element={<AddUser />} />
-        <Route path="/edit-user" element={<EditUser />} />
+        <Route path="/edit-user/:id" element={<EditUser />} />
         <Route path="/add-resep" element={<AddResep />} />
         <Route path="/edit-resep/:id" element={<EditResep />} />
         <Route path="/DataBahan" element={<DataBahan />} />
