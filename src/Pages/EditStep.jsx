@@ -113,7 +113,7 @@ const EditStep = () => {
               Waktu:
             </label>
             <input
-              type="text"
+              type="number"
               name="waktu"
               value={stepData.waktu}
               onChange={handleChange}
