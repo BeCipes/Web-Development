@@ -1,5 +1,6 @@
-# Web Development
 <p align="center"><img align="center" src="https://raw.githubusercontent.com/BeCipes/Resources/main/assets/banner-becipes.png" alt="Becipes Logo"/></p>
+
+# Web Development
 
 ## React + Vite
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
