@@ -8,7 +8,7 @@ const TotalArtikel= () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/artikel');
+        const response = await axios.get('https://backend-development-becipes.fly.dev/api/artikel');
         
         const artikelData = response.data.data
 

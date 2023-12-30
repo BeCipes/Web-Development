@@ -22,7 +22,7 @@ const EditVideo = () => {
   useEffect(() => {
     const fetchVideoData = async () => {
       try {
-        const videoResponse = await axios.get(`http://localhost:5000/api/teknik/${id}`);
+        const videoResponse = await axios.get(`https://backend-development-becipes.fly.dev/api/teknik/${id}`);
         setVideoData(videoResponse.data.data);
         console.log("log", videoResponse.data.data)
       } catch (error) {
@@ -32,7 +32,7 @@ const EditVideo = () => {
 
     const fetchKategoriOptions = async () => {
       try {
-        const kategoriResponse = await axios.get("http://localhost:5000/api/kategori");
+        const kategoriResponse = await axios.get("https://backend-development-becipes.fly.dev/api/kategori");
         setKategoriOptions(kategoriResponse.data.data);
       } catch (error) {
         console.error("Error fetching jenis options:", error.message);
@@ -68,7 +68,7 @@ const EditVideo = () => {
     e.preventDefault();
 
     try {
-      await axios.put(`http://localhost:5000/api/video/${id}`, videoData);
+      await axios.put(`https://backend-development-becipes.fly.dev/api/video/${id}`, videoData);
       navigate("/DataVideo");
     } catch (error) {
       console.error("Error editing artikel:", error.message);

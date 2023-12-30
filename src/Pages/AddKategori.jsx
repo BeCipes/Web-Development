@@ -16,7 +16,7 @@ const AddKategori = () => {
   useEffect(() => {
     const fetchJenisOptions = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/jenis-kategori");
+        const response = await axios.get("https://backend-development-becipes.fly.dev/api/jenis-kategori");
         setJenisOptions(response.data.data);
       } catch (error) {
         console.error("Error fetching jenis options:", error);

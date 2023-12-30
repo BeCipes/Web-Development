@@ -19,7 +19,7 @@ const DataArtikel = () => {
           navigate("/login");
           return;
         }
-        const response = await axios.get("http://localhost:5000/api/artikel");
+        const response = await axios.get("https://backend-development-becipes.fly.dev/api/artikel");
         console.log("Login Response:", response.data);
         setArtikelData(response.data);
       } catch (error) {

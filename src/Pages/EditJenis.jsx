@@ -16,7 +16,7 @@ const EditJenis = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/jenis-kategori/${id}`);
+        const response = await axios.get(`https://backend-development-becipes.fly.dev/api/jenis-kategori/${id}`);
         const jenisData = response.data.data;
 
         setFormData({
@@ -52,7 +52,7 @@ const EditJenis = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/jenis-kategori/${id}`,
+        `https://backend-development-becipes.fly.dev/api/jenis-kategori/${id}`,
         formData,
         {
           headers: {

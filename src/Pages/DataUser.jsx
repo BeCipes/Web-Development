@@ -20,7 +20,7 @@ const DataUser = () => {
           navigate("/login");
           return;
         }
-        const response = await axios.get("http://localhost:5000/api/user");
+        const response = await axios.get("https://backend-development-becipes.fly.dev/api/user");
         console.log("Login Response:", response.data);
         
         const filteredUsers = response.data.data.filter(

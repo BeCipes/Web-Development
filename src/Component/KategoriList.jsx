@@ -12,7 +12,7 @@ const KategoriList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/kategori");
+        const response = await axios.get("https://backend-development-becipes.fly.dev/api/kategori");
         setKategoriData(response.data.data);
         setFilteredKategoriData(response.data.data);
 
@@ -25,8 +25,8 @@ const KategoriList = () => {
 
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/kategori/${id}`);
-      const response = await axios.get("http://localhost:5000/api/kategori");
+      await axios.delete(`https://backend-development-becipes.fly.dev/api/kategori/${id}`);
+      const response = await axios.get("https://backend-development-becipes.fly.dev/api/kategori");
       setKategoriData(response.data.data);
       setFilteredKategoriData(response.data.data);
 

@@ -15,12 +15,12 @@ const RecipeDetail = () => {
     const fetchData = async () => {
       try {
         const resepResponse = await axios.get(
-          "http://localhost:5000/api/resep"
+          "https://backend-development-becipes.fly.dev/api/resep"
         );
         setResepData(resepResponse.data.data);
         setFilteredResepData(resepResponse.data.data);
 
-        const stepResponse = await axios.get("http://localhost:5000/api/step");
+        const stepResponse = await axios.get("https://backend-development-becipes.fly.dev/api/step");
         setStepData(stepResponse.data.data);
       } catch (error) {
         console.error("Error fetching data:", error.message);
@@ -42,8 +42,8 @@ const RecipeDetail = () => {
 
   const deleteResep = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/resep/${id}`);
-      const resepResponse = await axios.get("http://localhost:5000/api/resep");
+      await axios.delete(`https://backend-development-becipes.fly.dev/api/resep/${id}`);
+      const resepResponse = await axios.get("https://backend-development-becipes.fly.dev/api/resep");
       setResepData(resepResponse.data.data);
 
       // Update filteredResepData to reflect the changes
@@ -58,8 +58,8 @@ const RecipeDetail = () => {
 
   const deleteStep = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/step/${id}`);
-      const stepResponse = await axios.get("http://localhost:5000/api/step");
+      await axios.delete(`https://backend-development-becipes.fly.dev/api/step/${id}`);
+      const stepResponse = await axios.get("https://backend-development-becipes.fly.dev/api/step");
       setStepData(stepResponse.data.data);
     } catch (error) {
       console.error("Error deleting Step:", error.message);

@@ -7,7 +7,7 @@ const TotalVideo= () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/teknik');
+        const response = await axios.get('https://backend-development-becipes.fly.dev/api/teknik');
         
         const videoData = response.data.data
 

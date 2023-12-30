@@ -22,7 +22,7 @@ const EditResep = () => {
   useEffect(() => {
     const fetchResepOptions = async () => {
       try {
-        const resepResponse = await axios.get(`http://localhost:5000/api/resep/${id}`);
+        const resepResponse = await axios.get(`https://backend-development-becipes.fly.dev/api/resep/${id}`);
         setResepData(resepResponse.data.data);
       } catch (error) {
         console.error("Error fetching resep options:", error.message);
@@ -69,7 +69,7 @@ const EditResep = () => {
     e.preventDefault();
 
     try {
-      await axios.put(`http://localhost:5000/api/resep/${id}`, resepData);
+      await axios.put(`https://backend-development-becipes.fly.dev/api/resep/${id}`, resepData);
       navigate("/DataResepDetail");
     } catch (error) {
       console.error("Error editing resep:", error.message);

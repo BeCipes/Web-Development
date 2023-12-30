@@ -19,7 +19,7 @@ const AddArtikel = () => {
   useEffect(() => {
     const fetchKategoriOptions = async () => {
       try {
-        const kategoriResponse = await axios.get("http://localhost:5000/api/kategori");
+        const kategoriResponse = await axios.get("https://backend-development-becipes.fly.dev/api/kategori");
         setKategoriOptions(kategoriResponse.data.data);
       } catch (error) {
         console.error("Error fetching kategori options:", error.message);

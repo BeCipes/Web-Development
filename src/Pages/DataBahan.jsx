@@ -19,7 +19,7 @@ const DataBahan = () => {
           navigate("/login");
           return;
         }
-        const response = await axios.get("http://localhost:5000/api/bahan");
+        const response = await axios.get("https://backend-development-becipes.fly.dev/api/bahan");
 
         if (response.data && response.data.data && Array.isArray(response.data.data)) {
           const dataArray = response.data.data;

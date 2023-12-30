@@ -12,7 +12,7 @@ const JenisList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/jenis-kategori");
+        const response = await axios.get("https://backend-development-becipes.fly.dev/api/jenis-kategori");
         setJenisData(response.data.data);
         setFilteredJenisData(response.data.data);
 
@@ -25,8 +25,8 @@ const JenisList = () => {
 
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/jenis-kategori/${id}`);
-      const response = await axios.get("http://localhost:5000/api/jenis-kategori");
+      await axios.delete(`https://backend-development-becipes.fly.dev/api/jenis-kategori/${id}`);
+      const response = await axios.get("https://backend-development-becipes.fly.dev/api/jenis-kategori");
       setJenisData(response.data.data);
       setFilteredJenisData(response.data.data);
 

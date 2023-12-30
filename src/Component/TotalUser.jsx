@@ -8,7 +8,7 @@ const TotalUser = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/user');
+        const response = await axios.get('https://backend-development-becipes.fly.dev/api/user');
         
         // Filter users with role_name === 'admin'
         const Users = response.data.data.filter(

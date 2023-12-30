@@ -13,7 +13,7 @@ const VideoList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/teknik");
+        const response = await axios.get("https://backend-development-becipes.fly.dev/api/teknik");
         setVideoData(response.data.data);
         setFilteredVideoData(response.data.data);
 
@@ -26,8 +26,8 @@ const VideoList = () => {
 
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/teknik/${id}`);
-      const response = await axios.get("http://localhost:5000/api/teknik");
+      await axios.delete(`https://backend-development-becipes.fly.dev/api/teknik/${id}`);
+      const response = await axios.get("https://backend-development-becipes.fly.dev/api/teknik");
       setVideoData(response.data.data);
       setFilteredVideoData(response.data.data);
 

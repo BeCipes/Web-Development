@@ -37,7 +37,7 @@ const AddStep = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/step", stepData);
+      await axios.post("https://backend-development-becipes.fly.dev/api/step", stepData);
       navigate("/DataResepDetail");
     } catch (error) {
       console.error("Error adding step:", error.message);

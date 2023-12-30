@@ -19,7 +19,7 @@ const DataKategori = () => {
           navigate("/login");
           return;
         }
-        const response = await axios.get("http://localhost:5000/api/kategori");
+        const response = await axios.get("https://backend-development-becipes.fly.dev/api/kategori");
         console.log("Login Response:", response.data);
         setUserData(response.data);
       } catch (error) {

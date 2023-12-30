@@ -20,7 +20,7 @@ const EditUser = () => {
     const fetchData = async () => {
       try {
         console.log("Fetching user data for id:", id);
-        const response = await axios.get(`http://localhost:5000/api/user/${id}`);
+        const response = await axios.get(`https://backend-development-becipes.fly.dev/api/user/${id}`);
         console.log("Server Response:", response.data.data);
 
         const publikData = response.data.data;
@@ -61,7 +61,7 @@ const EditUser = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.put(`http://localhost:5000/api/user/${id}`, 
+      const response = await axios.put(`https://backend-development-becipes.fly.dev/api/user/${id}`, 
       userData,
       {
         headers: {

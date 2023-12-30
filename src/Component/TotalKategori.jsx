@@ -7,7 +7,7 @@ const TotalKategori= () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/kategori');
+        const response = await axios.get('https://backend-development-becipes.fly.dev/api/kategori');
         
         const kategoriData = response.data.data
 

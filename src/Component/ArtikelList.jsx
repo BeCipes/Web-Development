@@ -14,7 +14,7 @@ const ArtikelList = () => {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await axios.get("http://localhost:5000/api/artikel");
+          const response = await axios.get("https://backend-development-becipes.fly.dev/api/artikel");
           setArtikelData(response.data.data);
           setFilteredArtikelData(response.data.data);
 
@@ -27,8 +27,8 @@ const ArtikelList = () => {
   
     const deleteProduct = async (id) => {
       try {
-        await axios.delete(`http://localhost:5000/api/artikel/${id}`);
-        const response = await axios.get("http://localhost:5000/api/artikel");
+        await axios.delete(`https://backend-development-becipes.fly.dev/api/artikel/${id}`);
+        const response = await axios.get("https://backend-development-becipes.fly.dev/api/artikel");
         setArtikelData(response.data.data);
         setFilteredArtikelData(response.data.data);
 

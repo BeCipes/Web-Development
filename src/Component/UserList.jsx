@@ -10,7 +10,7 @@ const UserList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/user");
+        const response = await axios.get("https://backend-development-becipes.fly.dev/api/user");
         const filteredUsers = response.data.data.filter(
           (user) => user.role.role_name === "user"
         );
@@ -26,8 +26,8 @@ const UserList = () => {
 
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/user/${id}`);
-      const response = await axios.get("http://localhost:5000/api/user");
+      await axios.delete(`https://backend-development-becipes.fly.dev/api/${id}`);
+      const response = await axios.get("https://backend-development-becipes.fly.dev/api/user");
       setUserData(response.data.data);
     } catch (error) {
       console.error("Error deleting user :", error.message);

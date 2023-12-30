@@ -20,7 +20,7 @@ const EditStep = () => {
   useEffect(() => {
     const fetchStepData = async () => {
       try {
-        const stepResponse = await axios.get(`http://localhost:5000/api/step/${id}`);
+        const stepResponse = await axios.get(`https://backend-development-becipes.fly.dev/api/step/${id}`);
         setStepData(stepResponse.data.data);
         console.log("log", stepResponse.data.data)
       } catch (error) {
@@ -30,7 +30,7 @@ const EditStep = () => {
 
     const fetchResepOptions = async () => {
       try {
-        const resepResponse = await axios.get("http://localhost:5000/api/resep");
+        const resepResponse = await axios.get("https://backend-development-becipes.fly.dev/api/resep");
         setResepOptions(resepResponse.data.data);
       } catch (error) {
         console.error("Error fetching resep options:", error.message);
@@ -52,7 +52,7 @@ const EditStep = () => {
     e.preventDefault();
     console.log("Submitting Step Data:", stepData);
     try {
-      await axios.put(`http://localhost:5000/api/step/${id}/${stepData.id_resep}`, stepData);
+      await axios.put(`https://backend-development-becipes.fly.dev/api/step/${id}/${stepData.id_resep}`, stepData);
       navigate("/DataResepDetail");
     } catch (error) {
       console.error("Error editing step:", error.message);

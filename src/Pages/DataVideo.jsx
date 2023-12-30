@@ -19,7 +19,7 @@ const DataVideo = () => {
           navigate("/login");
           return;
         }
-        const response = await axios.get("http://localhost:5000/api/teknik");
+        const response = await axios.get("https://backend-development-becipes.fly.dev/api/teknik");
         console.log("Login Response:", response.data);
         setVideoData(response.data);
       } catch (error) {

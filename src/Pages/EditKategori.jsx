@@ -19,7 +19,7 @@ const EditKategori = () => {
   useEffect(() => {
     const fetchKategoriData = async () => {
       try {
-        const kategoriResponse = await axios.get(`http://localhost:5000/api/kategori/${id}`);
+        const kategoriResponse = await axios.get(`https://backend-development-becipes.fly.dev/api/kategori/${id}`);
         setKategoriData(kategoriResponse.data.data);
         console.log("log", kategoriResponse.data.data)
       } catch (error) {
@@ -29,7 +29,7 @@ const EditKategori = () => {
 
     const fetchJenisOptions = async () => {
       try {
-        const jenisResponse = await axios.get("http://localhost:5000/api/jenis-kategori");
+        const jenisResponse = await axios.get("https://backend-development-becipes.fly.dev/api/jenis-kategori");
         setJenisOptions(jenisResponse.data.data);
       } catch (error) {
         console.error("Error fetching jenis options:", error.message);
@@ -66,7 +66,7 @@ const EditKategori = () => {
     e.preventDefault();
 
     try {
-      await axios.put(`http://localhost:5000/api/kategori/${id}`, kategoriData);
+      await axios.put(`https://backend-development-becipes.fly.dev/api/kategori/${id}`, kategoriData);
       navigate("/DataKategori");
     } catch (error) {
       console.error("Error editing kategori:", error.message);

@@ -22,7 +22,6 @@ const dummyLogHistory = [
       table: 'Orders',
       action: 'Delete',
     },
-    // Add more dummy log entries as needed
   ];
 
 const LogHistory = () => {

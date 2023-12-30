@@ -12,7 +12,7 @@ const BahanList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/bahan");
+        const response = await axios.get("https://backend-development-becipes.fly.dev/api/bahan");
         setBahanData(response.data.data);
         setFilteredBahanData(response.data.data);
       } catch (error) {
@@ -24,8 +24,8 @@ const BahanList = () => {
 
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/bahan/${id}`);
-      const response = await axios.get("http://localhost:5000/api/bahan");
+      await axios.delete(`https://backend-development-becipes.fly.dev/api/bahan/${id}`);
+      const response = await axios.get("https://backend-development-becipes.fly.dev/api/bahan");
       setBahanData(response.data.data);
       setFilteredBahanData(response.data.data);
     } catch (error) {

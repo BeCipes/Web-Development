@@ -55,7 +55,7 @@ const AddResep = () => {
 
     try {
       console.log("FormData:", formData);
-      const response = await axios.post("http://localhost:5000/api/resep",formData);
+      const response = await axios.post("https://backend-development-becipes.fly.dev/api/resep",formData);
 
       console.log("respon", response.data.data);
       console.log("Server Response:", response);

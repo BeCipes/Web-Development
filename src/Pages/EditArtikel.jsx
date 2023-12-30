@@ -22,7 +22,7 @@ const EditArtikel = () => {
   useEffect(() => {
     const fetchArtikelData = async () => {
       try {
-        const artikelResponse = await axios.get(`http://localhost:5000/api/artikel/${id}`);
+        const artikelResponse = await axios.get(`https://backend-development-becipes.fly.dev/api/artikel/${id}`);
         setArtikelData(artikelResponse.data.data);
       } catch (error) {
         console.error("Error fetching artikel data:", error.message);
@@ -31,7 +31,7 @@ const EditArtikel = () => {
 
     const fetchKategoriOptions = async () => {
       try {
-        const kategoriResponse = await axios.get("http://localhost:5000/api/kategori");
+        const kategoriResponse = await axios.get("https://backend-development-becipes.fly.dev/api/kategori");
         setKategoriOptions(kategoriResponse.data.data);
       } catch (error) {
         console.error("Error fetching jenis options:", error.message);
@@ -67,7 +67,7 @@ const EditArtikel = () => {
     e.preventDefault();
 
     try {
-      await axios.put(`http://localhost:5000/api/artikel/${id}`, artikelData);
+      await axios.put(`https://backend-development-becipes.fly.dev/api/artikel/${id}`, artikelData);
       navigate("/DataArtikel");
     } catch (error) {
       console.error("Error editing artikel:", error.message);
