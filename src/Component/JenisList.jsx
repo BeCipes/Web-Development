@@ -12,10 +12,11 @@ const JenisList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/jenis-kategori");
+        const response = await axios.get(
+          "https://backend-development-becipes.fly.dev/api/jenis-kategori"
+        );
         setJenisData(response.data.data);
         setFilteredJenisData(response.data.data);
-
       } catch (error) {
         console.error("Error fetching user data:", error);
       }
@@ -25,11 +26,14 @@ const JenisList = () => {
 
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/jenis-kategori/${id}`);
-      const response = await axios.get("http://localhost:5000/api/jenis-kategori");
+      await axios.delete(
+        `https://backend-development-becipes.fly.dev/api/jenis-kategori/${id}`
+      );
+      const response = await axios.get(
+        "http://localhost:5000/api/jenis-kategori"
+      );
       setJenisData(response.data.data);
       setFilteredJenisData(response.data.data);
-
     } catch (error) {
       console.error("Error deleting Bahan:", error.message);
     }
@@ -45,7 +49,7 @@ const JenisList = () => {
   return (
     <div className="flex justify-center mt-5">
       <div className="w-4/5 sm:ml-56">
-      <SearchBar onSearch={handleSearch} />
+        <SearchBar onSearch={handleSearch} />
         <div className="relative shadow rounded-lg mt-3">
           <table className="w-full text-sm text-left text-green-500">
             <thead className="text-xs text-white uppercase bg-black">

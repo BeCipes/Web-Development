@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import axios from "axios"
+import axios from "axios";
 import CancelButton from "../Component/CancelButton";
 import UpdateButton from "../Component/UpdateButton";
 
@@ -22,7 +22,9 @@ const EditArtikel = () => {
   useEffect(() => {
     const fetchArtikelData = async () => {
       try {
-        const artikelResponse = await axios.get(`http://localhost:5000/api/artikel/${id}`);
+        const artikelResponse = await axios.get(
+          `https://backend-development-becipes.fly.dev/api/artikel/${id}`
+        );
         setArtikelData(artikelResponse.data.data);
       } catch (error) {
         console.error("Error fetching artikel data:", error.message);
@@ -31,7 +33,9 @@ const EditArtikel = () => {
 
     const fetchKategoriOptions = async () => {
       try {
-        const kategoriResponse = await axios.get("http://localhost:5000/api/kategori");
+        const kategoriResponse = await axios.get(
+          "https://backend-development-becipes.fly.dev/api/kategori"
+        );
         setKategoriOptions(kategoriResponse.data.data);
       } catch (error) {
         console.error("Error fetching jenis options:", error.message);
@@ -41,7 +45,7 @@ const EditArtikel = () => {
     fetchArtikelData();
     fetchKategoriOptions();
   }, [id]);
-  
+
   const handleChange = (e) => {
     const { name, value, files } = e.target;
     if (name === "gambar") {
@@ -67,7 +71,10 @@ const EditArtikel = () => {
     e.preventDefault();
 
     try {
-      await axios.put(`http://localhost:5000/api/artikel/${id}`, artikelData);
+      await axios.put(
+        `https://backend-development-becipes.fly.dev/api/artikel/${id}`,
+        artikelData
+      );
       navigate("/DataArtikel");
     } catch (error) {
       console.error("Error editing artikel:", error.message);
@@ -139,7 +146,10 @@ const EditArtikel = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="id_kategori">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="id_kategori"
+            >
               Kategori:
             </label>
             <select
@@ -160,7 +170,7 @@ const EditArtikel = () => {
             </select>
           </div>
           <div className="flex items-center">
-          <UpdateButton onClick={handleSubmit} />
+            <UpdateButton onClick={handleSubmit} />
             <Link to="/DataArtikel">
               <CancelButton />
             </Link>

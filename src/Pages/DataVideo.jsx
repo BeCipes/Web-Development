@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import axios from "axios"
+import axios from "axios";
 import Sidebar from "../Component/SideBar";
 import Header from "../Component/Header";
 import VideoList from "../Component/VideoList";
-import ButtonAddAdmin from "../Component/ButtonAddAdmin"
+import ButtonAddAdmin from "../Component/ButtonAddAdmin";
 
 const DataVideo = () => {
   const [videoData, setVideoData] = useState([]);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,7 +19,9 @@ const DataVideo = () => {
           navigate("/login");
           return;
         }
-        const response = await axios.get("http://localhost:5000/api/teknik");
+        const response = await axios.get(
+          "https://backend-development-becipes.fly.dev/api/teknik"
+        );
         console.log("Login Response:", response.data);
         setVideoData(response.data);
       } catch (error) {
@@ -39,8 +41,8 @@ const DataVideo = () => {
           <div className="flex items-center justify-between h-16 w-full">
             <div className="text-2xl font-bold">List Video</div>
 
-            <Link to="/add-video" >
-                <ButtonAddAdmin className="ml-auto" nama="Add Video"/>
+            <Link to="/add-video">
+              <ButtonAddAdmin className="ml-auto" nama="Add Video" />
             </Link>
           </div>
         </div>

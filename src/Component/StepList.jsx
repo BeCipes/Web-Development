@@ -11,7 +11,7 @@ const StepList = () => {
     const fetchData = async () => {
       try {
         const stepResponse = await axios.get(
-          "http://localhost:5000/api/step"
+          "https://backend-development-becipes.fly.dev/api/step"
         );
         setStepData(stepResponse.data.data);
       } catch (error) {
@@ -24,8 +24,12 @@ const StepList = () => {
 
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/step/${id}`);
-      const response = await axios.get("http://localhost:5000/api/step");
+      await axios.delete(
+        `https://backend-development-becipes.fly.dev/api/api/step/${id}`
+      );
+      const response = await axios.get(
+        "https://backend-development-becipes.fly.dev/api/step"
+      );
       setStepData(response.data.data);
     } catch (error) {
       console.error("Error deleting Resep:", error.message);

@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import axios from "axios"
+import axios from "axios";
 import Sidebar from "../Component/SideBar";
 import Header from "../Component/Header";
 import ResepList from "../Component/ResepList";
-import ButtonAddAdmin from "../Component/ButtonAddAdmin"
+import ButtonAddAdmin from "../Component/ButtonAddAdmin";
 
 const DataResep = () => {
   const [userData, setUserData] = useState([]);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,8 +36,8 @@ const DataResep = () => {
           <div className="flex items-center justify-between h-16 w-full">
             <div className="text-2xl font-bold">List Resep</div>
 
-            <Link to="/add-resep" >
-                <ButtonAddAdmin className="ml-auto" nama="Add Resep"/>
+            <Link to="/add-resep">
+              <ButtonAddAdmin className="ml-auto" nama="Add Resep" />
             </Link>
           </div>
         </div>

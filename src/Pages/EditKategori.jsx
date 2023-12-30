@@ -19,9 +19,11 @@ const EditKategori = () => {
   useEffect(() => {
     const fetchKategoriData = async () => {
       try {
-        const kategoriResponse = await axios.get(`http://localhost:5000/api/kategori/${id}`);
+        const kategoriResponse = await axios.get(
+          `https://backend-development-becipes.fly.dev/api/kategori/${id}`
+        );
         setKategoriData(kategoriResponse.data.data);
-        console.log("log", kategoriResponse.data.data)
+        console.log("log", kategoriResponse.data.data);
       } catch (error) {
         console.error("Error fetching kategori data:", error.message);
       }
@@ -29,7 +31,9 @@ const EditKategori = () => {
 
     const fetchJenisOptions = async () => {
       try {
-        const jenisResponse = await axios.get("http://localhost:5000/api/jenis-kategori");
+        const jenisResponse = await axios.get(
+          "https://backend-development-becipes.fly.dev/api/jenis-kategori"
+        );
         setJenisOptions(jenisResponse.data.data);
       } catch (error) {
         console.error("Error fetching jenis options:", error.message);
@@ -39,7 +43,7 @@ const EditKategori = () => {
     fetchKategoriData();
     fetchJenisOptions();
   }, [id]);
-  
+
   const handleChange = (e) => {
     const { name, value, files } = e.target;
 
@@ -66,19 +70,21 @@ const EditKategori = () => {
     e.preventDefault();
 
     try {
-      await axios.put(`http://localhost:5000/api/kategori/${id}`, kategoriData);
+      await axios.put(
+        `https://backend-development-becipes.fly.dev/api/kategori/${id}`,
+        kategoriData
+      );
       navigate("/DataKategori");
     } catch (error) {
       console.error("Error editing kategori:", error.message);
     }
   };
 
-
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 flex items-center justify-center">
       <div className="bg-white w-1/2 p-8 rounded-lg">
         <h2 className="text-2xl font-bold mb-4">Edit Kategori</h2>
-          <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">
               Nama Kategori
@@ -112,7 +118,9 @@ const EditKategori = () => {
               onChange={handleChange}
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             >
-              <option value="" disabled>Select Jenis</option>
+              <option value="" disabled>
+                Select Jenis
+              </option>
               {jenisOptions.map((jenis) => (
                 <option key={jenis.id} value={jenis.id}>
                   {jenis.nama_jenis}
@@ -120,9 +128,9 @@ const EditKategori = () => {
               ))}
             </select>
           </div>
-     
+
           <div className="flex items-center">
-          <UpdateButton onClick={handleSubmit} />
+            <UpdateButton onClick={handleSubmit} />
             <Link to="/DataKategori">
               <CancelButton />
             </Link>

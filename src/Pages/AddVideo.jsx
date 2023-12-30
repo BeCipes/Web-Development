@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import axios from "axios"
-import AddButton from "../Component/AddButton"
+import axios from "axios";
+import AddButton from "../Component/AddButton";
 
 const AddVideo = () => {
   const navigate = useNavigate();
@@ -19,7 +19,9 @@ const AddVideo = () => {
   useEffect(() => {
     const fetchKategoriOptions = async () => {
       try {
-        const kategoriResponse = await axios.get("http://localhost:5000/api/kategori");
+        const kategoriResponse = await axios.get(
+          "https://backend-development-becipes.fly.dev/api/kategori"
+        );
         setKategoriOptions(kategoriResponse.data.data);
       } catch (error) {
         console.error("Error fetching kategori options:", error.message);
@@ -48,7 +50,10 @@ const AddVideo = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/teknik", videoData);
+      await axios.post(
+        "https://backend-development-becipes.fly.dev/api/teknik",
+        videoData
+      );
       navigate("/DataVideo");
     } catch (error) {
       console.error("Error adding video:", error.message);
@@ -120,7 +125,10 @@ const AddVideo = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="id_kategori">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="id_kategori"
+            >
               Kategori:
             </label>
             <select

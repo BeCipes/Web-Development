@@ -20,9 +20,11 @@ const EditStep = () => {
   useEffect(() => {
     const fetchStepData = async () => {
       try {
-        const stepResponse = await axios.get(`http://localhost:5000/api/step/${id}`);
+        const stepResponse = await axios.get(
+          `https://backend-development-becipes.fly.dev/api/step/${id}`
+        );
         setStepData(stepResponse.data.data);
-        console.log("log", stepResponse.data.data)
+        console.log("log", stepResponse.data.data);
       } catch (error) {
         console.error("Error fetching step data:", error.message);
       }
@@ -30,7 +32,9 @@ const EditStep = () => {
 
     const fetchResepOptions = async () => {
       try {
-        const resepResponse = await axios.get("http://localhost:5000/api/resep");
+        const resepResponse = await axios.get(
+          "https://backend-development-becipes.fly.dev/api/resep"
+        );
         setResepOptions(resepResponse.data.data);
       } catch (error) {
         console.error("Error fetching resep options:", error.message);
@@ -47,25 +51,31 @@ const EditStep = () => {
       [e.target.name]: e.target.value,
     });
   };
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Submitting Step Data:", stepData);
     try {
-      await axios.put(`http://localhost:5000/api/step/${id}/${stepData.id_resep}`, stepData);
+      await axios.put(
+        `https://backend-development-becipes.fly.dev/api/step/${id}/${stepData.id_resep}`,
+        stepData
+      );
       navigate("/DataResepDetail");
     } catch (error) {
       console.error("Error editing step:", error.message);
     }
   };
-  
+
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 flex items-center justify-center">
       <div className="bg-white w-1/2 p-8 rounded-lg">
         <h2 className="text-2xl font-bold mb-4">Edit Step</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="id_resep">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="id_resep"
+            >
               Resep:
             </label>
             <select
@@ -85,7 +95,10 @@ const EditStep = () => {
             </select>
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="step_no">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="step_no"
+            >
               Step Number:
             </label>
             <input
@@ -97,7 +110,10 @@ const EditStep = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="step_desc">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="step_desc"
+            >
               Step Description:
             </label>
             <input
@@ -109,7 +125,10 @@ const EditStep = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="waktu">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="waktu"
+            >
               Waktu:
             </label>
             <input
@@ -121,7 +140,7 @@ const EditStep = () => {
             />
           </div>
           <div className="flex items-center">
-          <UpdateButton onClick={handleSubmit} />
+            <UpdateButton onClick={handleSubmit} />
             <Link to="/DataResepDetail">
               <CancelButton />
             </Link>

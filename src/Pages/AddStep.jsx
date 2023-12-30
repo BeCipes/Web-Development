@@ -16,7 +16,9 @@ const AddStep = () => {
   useEffect(() => {
     const fetchResepOptions = async () => {
       try {
-        const resepResponse = await axios.get("http://localhost:5000/api/resep");
+        const resepResponse = await axios.get(
+          "https://backend-development-becipes.fly.dev/api/resep"
+        );
         setResepOptions(resepResponse.data.data);
       } catch (error) {
         console.error("Error fetching resep options:", error.message);
@@ -37,7 +39,10 @@ const AddStep = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/step", stepData);
+      await axios.post(
+        "https://backend-development-becipes.fly.dev/api/step",
+        stepData
+      );
       navigate("/DataResepDetail");
     } catch (error) {
       console.error("Error adding step:", error.message);
@@ -50,7 +55,10 @@ const AddStep = () => {
         <h2 className="text-2xl font-bold mb-4">Add Step</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="id_resep">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="id_resep"
+            >
               Resep:
             </label>
             <select
@@ -71,7 +79,10 @@ const AddStep = () => {
             </select>
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="step_no">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="step_no"
+            >
               Step Number:
             </label>
             <input
@@ -84,7 +95,10 @@ const AddStep = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="step_desc">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="step_desc"
+            >
               Step Description:
             </label>
             <input
@@ -97,7 +111,10 @@ const AddStep = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="waktu">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="waktu"
+            >
               Waktu:
             </label>
             <input

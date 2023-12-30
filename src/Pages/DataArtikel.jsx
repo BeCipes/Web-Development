@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import axios from "axios"
+import axios from "axios";
 import Sidebar from "../Component/SideBar";
 import Header from "../Component/Header";
 import ArtikelList from "../Component/ArtikelList";
-import ButtonAddAdmin from "../Component/ButtonAddAdmin"
+import ButtonAddAdmin from "../Component/ButtonAddAdmin";
 
 const DataArtikel = () => {
   const [artikelData, setArtikelData] = useState([]);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,7 +19,9 @@ const DataArtikel = () => {
           navigate("/login");
           return;
         }
-        const response = await axios.get("http://localhost:5000/api/artikel");
+        const response = await axios.get(
+          "https://backend-development-becipes.fly.dev/api/artikel"
+        );
         console.log("Login Response:", response.data);
         setArtikelData(response.data);
       } catch (error) {
@@ -30,7 +32,7 @@ const DataArtikel = () => {
 
     fetchData();
   }, [navigate]);
-  
+
   return (
     <div className="flex-column">
       <Sidebar />
@@ -39,8 +41,8 @@ const DataArtikel = () => {
         <div className="flex px-6 sm:ml-56 mt-5">
           <div className="flex items-center justify-between h-16 w-full">
             <div className="text-2xl font-bold">List Artikel</div>
-            <Link to="/add-artikel" >
-                <ButtonAddAdmin className="ml-auto" nama="Add Artikel"/>
+            <Link to="/add-artikel">
+              <ButtonAddAdmin className="ml-auto" nama="Add Artikel" />
             </Link>
           </div>
         </div>

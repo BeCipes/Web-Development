@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import CancelButton from "../Component/CancelButton";
 import UpdateButton from "../Component/UpdateButton";
-import axios from "axios"
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const EditAdmin = () => {
   const [userData, setUserData] = useState([]);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,9 +17,11 @@ const EditAdmin = () => {
           navigate("/login");
           return;
         }
-        const response = await axios.get("http://localhost:5000/api/user");
+        const response = await axios.get(
+          "https://backend-development-becipes.fly.dev/api/api/user"
+        );
         console.log("Login Response:", response.data);
-        
+
         const filteredUsers = response.data.data.filter(
           (user) => user.role.role_name === "admin"
         );
@@ -44,7 +46,7 @@ const EditAdmin = () => {
             <input
               type="text"
               name="name"
-            //   value={admin.name}
+              //   value={admin.name}
               // onChange={}
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             />
@@ -56,7 +58,7 @@ const EditAdmin = () => {
             <input
               type="email"
               name="email"
-            //   value={admin.email}
+              //   value={admin.email}
               // onChange={}
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             />
@@ -68,7 +70,7 @@ const EditAdmin = () => {
             <input
               type="password"
               name="password"
-            //   value={admin.password}
+              //   value={admin.password}
               // onChange={}
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             />
@@ -85,9 +87,9 @@ const EditAdmin = () => {
             />
           </div>
           <div className="flex items-center">
-            <UpdateButton/>
+            <UpdateButton />
             <Link to="/DataAdmin">
-                <CancelButton/>
+              <CancelButton />
             </Link>
           </div>
         </form>

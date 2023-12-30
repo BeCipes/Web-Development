@@ -13,11 +13,13 @@ const RecipeDetail = () => {
     const fetchData = async () => {
       try {
         const resepResponse = await axios.get(
-          "http://localhost:5000/api/resep"
+          "https://backend-development-becipes.fly.dev/api/resep"
         );
         setResepData(resepResponse.data.data);
 
-        const stepResponse = await axios.get("http://localhost:5000/api/step");
+        const stepResponse = await axios.get(
+          "https://backend-development-becipes.fly.dev/api/step"
+        );
         setStepData(stepResponse.data.data);
       } catch (error) {
         console.error("Error fetching data:", error.message);
@@ -39,8 +41,12 @@ const RecipeDetail = () => {
 
   const deleteResep = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/resep/${id}`);
-      const resepResponse = await axios.get("http://localhost:5000/api/resep");
+      await axios.delete(
+        `https://backend-development-becipes.fly.dev/api/resep/${id}`
+      );
+      const resepResponse = await axios.get(
+        "https://backend-development-becipes.fly.dev/api/resep"
+      );
       setResepData(resepResponse.data.data);
       // Jika resep dihapus, tutup dropdown jika sedang terbuka
       setOpenDropdownId(null);
@@ -51,8 +57,12 @@ const RecipeDetail = () => {
 
   const deleteStep = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/step/${id}`);
-      const stepResponse = await axios.get("http://localhost:5000/api/step");
+      await axios.delete(
+        `https://backend-development-becipes.fly.dev/api/step/${id}`
+      );
+      const stepResponse = await axios.get(
+        "https://backend-development-becipes.fly.dev/api/step"
+      );
       setStepData(stepResponse.data.data);
     } catch (error) {
       console.error("Error deleting Step:", error.message);
@@ -64,7 +74,7 @@ const RecipeDetail = () => {
       <div className="w-4/5 sm:ml-56">
         <div className="relative shadow rounded-lg mt-3">
           <table className="w-full text-sm text-left text-green-500">
-          <thead className="text-xs text-green-700 uppercase bg-slate-300">
+            <thead className="text-xs text-green-700 uppercase bg-slate-300">
               <tr>
                 <th className="py-3 px-1 text-center">No</th>
                 <th className="py-3 px-6">Id</th>
@@ -80,7 +90,7 @@ const RecipeDetail = () => {
               {resepData.map((resep, index) => (
                 <React.Fragment key={resep.id}>
                   <tr className="bg-white border-b">
-                  <td className="py-3 px-1 text-center">{index + 1}</td>
+                    <td className="py-3 px-1 text-center">{index + 1}</td>
                     <td className="py-3 px-6">{resep.id}</td>
                     <td className="py-3 px-6 font-medium text-gray-900">
                       {resep.nama_resep}
@@ -101,7 +111,8 @@ const RecipeDetail = () => {
                     </td>
                     <td className="py-3 px-1 text-center">
                       <button onClick={() => toggleDropdown(resep.id)}>
-                        {openDropdownId === resep.id ? "Tutup" : "Buka"} Langkah-langkah
+                        {openDropdownId === resep.id ? "Tutup" : "Buka"}{" "}
+                        Langkah-langkah
                       </button>
                     </td>
                   </tr>
@@ -114,7 +125,7 @@ const RecipeDetail = () => {
                             Langkah-langkah untuk "{resep.nama_resep}"
                           </h2>
                           <table className="w-full text-sm text-left text-green-500">
-                          <thead className="text-xs text-green-700 uppercase bg-slate-300">
+                            <thead className="text-xs text-green-700 uppercase bg-slate-300">
                               <tr>
                                 <th className="py-3 px-1 text-center">No</th>
                                 <th className="py-3 px-6">id</th>
@@ -150,9 +161,7 @@ const RecipeDetail = () => {
                                       >
                                         <EditButton />
                                       </Link>
-                                      <Link
-                                        onClick={() => deleteStep(step.id)}
-                                      >
+                                      <Link onClick={() => deleteStep(step.id)}>
                                         <DeleteButton />
                                       </Link>
                                     </div>

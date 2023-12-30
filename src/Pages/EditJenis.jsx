@@ -5,18 +5,19 @@ import CancelButton from "../Component/CancelButton";
 import UpdateButton from "../Component/UpdateButton";
 
 const EditJenis = () => {
-
   const { id } = useParams();
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    nama_jenis: "", 
+    nama_jenis: "",
   });
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/jenis-kategori/${id}`);
+        const response = await axios.get(
+          `https://backend-development-becipes.fly.dev/api/jenis-kategori/${id}`
+        );
         const jenisData = response.data.data;
 
         setFormData({
@@ -46,17 +47,16 @@ const EditJenis = () => {
     }
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/jenis-kategori/${id}`,
+        `https://backend-development-becipes.fly.dev/api/jenis-kategori/${id}`,
         formData,
         {
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
         }
       );

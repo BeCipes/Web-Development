@@ -9,16 +9,18 @@ const EditBahan = () => {
   const navigate = useNavigate();
 
   const [bahanData, setBahanData] = useState({
-    nama_bahan: "", 
+    nama_bahan: "",
     deskripsi: "",
     gambar: "",
-    gizi: "", 
+    gizi: "",
   });
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/bahan/${id}`);
+        const response = await axios.get(
+          `https://backend-development-becipes.fly.dev/api/bahan/${id}`
+        );
         const bahanData = response.data.data;
 
         setBahanData({
@@ -51,17 +53,16 @@ const EditBahan = () => {
     }
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/bahan/${id}`,
+        `https://backend-development-becipes.fly.dev/api/bahan/${id}`,
         bahanData,
         {
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
         }
       );

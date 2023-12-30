@@ -9,7 +9,7 @@ import ButtonAddAdmin from "../Component/ButtonAddAdmin";
 
 const DataAdmin = () => {
   const [userData, setUserData] = useState([]);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,9 +19,11 @@ const DataAdmin = () => {
           navigate("/login");
           return;
         }
-        const response = await axios.get("http://localhost:5000/api/user");
+        const response = await axios.get(
+          "https://backend-development-becipes.fly.dev/api/user"
+        );
         console.log("Login Response:", response.data);
-        
+
         const filteredUsers = response.data.data.filter(
           (user) => user.role.role_name === "admin"
         );
@@ -34,7 +36,6 @@ const DataAdmin = () => {
 
     fetchData();
   }, [navigate]);
-
 
   return (
     <div className="flex-column">

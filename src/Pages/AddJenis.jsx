@@ -29,7 +29,10 @@ const AddJenis = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/api/jenis-kategori", formData);
+      const response = await axios.post(
+        "https://backend-development-becipes.fly.dev/api/jenis-kategori",
+        formData
+      );
 
       console.log("Server Response:", response);
 
@@ -39,13 +42,11 @@ const AddJenis = () => {
     }
   };
 
-  
-
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 flex items-center justify-center">
       <div className="bg-white w-1/2 p-8 rounded-lg">
         <h2 className="text-2xl font-bold mb-4">Add Jenis</h2>
-        <form onSubmit={handleSubmit} >
+        <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">
               Nama Jenis

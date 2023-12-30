@@ -32,7 +32,7 @@ const AddBahan = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/api/bahan", formData);
+      const response = await axios.post("https://backend-development-becipes.fly.dev/api/bahan", formData);
 
       console.log("Server Response:", response);
 

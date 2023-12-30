@@ -1,6 +1,6 @@
 import React from "react";
 
-const UpdateButton = ({onClick}) => {
+const UpdateButton = ({ onClick }) => {
   return (
     <button
       type="submit"

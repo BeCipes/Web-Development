@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import axios from "axios"
+import axios from "axios";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import AddButton from "../Component/AddButton"
+import AddButton from "../Component/AddButton";
 
 const AddUser = () => {
   const navigate = useNavigate();
@@ -33,7 +33,10 @@ const AddUser = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/api/user", userData);
+      const response = await axios.post(
+        "https://backend-development-becipes.fly.dev/api/user",
+        userData
+      );
 
       console.log("Server Response:", response);
 
@@ -43,7 +46,6 @@ const AddUser = () => {
     }
   };
 
-  
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 flex items-center justify-center">
       <div className="bg-white w-1/2 p-8 rounded-lg">
@@ -98,7 +100,7 @@ const AddUser = () => {
             />
           </div>
           <div className="flex items-center">
-          <button
+            <button
               type="submit"
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
             >

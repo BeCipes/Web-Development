@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import AddButton from "../Component/AddButton";
 
 const AddKategori = () => {
-  
   const [formData, setFormData] = useState({
     nama_kategori: "",
     gambar: "",
@@ -16,7 +15,9 @@ const AddKategori = () => {
   useEffect(() => {
     const fetchJenisOptions = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/jenis-kategori");
+        const response = await axios.get(
+          "https://backend-development-becipes.fly.dev/api/jenis-kategori"
+        );
         setJenisOptions(response.data.data);
       } catch (error) {
         console.error("Error fetching jenis options:", error);
@@ -52,7 +53,10 @@ const AddKategori = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/api/kategori", formData);
+      const response = await axios.post(
+        "http://localhost:5000/api/kategori",
+        formData
+      );
 
       console.log("Server Response:", response);
 
@@ -100,7 +104,9 @@ const AddKategori = () => {
               onChange={handleJenisChange}
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             >
-              <option value="" disabled>Select Jenis</option>
+              <option value="" disabled>
+                Select Jenis
+              </option>
               {jenisOptions.map((jenis) => (
                 <option key={jenis.id} value={jenis.id}>
                   {jenis.nama_jenis}

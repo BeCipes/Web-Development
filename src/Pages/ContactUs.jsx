@@ -1,4 +1,4 @@
-import Navbar from "../Component/Navbar"
+import Navbar from "../Component/Navbar";
 import Footer from "../Component/Footer";
 import { Link } from "react-router-dom";
 

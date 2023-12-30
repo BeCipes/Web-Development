@@ -11,7 +11,7 @@ const ResepList = () => {
     const fetchData = async () => {
       try {
         const resepResponse = await axios.get(
-          "http://localhost:5000/api/resep"
+          "https://backend-development-becipes.fly.dev/api/resep"
         );
         setResepData(resepResponse.data.data);
       } catch (error) {
