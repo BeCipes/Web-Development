@@ -45,7 +45,12 @@ const RecipeDetail = () => {
       await axios.delete(`http://localhost:5000/api/resep/${id}`);
       const resepResponse = await axios.get("http://localhost:5000/api/resep");
       setResepData(resepResponse.data.data);
+
+      // Update filteredResepData to reflect the changes
+      setFilteredResepData(resepResponse.data.data);
+
       // Jika resep dihapus, tutup dropdown jika sedang terbuka
+      setOpenDropdownId(null);
     } catch (error) {
       console.error("Error deleting Recipe:", error.message);
     }
@@ -99,7 +104,14 @@ const RecipeDetail = () => {
                       {resep.deskripsi}
                     </td>
                     <td className="py-3 px-6">{resep.gambar}</td>
-                    <td className="py-3 px-6">{resep.bahan}</td>
+                    <td className="py-3 px-6">
+                      <ul className="list-disc pl-4">
+                        {resep.bahan.map((ingredient, index) => (
+                          <li key={index}>{ingredient}</li>
+                        ))}
+                      </ul>
+                    </td>
+
                     <td className="py-3 px-6 max-w-[200px] overflow-hidden whitespace-nowrap truncate-overflow">
                       <ul className="list-disc pl-4">
                         {Object.entries(resep.informasi_gizi).map(
@@ -141,56 +153,70 @@ const RecipeDetail = () => {
                           <h2 className="text-2xl font-semibold mb-3">
                             Langkah-langkah untuk membuat "{resep.nama_resep}"
                           </h2>
-                           {stepsByRecipeId[resep.id] && stepsByRecipeId[resep.id].length > 0 ? (
-                          <table className="w-full text-sm text-left text-green-500">
-                            <thead className="text-xs text-green-800 uppercase bg-slate-200">
-                              <tr>
-                                <th className="py-3 px-1 text-center">No</th>
-                                <th className="py-3 px-6">id</th>
-                                <th className="py-3 px-6">id_resep</th>
-                                <th className="py-3 px-6">step_no</th>
-                                <th className="py-3 px-6">step_desc</th>
-                                <th className="py-3 px-6">waktu</th>
-                                <th className="py-3 px-1 text-center">
-                                  Action
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {stepsByRecipeId[resep.id].map((step, index) => (
-                                <tr key={step.id} className="bg-white border-b">
-                                  <td className="py-3 px-1 text-center">
-                                    {index + 1}
-                                  </td>
-                                  <td className="py-3 px-6">{step.id}</td>
-                                  <td className="py-3 px-6 font-medium text-gray-900">
-                                    {step.id_resep}
-                                  </td>
-                                  <td className="py-3 px-6">{step.step_no}</td>
-                                  <td className="py-3 px-6 max-w-[200px] overflow-hidden whitespace-nowrap truncate-overflow">
-                                    {step.step_desc}
-                                  </td>
-                                  <td className="py-3 px-6">{step.waktu}</td>
-                                  <td className="py-3 px-1 text-center">
-                                    <div className="flex">
-                                      <Link
-                                        to={`/edit-step/${step.id}`}
-                                        className="mr-2"
-                                      >
-                                        <EditButton />
-                                      </Link>
-                                      <Link onClick={() => deleteStep(step.id)}>
-                                        <DeleteButton />
-                                      </Link>
-                                    </div>
-                                  </td>
+                          {stepsByRecipeId[resep.id] &&
+                          stepsByRecipeId[resep.id].length > 0 ? (
+                            <table className="w-full text-sm text-left text-green-500">
+                              <thead className="text-xs text-green-800 uppercase bg-slate-200">
+                                <tr>
+                                  <th className="py-3 px-1 text-center">No</th>
+                                  <th className="py-3 px-6">id</th>
+                                  <th className="py-3 px-6">id_resep</th>
+                                  <th className="py-3 px-6">step_no</th>
+                                  <th className="py-3 px-6">step_desc</th>
+                                  <th className="py-3 px-6">waktu</th>
+                                  <th className="py-3 px-1 text-center">
+                                    Action
+                                  </th>
                                 </tr>
-                              ))}
-                            </tbody>
-                          </table>
-                           ) : (
-                            <p className="text-red-500">Data "Langkah-langkah" masih kosong</p>
-                           )}
+                              </thead>
+                              <tbody>
+                                {stepsByRecipeId[resep.id].map(
+                                  (step, index) => (
+                                    <tr
+                                      key={step.id}
+                                      className="bg-white border-b"
+                                    >
+                                      <td className="py-3 px-1 text-center">
+                                        {index + 1}
+                                      </td>
+                                      <td className="py-3 px-6">{step.id}</td>
+                                      <td className="py-3 px-6 font-medium text-gray-900">
+                                        {step.id_resep}
+                                      </td>
+                                      <td className="py-3 px-6">
+                                        {step.step_no}
+                                      </td>
+                                      <td className="py-3 px-6 max-w-[200px] overflow-hidden whitespace-nowrap truncate-overflow">
+                                        {step.step_desc}
+                                      </td>
+                                      <td className="py-3 px-6">
+                                        {step.waktu}
+                                      </td>
+                                      <td className="py-3 px-1 text-center">
+                                        <div className="flex">
+                                          <Link
+                                            to={`/edit-step/${step.id}`}
+                                            className="mr-2"
+                                          >
+                                            <EditButton />
+                                          </Link>
+                                          <Link
+                                            onClick={() => deleteStep(step.id)}
+                                          >
+                                            <DeleteButton />
+                                          </Link>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  )
+                                )}
+                              </tbody>
+                            </table>
+                          ) : (
+                            <p className="text-red-500">
+                              Data "Langkah-langkah" masih kosong
+                            </p>
+                          )}
                         </div>
                       </td>
                     </tr>
