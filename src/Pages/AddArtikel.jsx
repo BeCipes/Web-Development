@@ -7,7 +7,7 @@ const AddArtikel = () => {
   const navigate = useNavigate();
   const [artikelData, setArtikelData] = useState({
     headline: "",
-    gambar: null,
+    gambar: [],
     isi: "",
     penulis: "",
     sumber: "",
@@ -31,10 +31,12 @@ const AddArtikel = () => {
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
+
     if (name === "gambar") {
+      const newGambarArray = Array.from(files).map((file) => file.name);
       setArtikelData((prevData) => ({
         ...prevData,
-        [name]: files[0].name,
+        [name]: [...prevData.gambar, ...newGambarArray],
       }));
     } else {
       setArtikelData((prevData) => ({
@@ -43,12 +45,11 @@ const AddArtikel = () => {
       }));
     }
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/artikel", artikelData);
+      await axios.post("https://backend-development-becipes.fly.dev/api/artikel", artikelData);
       navigate("/DataArtikel");
     } catch (error) {
       console.error("Error adding artikel:", error.message);
@@ -80,6 +81,7 @@ const AddArtikel = () => {
               type="file"
               name="gambar"
               onChange={handleChange}
+              multiple
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
@@ -87,8 +89,7 @@ const AddArtikel = () => {
             <label className="block text-gray-700 text-sm font-bold mb-2">
               Isi
             </label>
-            <input
-              type="text"
+            <textarea
               name="isi"
               value={artikelData.isi}
               onChange={handleChange}
@@ -145,7 +146,7 @@ const AddArtikel = () => {
               type="submit"
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
             >
-              Add Step
+              Add Artikel
             </button>
             <button
               className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
